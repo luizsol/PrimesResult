@@ -1,6 +1,6 @@
 # PrimesResult
 
-The results of the [Dave Plummer's Primes Drag Race](git@github.com:luizsol/PrimesResult.git).
+The results of the [Dave Plummer's Primes Drag Race](https://github.com/PlummersSoftwareLLC/Primes).
 
 ## Results
 
