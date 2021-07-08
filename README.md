@@ -6,6 +6,58 @@ The results of the [Dave Plummer's Primes Drag Race](https://github.com/Plummers
 
 Generated at 2021-07-08 on a Ryzen 9 5950X with 32GB RAM.
 
+### Best performers for each language
+
+| Position | Index | Implementation | Solution | Label                                                | Passes | Duration | Threads | Algorithm | Faithful | Bits | Passes/Second |
+| -------- | ----- | -------------- | -------- | ---------------------------------------------------- | ------ | -------- | ------- | --------- | -------- | ---- | ------------- |
+| 1        | 1     | cpp            | 3        | flo80_constexpr                                      | 202494 | 5.00002  | 1       | base      | no       | 1    | 40498.64611   |
+| 2        | 2     | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u8-5760of30030 | 26631  | 5.00002  | 1       | wheel     | yes      | 1    | 5326.17870    |
+| 3        | 5     | c              | 2        | danielspaangberg_48of210                             | 24173  | 5.00014  | 1       | wheel     | yes      | 1    | 4834.46077    |
+| 4        | 8     | rust           | 1        | mike-barber_byte-storage                             | 19771  | 5.00019  | 1       | base      | yes      | 8    | 3954.05294    |
+| 5        | 10    | assembly       | 1        | rbergen_x64uff_byte                                  | 18452  | 5.00000  | 1       | base      | no       | 8    | 3690.40000    |
+| 6        | 12    | v              | 1        | marghidanu                                           | 16567  | 5.00000  | 1       | base      | yes      |      | 3313.40000    |
+| 7        | 13    | haskell        | 1        | fatho/vector_unchecked                               | 16080  | 5.00029  | 1       | base      | no       | 8    | 3215.81155    |
+| 8        | 18    | fortran        | 1        | johandweber_fortran                                  | 13285  | 5.00000  | 1       | base      | no       | 1    | 2657.00000    |
+| 9        | 22    | fsharp         | 3        | dmannock_fsharp_recursion                            | 12030  | 5.00055  | 1       | base      | yes      |      | 2405.73729    |
+| 10       | 25    | crystal        | 1        | marghidanu                                           | 11494  | 5.00040  | 1       | base      | yes      | 1    | 2298.61841    |
+| 11       | 32    | csharp         | 1        | kinematics_dbool                                     | 10074  | 5.00011  | 1       | base      | yes      |      | 2014.75568    |
+| 12       | 36    | java           | 1        | MansenC                                              | 18555  | 10.00000 | 1       | base      | yes      |      | 1855.50000    |
+| 13       | 44    | julia          | 2        | epithet-jl                                           | 7876   | 5.00023  | 1       | base      | yes      | 1    | 1575.12880    |
+| 14       | 51    | nodejs         | 1        | rogiervandam                                         | 6736   | 5.00039  | 1       | base      | yes      | 1    | 1347.09444    |
+| 15       | 52    | go             | 2        | ssovest-go                                           | 6284   | 5.00048  | 1       | base      | yes      | 1    | 1256.67986    |
+| 16       | 54    | lisp           | 2        | mayerrobert-cl                                       | 5754   | 5.00001  | 1       | base      | no       | 1    | 1150.79862    |
+| 17       | 56    | typescript     | 1        | marghidanu                                           | 5575   | 5.00000  | 1       | base      | yes      |      | 1115.00000    |
+| 18       | 59    | lua            | 2        | ben1jen_luajit1                                      | 3910   | 5.00000  | 1       | base      | no       | 1    | 782.00000     |
+| 19       | 60    | nim            | 2        | beef331                                              | 2974   | 5.00076  | 1       | base      | yes      | 1    | 594.70908     |
+| 20       | 61    | d              | 1        | eagerestwolf                                         | 2863   | 5.00000  | 1       | base      | yes      | 8    | 572.60000     |
+| 21       | 66    | cython         | 1        | rpkak                                                | 2572   | 5.00143  | 1       | base      | yes      | 8    | 514.25322     |
+| 22       | 68    | basic          | 1        | rbergen_8of30                                        | 2428   | 5.00000  | 1       | wheel     | yes      | 1    | 485.60000     |
+| 23       | 69    | assemblyscript | 1        | donmahallem                                          | 4534   | 10.00100 | 1       | base      | yes      |      | 453.35465     |
+| 24       | 70    | octave         | 1        | octave                                               | 2177   | 5.00043  | 1       | base      | no       |      | 435.36256     |
+| 25       | 71    | python         | 2        | ssovest                                              | 2083   | 5.00212  | 1       | base      | yes      | 8    | 416.42338     |
+| 26       | 76    | dart           | 1        | eagerestwolf                                         | 1399   | 5.00061  | 1       | base      | yes      |      | 279.76609     |
+| 27       | 77    | scala          | 1        | rom1dep                                              | 1398   | 5.00200  | 1       | base      | yes      |      | 279.48820     |
+| 28       | 79    | pony           | 1        | marghidanu                                           | 1297   | 5.00000  | 1       | base      | yes      | 1    | 259.40000     |
+| 29       | 80    | cobol          | 1        | fvbakel_Cobol                                        | 1228   | 5.00000  | 1       | base      | no       | 8    | 245.60000     |
+| 30       | 81    | pascal         | 1        | rbergen                                              | 1214   | 5.00000  | 1       | base      | yes      |      | 242.80000     |
+| 31       | 82    | swift          | 1        | j-f1                                                 | 2245   | 10.00072 | 1       | base      | yes      |      | 224.48392     |
+| 32       | 83    | ada            | 1        | BoopBeepBoopBeep                                     | 751    | 5.00216  | 1       | base      | no       |      | 150.13507     |
+| 33       | 85    | haxe           | 1        | TayIorRobinson_Haxe_C++                              | 1427   | 10.00641 | 1       | base      | yes      |      | 142.60863     |
+| 34       | 86    | ocaml          | 2        | gkpotter-unfaithful                                  | 712    | 5.00527  | 1       | base      | no       |      | 142.25004     |
+| 35       | 91    | postscript     | 1        | epithet-ps                                           | 245    | 5.00100  | 1       | base      | no       | 8    | 48.99020      |
+| 36       | 92    | ruby           | 1        | rbergen                                              | 148    | 5.00200  | 1       | base      | yes      |      | 29.58816      |
+| 37       | 93    | wren           | 1        | marghidanu                                           | 120    | 5.00823  | 1       | base      | yes      |      | 23.96057      |
+| 38       | 94    | php            | 1        | DennisdeBest                                         | 219    | 10.02587 | 1       | base      | yes      |      | 21.84350      |
+| 39       | 96    | smalltalk      | 1        | fvbakel_smalltalk                                    | 55     | 5.06900  | 1       | base      | yes      | 1    | 10.85027      |
+| 40       | 97    | perl           | 1        | marghidanu                                           | 50     | 5.07497  | 1       | base      | yes      |      | 9.85228       |
+| 41       | 98    | mixal          | 1        | rbergen                                              | 30     | 3.51000  | 1       | base      | no       | 1    | 8.54701       |
+| 42       | 101   | r              | 1        | fvbakel_R                                            | 10     | 5.50700  | 1       | base      | yes      | 32   | 1.81587       |
+| 43       | 102   | sql            | 2        | fvbakel_MariaDB3                                     | 9      | 5.38700  | 1       | other     | no       | 32   | 1.67069       |
+| 44       | 103   | tcl            | 1        | fvbakeltcl                                           | 8      | 5.22400  | 1       | base      | yes      | 1    | 1.53139       |
+| 45       | 104   | powershell     | 2        | crowbar27_ps2                                        | 8      | 5.67315  | 1       | base      | yes      | 1    | 1.41015       |
+| 46       | 110   | latex          | 1        | tjol                                                 | 2      | 12.82645 | 1       | base      | no       | 32   | 0.15593       |
+| 47       | 111   | bash           | 1        | bash                                                 | 1      | 7.42022  | 1       | base      | no       |      | 0.13477       |
+
 ### Single-threaded
 
 | Index | Implementation | Solution | Label                                                 | Passes | Duration | Threads | Algorithm | Faithful | Bits | Passes/Second |
