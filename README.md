@@ -4,204 +4,208 @@ The results of the [Dave Plummer's Primes Drag Race](https://github.com/Plummers
 
 ## Results
 
-Generated at 2021-07-08 on a Ryzen 9 5950X with 32GB RAM.
+Generated at 2021-07-09 on a Ryzen 9 5950X with 32GB RAM.
 
 ### Best performers for each language
 
 | Position | Index | Implementation | Solution | Label                                                | Passes | Duration | Threads | Algorithm | Faithful | Bits | Passes/Second |
 | -------- | ----- | -------------- | -------- | ---------------------------------------------------- | ------ | -------- | ------- | --------- | -------- | ---- | ------------- |
-| 1        | 1     | cpp            | 3        | flo80_constexpr                                      | 202494 | 5.00002  | 1       | base      | no       | 1    | 40498.64611   |
-| 2        | 2     | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u8-5760of30030 | 26631  | 5.00002  | 1       | wheel     | yes      | 1    | 5326.17870    |
-| 3        | 5     | c              | 2        | danielspaangberg_48of210                             | 24173  | 5.00014  | 1       | wheel     | yes      | 1    | 4834.46077    |
-| 4        | 8     | rust           | 1        | mike-barber_byte-storage                             | 19771  | 5.00019  | 1       | base      | yes      | 8    | 3954.05294    |
-| 5        | 10    | assembly       | 1        | rbergen_x64uff_byte                                  | 18452  | 5.00000  | 1       | base      | no       | 8    | 3690.40000    |
-| 6        | 12    | v              | 1        | marghidanu                                           | 16567  | 5.00000  | 1       | base      | yes      |      | 3313.40000    |
-| 7        | 13    | haskell        | 1        | fatho/vector_unchecked                               | 16080  | 5.00029  | 1       | base      | no       | 8    | 3215.81155    |
-| 8        | 18    | fortran        | 1        | johandweber_fortran                                  | 13285  | 5.00000  | 1       | base      | no       | 1    | 2657.00000    |
-| 9        | 22    | fsharp         | 3        | dmannock_fsharp_recursion                            | 12030  | 5.00055  | 1       | base      | yes      |      | 2405.73729    |
-| 10       | 25    | crystal        | 1        | marghidanu                                           | 11494  | 5.00040  | 1       | base      | yes      | 1    | 2298.61841    |
-| 11       | 32    | csharp         | 1        | kinematics_dbool                                     | 10074  | 5.00011  | 1       | base      | yes      |      | 2014.75568    |
-| 12       | 36    | java           | 1        | MansenC                                              | 18555  | 10.00000 | 1       | base      | yes      |      | 1855.50000    |
-| 13       | 44    | julia          | 2        | epithet-jl                                           | 7876   | 5.00023  | 1       | base      | yes      | 1    | 1575.12880    |
-| 14       | 51    | nodejs         | 1        | rogiervandam                                         | 6736   | 5.00039  | 1       | base      | yes      | 1    | 1347.09444    |
-| 15       | 52    | go             | 2        | ssovest-go                                           | 6284   | 5.00048  | 1       | base      | yes      | 1    | 1256.67986    |
-| 16       | 54    | lisp           | 2        | mayerrobert-cl                                       | 5754   | 5.00001  | 1       | base      | no       | 1    | 1150.79862    |
-| 17       | 56    | typescript     | 1        | marghidanu                                           | 5575   | 5.00000  | 1       | base      | yes      |      | 1115.00000    |
-| 18       | 59    | lua            | 2        | ben1jen_luajit1                                      | 3910   | 5.00000  | 1       | base      | no       | 1    | 782.00000     |
-| 19       | 60    | nim            | 2        | beef331                                              | 2974   | 5.00076  | 1       | base      | yes      | 1    | 594.70908     |
-| 20       | 61    | d              | 1        | eagerestwolf                                         | 2863   | 5.00000  | 1       | base      | yes      | 8    | 572.60000     |
-| 21       | 66    | cython         | 1        | rpkak                                                | 2572   | 5.00143  | 1       | base      | yes      | 8    | 514.25322     |
-| 22       | 68    | basic          | 1        | rbergen_8of30                                        | 2428   | 5.00000  | 1       | wheel     | yes      | 1    | 485.60000     |
-| 23       | 69    | assemblyscript | 1        | donmahallem                                          | 4534   | 10.00100 | 1       | base      | yes      |      | 453.35465     |
-| 24       | 70    | octave         | 1        | octave                                               | 2177   | 5.00043  | 1       | base      | no       |      | 435.36256     |
-| 25       | 71    | python         | 2        | ssovest                                              | 2083   | 5.00212  | 1       | base      | yes      | 8    | 416.42338     |
-| 26       | 76    | dart           | 1        | eagerestwolf                                         | 1399   | 5.00061  | 1       | base      | yes      |      | 279.76609     |
-| 27       | 77    | scala          | 1        | rom1dep                                              | 1398   | 5.00200  | 1       | base      | yes      |      | 279.48820     |
-| 28       | 79    | pony           | 1        | marghidanu                                           | 1297   | 5.00000  | 1       | base      | yes      | 1    | 259.40000     |
-| 29       | 80    | cobol          | 1        | fvbakel_Cobol                                        | 1228   | 5.00000  | 1       | base      | no       | 8    | 245.60000     |
-| 30       | 81    | pascal         | 1        | rbergen                                              | 1214   | 5.00000  | 1       | base      | yes      |      | 242.80000     |
-| 31       | 82    | swift          | 1        | j-f1                                                 | 2245   | 10.00072 | 1       | base      | yes      |      | 224.48392     |
-| 32       | 83    | ada            | 1        | BoopBeepBoopBeep                                     | 751    | 5.00216  | 1       | base      | no       |      | 150.13507     |
-| 33       | 85    | haxe           | 1        | TayIorRobinson_Haxe_C++                              | 1427   | 10.00641 | 1       | base      | yes      |      | 142.60863     |
-| 34       | 86    | ocaml          | 2        | gkpotter-unfaithful                                  | 712    | 5.00527  | 1       | base      | no       |      | 142.25004     |
-| 35       | 91    | postscript     | 1        | epithet-ps                                           | 245    | 5.00100  | 1       | base      | no       | 8    | 48.99020      |
-| 36       | 92    | ruby           | 1        | rbergen                                              | 148    | 5.00200  | 1       | base      | yes      |      | 29.58816      |
-| 37       | 93    | wren           | 1        | marghidanu                                           | 120    | 5.00823  | 1       | base      | yes      |      | 23.96057      |
-| 38       | 94    | php            | 1        | DennisdeBest                                         | 219    | 10.02587 | 1       | base      | yes      |      | 21.84350      |
-| 39       | 96    | smalltalk      | 1        | fvbakel_smalltalk                                    | 55     | 5.06900  | 1       | base      | yes      | 1    | 10.85027      |
-| 40       | 97    | perl           | 1        | marghidanu                                           | 50     | 5.07497  | 1       | base      | yes      |      | 9.85228       |
-| 41       | 98    | mixal          | 1        | rbergen                                              | 30     | 3.51000  | 1       | base      | no       | 1    | 8.54701       |
-| 42       | 101   | r              | 1        | fvbakel_R                                            | 10     | 5.50700  | 1       | base      | yes      | 32   | 1.81587       |
-| 43       | 102   | sql            | 2        | fvbakel_MariaDB3                                     | 9      | 5.38700  | 1       | other     | no       | 32   | 1.67069       |
-| 44       | 103   | tcl            | 1        | fvbakeltcl                                           | 8      | 5.22400  | 1       | base      | yes      | 1    | 1.53139       |
-| 45       | 104   | powershell     | 2        | crowbar27_ps2                                        | 8      | 5.67315  | 1       | base      | yes      | 1    | 1.41015       |
-| 46       | 110   | latex          | 1        | tjol                                                 | 2      | 12.82645 | 1       | base      | no       | 32   | 0.15593       |
-| 47       | 111   | bash           | 1        | bash                                                 | 1      | 7.42022  | 1       | base      | no       |      | 0.13477       |
+| 1        | 1     | cpp            | 3        | flo80_constexpr                                      | 296241 | 5.00001  | 1       | base      | no       | 1    | 59248.06965   |
+| 2        | 2     | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u8-5760of30030 | 26535  | 5.00005  | 1       | wheel     | yes      | 1    | 5306.94693    |
+| 3        | 4     | c              | 2        | danielspaangberg_48of210                             | 24420  | 5.00001  | 1       | wheel     | yes      | 1    | 4883.99219    |
+| 4        | 9     | rust           | 1        | mike-barber_byte-storage                             | 18933  | 5.00006  | 1       | base      | yes      | 8    | 3786.55522    |
+| 5        | 10    | assembly       | 1        | rbergen_x64uff_byte                                  | 18857  | 5.00000  | 1       | base      | no       | 8    | 3771.40000    |
+| 6        | 12    | v              | 1        | marghidanu                                           | 16566  | 5.00000  | 1       | base      | yes      |      | 3313.20000    |
+| 7        | 15    | haskell        | 1        | fatho/vector_unchecked                               | 14942  | 5.00032  | 1       | base      | no       | 8    | 2988.20756    |
+| 8        | 18    | fortran        | 1        | johandweber_fortran                                  | 12761  | 5.00000  | 1       | base      | no       | 1    | 2552.20000    |
+| 9        | 23    | fsharp         | 3        | dmannock_fsharp_recursion                            | 11792  | 5.00024  | 1       | base      | yes      |      | 2358.28680    |
+| 10       | 27    | crystal        | 1        | marghidanu                                           | 11273  | 5.00021  | 1       | base      | yes      | 1    | 2254.50441    |
+| 11       | 30    | csharp         | 1        | kinematics_dbool                                     | 10483  | 5.00004  | 1       | base      | yes      |      | 2096.58323    |
+| 12       | 35    | java           | 1        | MansenC                                              | 18891  | 10.00000 | 1       | base      | yes      |      | 1889.10000    |
+| 13       | 43    | julia          | 2        | epithet-jl                                           | 7908   | 5.00016  | 1       | base      | yes      | 1    | 1581.55068    |
+| 14       | 47    | dart           | 1        | eagerestwolf&mmcdon20                                | 7047   | 5.00029  | 1       | base      | yes      | 8    | 1409.31826    |
+| 15       | 53    | nodejs         | 1        | rogiervandam                                         | 6599   | 5.00015  | 1       | base      | yes      | 1    | 1319.75983    |
+| 16       | 54    | d              | 2        | BradleyChatha                                        | 6478   | 5.00042  | 1       | base      | yes      | 1    | 1295.49118    |
+| 17       | 55    | typescript     | 1        | marghidanu                                           | 5707   | 5.00000  | 1       | base      | yes      |      | 1141.40000    |
+| 18       | 56    | lisp           | 2        | mayerrobert-cl                                       | 5695   | 5.00333  | 1       | base      | no       | 1    | 1138.24170    |
+| 19       | 59    | go             | 2        | ssovest-go                                           | 5198   | 5.00119  | 1       | base      | yes      | 1    | 1039.35177    |
+| 20       | 61    | lua            | 2        | ben1jen_luajit1                                      | 3928   | 5.00000  | 1       | base      | no       | 1    | 785.60000     |
+| 21       | 62    | nim            | 2        | beef331                                              | 2903   | 5.00090  | 1       | base      | yes      | 1    | 580.49495     |
+| 22       | 68    | cython         | 1        | rpkak                                                | 2525   | 5.00175  | 1       | base      | yes      | 8    | 504.82376     |
+| 23       | 70    | basic          | 1        | rbergen_8of30                                        | 2407   | 5.00100  | 1       | wheel     | yes      | 1    | 481.30374     |
+| 24       | 71    | assemblyscript | 1        | donmahallem                                          | 4584   | 10.00100 | 1       | base      | yes      |      | 458.35415     |
+| 25       | 72    | octave         | 1        | octave                                               | 2138   | 5.00196  | 1       | base      | no       |      | 427.43245     |
+| 26       | 73    | python         | 2        | ssovest                                              | 2042   | 5.00183  | 1       | base      | yes      | 8    | 408.25038     |
+| 27       | 78    | scala          | 1        | rom1dep                                              | 1394   | 5.00100  | 1       | base      | yes      |      | 278.74425     |
+| 28       | 80    | cobol          | 1        | fvbakel_Cobol                                        | 1235   | 5.00000  | 1       | base      | no       | 8    | 247.00000     |
+| 29       | 81    | pascal         | 1        | rbergen                                              | 1177   | 5.00000  | 1       | base      | yes      |      | 235.40000     |
+| 30       | 82    | pony           | 1        | marghidanu                                           | 1138   | 5.00000  | 1       | base      | yes      | 1    | 227.60000     |
+| 31       | 83    | swift          | 1        | j-f1                                                 | 2233   | 10.00296 | 1       | base      | yes      |      | 223.23381     |
+| 32       | 84    | r              | 1        | fvbakel_R                                            | 831    | 5.00100  | 1       | base      | yes      | 32   | 166.16677     |
+| 33       | 85    | ada            | 1        | BoopBeepBoopBeep                                     | 752    | 5.00674  | 1       | base      | no       |      | 150.19746     |
+| 34       | 87    | haxe           | 1        | TayIorRobinson_Haxe_C++                              | 1397   | 10.00201 | 1       | base      | yes      |      | 139.67190     |
+| 35       | 88    | ocaml          | 2        | gkpotter-unfaithful                                  | 688    | 5.00218  | 1       | base      | no       |      | 137.54003     |
+| 36       | 93    | postscript     | 1        | epithet-ps                                           | 248    | 5.01500  | 1       | base      | no       | 8    | 49.45165      |
+| 37       | 94    | ruby           | 1        | rbergen                                              | 152    | 5.02500  | 1       | base      | yes      |      | 30.24876      |
+| 38       | 95    | wren           | 1        | marghidanu                                           | 119    | 5.01975  | 1       | base      | yes      |      | 23.70634      |
+| 39       | 96    | php            | 1        | DennisdeBest                                         | 213    | 10.04393 | 1       | base      | yes      |      | 21.20684      |
+| 40       | 98    | smalltalk      | 1        | fvbakel_smalltalk                                    | 53     | 5.05000  | 1       | base      | yes      | 1    | 10.49505      |
+| 41       | 99    | perl           | 1        | marghidanu                                           | 47     | 5.06580  | 1       | base      | yes      |      | 9.27790       |
+| 42       | 100   | mixal          | 1        | rbergen                                              | 30     | 3.66000  | 1       | base      | no       | 1    | 8.19672       |
+| 43       | 103   | sql            | 2        | fvbakel_MariaDB3                                     | 9      | 5.54700  | 1       | other     | no       | 32   | 1.62250       |
+| 44       | 104   | tcl            | 1        | fvbakeltcl                                           | 8      | 5.16700  | 1       | base      | yes      | 1    | 1.54829       |
+| 45       | 105   | powershell     | 2        | crowbar27_ps2                                        | 7      | 5.16513  | 1       | base      | yes      | 1    | 1.35524       |
+| 46       | 111   | latex          | 1        | tjol                                                 | 2      | 13.41066 | 1       | base      | no       | 32   | 0.14914       |
+| 47       | 112   | bash           | 1        | bash                                                 | 1      | 7.40178  | 1       | base      | no       |      | 0.13510       |
+| 48       | 113   | elixir         | 1        | cdesch                                               | 1      | 19.52600 | 1       | base      | no       |      | 0.05121       |
 
 ### Single-threaded
 
 | Index | Implementation | Solution | Label                                                 | Passes | Duration | Threads | Algorithm | Faithful | Bits | Passes/Second |
 | ----- | -------------- | -------- | ----------------------------------------------------- | ------ | -------- | ------- | --------- | -------- | ---- | ------------- |
-| 1     | cpp            | 3        | flo80_constexpr                                       | 202494 | 5.00002  | 1       | base      | no       | 1    | 40498.64611   |
-| 2     | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u8-5760of30030  | 26631  | 5.00002  | 1       | wheel     | yes      | 1    | 5326.17870    |
-| 3     | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u64-5760of30030 | 26251  | 5.00015  | 1       | wheel     | yes      | 1    | 5250.04250    |
-| 4     | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u8-480of2310    | 24753  | 5.00008  | 1       | wheel     | yes      | 1    | 4950.52079    |
-| 5     | c              | 2        | danielspaangberg_48of210                              | 24173  | 5.00014  | 1       | wheel     | yes      | 1    | 4834.46077    |
-| 6     | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u64-480of2310   | 22730  | 5.00014  | 1       | wheel     | yes      | 1    | 4545.87272    |
-| 7     | c              | 2        | danielspaangberg_8of30                                | 20295  | 5.00018  | 1       | wheel     | yes      | 1    | 4058.85469    |
-| 8     | rust           | 1        | mike-barber_byte-storage                              | 19771  | 5.00019  | 1       | base      | yes      | 8    | 3954.05294    |
-| 9     | zig            | 2        | ManDeJan&ityonemo-zig-byte-sieve-type-bool            | 19610  | 5.00008  | 1       | base      | yes      | 8    | 3921.93725    |
-| 10    | assembly       | 1        | rbergen_x64uff_byte                                   | 18452  | 5.00000  | 1       | base      | no       | 8    | 3690.40000    |
-| 11    | c              | 2        | danielspaangberg_5760of30030_owrb                     | 18389  | 5.00010  | 1       | wheel     | yes      | 1    | 3677.72350    |
-| 12    | v              | 1        | marghidanu                                            | 16567  | 5.00000  | 1       | base      | yes      |      | 3313.40000    |
-| 13    | haskell        | 1        | fatho/vector_unchecked                                | 16080  | 5.00029  | 1       | base      | no       | 8    | 3215.81155    |
-| 14    | zig            | 1        | devblok                                               | 15966  | 5.00028  | 1       | base      | yes      | 8    | 3193.02119    |
-| 15    | c              | 2        | danielspaangberg_480of2310_owrb                       | 15812  | 5.00002  | 1       | wheel     | yes      | 1    | 3162.38798    |
-| 16    | assembly       | 1        | rbergen_x64ff_byte                                    | 13431  | 5.00000  | 1       | base      | yes      | 8    | 2686.20000    |
-| 17    | haskell        | 1        | fatho/vector                                          | 13374  | 5.00008  | 1       | base      | no       | 8    | 2674.75774    |
-| 18    | fortran        | 1        | johandweber_fortran                                   | 13285  | 5.00000  | 1       | base      | no       | 1    | 2657.00000    |
-| 19    | c              | 1        | mckoss-c830                                           | 12873  | 5.00000  | 1       | wheel     | yes      | 1    | 2574.60000    |
-| 20    | c              | 2        | danielspaangberg_48of210_owrb                         | 12844  | 5.00004  | 1       | wheel     | yes      | 1    | 2568.77996    |
-| 21    | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u8              | 12841  | 5.00019  | 1       | base      | yes      | 1    | 2568.10241    |
-| 22    | fsharp         | 3        | dmannock_fsharp_recursion                             | 12030  | 5.00055  | 1       | base      | yes      |      | 2405.73729    |
-| 23    | zig            | 3        | ManDeJan&ityonemo-zig-single-sieve-u8                 | 11901  | 5.00004  | 1       | base      | yes      | 8    | 2380.18096    |
-| 24    | zig            | 2        | ManDeJan&ityonemo-zig-bit-sieve                       | 11615  | 5.00004  | 1       | base      | yes      | 1    | 2322.98142    |
-| 25    | crystal        | 1        | marghidanu                                            | 11494  | 5.00040  | 1       | base      | yes      | 1    | 2298.61841    |
-| 26    | haskell        | 1        | fatho/bitset                                          | 11226  | 5.00006  | 1       | base      | no       | 1    | 2245.17171    |
-| 27    | c              | 2        | danielspaangberg_1of2                                 | 11120  | 5.00029  | 1       | base      | yes      | 1    | 2223.87057    |
-| 28    | fsharp         | 2        | dmannock_fsharp_port                                  | 10795  | 5.00032  | 1       | base      | yes      |      | 2158.86097    |
-| 29    | rust           | 1        | mike-barber_bit-storage                               | 10746  | 5.00033  | 1       | base      | yes      | 1    | 2149.05858    |
-| 30    | rust           | 2        | Azgrom                                                | 10744  | 5.00003  | 1       | base      | yes      |      | 2148.78646    |
-| 31    | rust           | 1        | mike-barber_bit-storage-rotate                        | 10092  | 5.00011  | 1       | base      | yes      | 1    | 2018.35727    |
-| 32    | csharp         | 1        | kinematics_dbool                                      | 10074  | 5.00011  | 1       | base      | yes      |      | 2014.75568    |
-| 33    | cpp            | 1        | davepl                                                | 9701   | 5.00003  | 1       | base      | yes      | 1    | 1940.18875    |
-| 34    | c              | 2        | danielspaangberg_8of30_owrb                           | 9626   | 5.00032  | 1       | wheel     | yes      | 1    | 1925.07680    |
-| 35    | zig            | 3        | ManDeJan&ityonemo-zig-single-sieve-bool               | 9477   | 5.00010  | 1       | base      | yes      | 8    | 1895.36209    |
-| 36    | java           | 1        | MansenC                                               | 18555  | 10.00000 | 1       | base      | yes      |      | 1855.50000    |
-| 37    | zig            | 3        | ManDeJan&ityonemo-zig-single-sieve-u8-5760of30030     | 9193   | 5.00044  | 1       | wheel     | yes      | 8    | 1838.43822    |
-| 38    | haskell        | 1        | fatho/bitset_unchecked                                | 9158   | 5.00021  | 1       | base      | no       | 1    | 1831.52198    |
-| 39    | zig            | 3        | ManDeJan&ityonemo-zig-single-sieve-u8-480of2310       | 8853   | 5.00013  | 1       | wheel     | yes      | 8    | 1770.55397    |
-| 40    | rust           | 4        | joshallen64                                           | 8803   | 5.00019  | 1       | base      | yes      |      | 1760.53380    |
-| 41    | assembly       | 1        | rbergen_x64ff_bitshift                                | 8528   | 5.00000  | 1       | base      | yes      | 1    | 1705.60000    |
-| 42    | assembly       | 1        | rbergen_x64uff_bitshift                               | 8215   | 5.00000  | 1       | base      | no       | 1    | 1643.00000    |
-| 43    | csharp         | 3        | tannergooding                                         | 7933   | 5.00011  | 1       | base      | yes      | 1    | 1586.56579    |
-| 44    | julia          | 2        | epithet-jl                                            | 7876   | 5.00023  | 1       | base      | yes      | 1    | 1575.12880    |
-| 45    | assembly       | 1        | rbergen_x64uff_bitbtr                                 | 7638   | 5.00000  | 1       | base      | no       | 1    | 1527.60000    |
-| 46    | assembly       | 1        | rbergen_x64ff_bitbtr                                  | 7481   | 5.00000  | 1       | base      | yes      | 1    | 1496.20000    |
-| 47    | csharp         | 1        | kinematics_raw                                        | 6984   | 5.00026  | 1       | base      | yes      | 1    | 1396.72737    |
-| 48    | csharp         | 1        | kinematics_rawd                                       | 6970   | 5.00068  | 1       | base      | yes      | 1    | 1393.81044    |
-| 49    | csharp         | 1        | kinematics_raw32                                      | 6778   | 5.00003  | 1       | base      | yes      | 1    | 1355.59187    |
-| 50    | csharp         | 1        | kinematics_raw6                                       | 6736   | 5.00011  | 1       | wheel     | yes      | 1    | 1347.17036    |
-| 51    | nodejs         | 1        | rogiervandam                                          | 6736   | 5.00039  | 1       | base      | yes      | 1    | 1347.09444    |
-| 52    | go             | 2        | ssovest-go                                            | 6284   | 5.00048  | 1       | base      | yes      | 1    | 1256.67986    |
-| 53    | csharp         | 1        | kinematics_pool30                                     | 5991   | 5.00009  | 1       | wheel     | yes      | 1    | 1198.17843    |
-| 54    | lisp           | 2        | mayerrobert-cl                                        | 5754   | 5.00001  | 1       | base      | no       | 1    | 1150.79862    |
-| 55    | csharp         | 1        | kinematics_pool30m                                    | 5704   | 5.00005  | 1       | wheel     | yes      | 1    | 1140.78859    |
-| 56    | typescript     | 1        | marghidanu                                            | 5575   | 5.00000  | 1       | base      | yes      |      | 1115.00000    |
-| 57    | csharp         | 1        | kinematics_pool2of6                                   | 5252   | 5.00093  | 1       | wheel     | yes      | 1    | 1050.20466    |
-| 58    | rust           | 3        | Blui42                                                | 4052   | 5.00013  | 1       | base      | yes      |      | 810.37917     |
-| 59    | lua            | 2        | ben1jen_luajit1                                       | 3910   | 5.00000  | 1       | base      | no       | 1    | 782.00000     |
-| 60    | nim            | 2        | beef331                                               | 2974   | 5.00076  | 1       | base      | yes      | 1    | 594.70908     |
-| 61    | d              | 1        | eagerestwolf                                          | 2863   | 5.00000  | 1       | base      | yes      | 8    | 572.60000     |
-| 62    | csharp         | 1        | kinematics_ibool                                      | 2830   | 5.00099  | 1       | base      | yes      |      | 565.88795     |
-| 63    | csharp         | 1        | kinematics_pool                                       | 2808   | 5.00023  | 1       | base      | yes      | 1    | 561.57417     |
-| 64    | nim            | 1        | marghidanu                                            | 2804   | 5.00005  | 1       | base      | yes      | 8    | 560.79492     |
-| 65    | go             | 1        | bundgaard                                             | 2606   | 5.00106  | 1       | base      | yes      |      | 521.08984     |
-| 66    | cython         | 1        | rpkak                                                 | 2572   | 5.00143  | 1       | base      | yes      | 8    | 514.25322     |
-| 67    | csharp         | 1        | kinematics_bool                                       | 2448   | 5.00106  | 1       | base      | yes      |      | 489.49623     |
-| 68    | basic          | 1        | rbergen_8of30                                         | 2428   | 5.00000  | 1       | wheel     | yes      | 1    | 485.60000     |
-| 69    | assemblyscript | 1        | donmahallem                                           | 4534   | 10.00100 | 1       | base      | yes      |      | 453.35465     |
-| 70    | octave         | 1        | octave                                                | 2177   | 5.00043  | 1       | base      | no       |      | 435.36256     |
-| 71    | python         | 2        | ssovest                                               | 2083   | 5.00212  | 1       | base      | yes      | 8    | 416.42338     |
-| 72    | fsharp         | 1        | rbergen                                               | 1775   | 5.00072  | 1       | base      | yes      | 1    | 354.94899     |
-| 73    | csharp         | 1        | kinematics_standard                                   | 1646   | 5.00214  | 1       | base      | yes      | 1    | 329.05916     |
-| 74    | basic          | 2        | rbergen_vb                                            | 1632   | 5.00293  | 1       | base      | yes      | 1    | 326.20906     |
-| 75    | csharp         | 2        | davepl                                                | 2941   | 10.00240 | 1       | base      | yes      | 1    | 294.02943     |
-| 76    | dart           | 1        | eagerestwolf                                          | 1399   | 5.00061  | 1       | base      | yes      |      | 279.76609     |
-| 77    | scala          | 1        | rom1dep                                               | 1398   | 5.00200  | 1       | base      | yes      |      | 279.48820     |
-| 78    | csharp         | 1        | kinematics_original                                   | 1357   | 5.00114  | 1       | base      | yes      | 1    | 271.33813     |
-| 79    | pony           | 1        | marghidanu                                            | 1297   | 5.00000  | 1       | base      | yes      | 1    | 259.40000     |
-| 80    | cobol          | 1        | fvbakel_Cobol                                         | 1228   | 5.00000  | 1       | base      | no       | 8    | 245.60000     |
-| 81    | pascal         | 1        | rbergen                                               | 1214   | 5.00000  | 1       | base      | yes      |      | 242.80000     |
-| 82    | swift          | 1        | j-f1                                                  | 2245   | 10.00072 | 1       | base      | yes      |      | 224.48392     |
-| 83    | ada            | 1        | BoopBeepBoopBeep                                      | 751    | 5.00216  | 1       | base      | no       |      | 150.13507     |
-| 84    | basic          | 1        | rbergen_boolean                                       | 732    | 5.00400  | 1       | base      | yes      |      | 146.28297     |
-| 85    | haxe           | 1        | TayIorRobinson_Haxe_C++                               | 1427   | 10.00641 | 1       | base      | yes      |      | 142.60863     |
-| 86    | ocaml          | 2        | gkpotter-unfaithful                                   | 712    | 5.00527  | 1       | base      | no       |      | 142.25004     |
-| 87    | ocaml          | 1        | gkpotter-faithful                                     | 553    | 5.00402  | 1       | base      | yes      |      | 110.51122     |
-| 88    | julia          | 1        | dcbi                                                  | 541    | 5.00454  | 1       | base      | yes      | 1    | 108.10174     |
-| 89    | basic          | 1        | rbergen_bit32                                         | 478    | 5.00100  | 1       | base      | yes      | 1    | 95.58088      |
-| 90    | basic          | 1        | rbergen_bit64                                         | 467    | 5.00900  | 1       | base      | yes      | 1    | 93.23218      |
-| 91    | postscript     | 1        | epithet-ps                                            | 245    | 5.00100  | 1       | base      | no       | 8    | 48.99020      |
-| 92    | ruby           | 1        | rbergen                                               | 148    | 5.00200  | 1       | base      | yes      |      | 29.58816      |
-| 93    | wren           | 1        | marghidanu                                            | 120    | 5.00823  | 1       | base      | yes      |      | 23.96057      |
-| 94    | php            | 1        | DennisdeBest                                          | 219    | 10.02587 | 1       | base      | yes      |      | 21.84350      |
-| 95    | lisp           | 1        | mikehw                                                | 113    | 10.07001 | 1       | base      | no       | 1    | 11.22144      |
-| 96    | smalltalk      | 1        | fvbakel_smalltalk                                     | 55     | 5.06900  | 1       | base      | yes      | 1    | 10.85027      |
-| 97    | perl           | 1        | marghidanu                                            | 50     | 5.07497  | 1       | base      | yes      |      | 9.85228       |
-| 98    | mixal          | 1        | rbergen                                               | 30     | 3.51000  | 1       | base      | no       | 1    | 8.54701       |
-| 99    | haxe           | 1        | TayIorRobinson_Haxe_HaxeEval                          | 60     | 10.01609 | 1       | base      | yes      |      | 5.99036       |
-| 100   | python         | 1        | davepl                                                | 47     | 10.10644 | 1       | base      | yes      |      | 4.65050       |
-| 101   | r              | 1        | fvbakel_R                                             | 10     | 5.50700  | 1       | base      | yes      | 32   | 1.81587       |
-| 102   | sql            | 2        | fvbakel_MariaDB3                                      | 9      | 5.38700  | 1       | other     | no       | 32   | 1.67069       |
-| 103   | tcl            | 1        | fvbakeltcl                                            | 8      | 5.22400  | 1       | base      | yes      | 1    | 1.53139       |
-| 104   | powershell     | 2        | crowbar27_ps2                                         | 8      | 5.67315  | 1       | base      | yes      | 1    | 1.41015       |
-| 105   | sql            | 1        | fvbakel_sqlite                                        | 7      | 5.22281  | 1       | other     | no       | 8    | 1.34028       |
-| 106   | haxe           | 1        | TayIorRobinson_Haxe_Python                            | 13     | 10.47694 | 1       | base      | yes      |      | 1.24082       |
-| 107   | tcl            | 2        | fvbakel_ootcl                                         | 7      | 5.68200  | 1       | base      | yes      | 1    | 1.23196       |
-| 108   | sql            | 2        | fvbakel_MariaDB2                                      | 6      | 5.57900  | 1       | other     | no       | 32   | 1.07546       |
-| 109   | sql            | 2        | fvbakel_MariaDB1                                      | 1      | 5.91500  | 1       | base      | no       | 32   | 0.16906       |
-| 110   | latex          | 1        | tjol                                                  | 2      | 12.82645 | 1       | base      | no       | 32   | 0.15593       |
-| 111   | bash           | 1        | bash                                                  | 1      | 7.42022  | 1       | base      | no       |      | 0.13477       |
-| 112   | lua            | 1        | lua                                                   | 1      | 26.00000 | 1       | base      | no       | 64   | 0.03846       |
-| 113   | powershell     | 1        | crowbar27_ps1                                         | 1      | 52.12820 | 1       | base      | yes      | 1    | 0.01918       |
+| 1     | cpp            | 3        | flo80_constexpr                                       | 296241 | 5.00001  | 1       | base      | no       | 1    | 59248.06965   |
+| 2     | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u8-5760of30030  | 26535  | 5.00005  | 1       | wheel     | yes      | 1    | 5306.94693    |
+| 3     | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u64-5760of30030 | 26513  | 5.00019  | 1       | wheel     | yes      | 1    | 5302.39851    |
+| 4     | c              | 2        | danielspaangberg_48of210                              | 24420  | 5.00001  | 1       | wheel     | yes      | 1    | 4883.99219    |
+| 5     | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u8-480of2310    | 24308  | 5.00004  | 1       | wheel     | yes      | 1    | 4861.56111    |
+| 6     | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u64-480of2310   | 22787  | 5.00019  | 1       | wheel     | yes      | 1    | 4557.22683    |
+| 7     | c              | 2        | danielspaangberg_8of30                                | 20361  | 5.00013  | 1       | wheel     | yes      | 1    | 4072.09575    |
+| 8     | zig            | 2        | ManDeJan&ityonemo-zig-byte-sieve-type-bool            | 19335  | 5.00023  | 1       | base      | yes      | 8    | 3866.82213    |
+| 9     | rust           | 1        | mike-barber_byte-storage                              | 18933  | 5.00006  | 1       | base      | yes      | 8    | 3786.55522    |
+| 10    | assembly       | 1        | rbergen_x64uff_byte                                   | 18857  | 5.00000  | 1       | base      | no       | 8    | 3771.40000    |
+| 11    | c              | 2        | danielspaangberg_5760of30030_owrb                     | 18407  | 5.00009  | 1       | wheel     | yes      | 1    | 3681.33742    |
+| 12    | v              | 1        | marghidanu                                            | 16566  | 5.00000  | 1       | base      | yes      |      | 3313.20000    |
+| 13    | zig            | 1        | devblok                                               | 15880  | 5.00019  | 1       | base      | yes      | 8    | 3175.87932    |
+| 14    | c              | 2        | danielspaangberg_480of2310_owrb                       | 15579  | 5.00025  | 1       | wheel     | yes      | 1    | 3115.64235    |
+| 15    | haskell        | 1        | fatho/vector_unchecked                                | 14942  | 5.00032  | 1       | base      | no       | 8    | 2988.20756    |
+| 16    | assembly       | 1        | rbergen_x64ff_byte                                    | 13843  | 5.00000  | 1       | base      | yes      | 8    | 2768.60000    |
+| 17    | haskell        | 1        | fatho/vector                                          | 13106  | 5.00012  | 1       | base      | no       | 8    | 2621.13604    |
+| 18    | fortran        | 1        | johandweber_fortran                                   | 12761  | 5.00000  | 1       | base      | no       | 1    | 2552.20000    |
+| 19    | c              | 1        | mckoss-c830                                           | 12756  | 5.00000  | 1       | wheel     | yes      | 1    | 2551.20000    |
+| 20    | c              | 2        | danielspaangberg_48of210_owrb                         | 12658  | 5.00009  | 1       | wheel     | yes      | 1    | 2531.55646    |
+| 21    | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u8              | 12443  | 5.00022  | 1       | base      | yes      | 1    | 2488.49051    |
+| 22    | zig            | 3        | ManDeJan&ityonemo-zig-single-sieve-u8                 | 12275  | 5.00027  | 1       | base      | yes      | 8    | 2454.86744    |
+| 23    | fsharp         | 3        | dmannock_fsharp_recursion                             | 11792  | 5.00024  | 1       | base      | yes      |      | 2358.28680    |
+| 24    | zig            | 2        | ManDeJan&ityonemo-zig-bit-sieve                       | 11506  | 5.00007  | 1       | base      | yes      | 1    | 2301.16778    |
+| 25    | fsharp         | 2        | dmannock_fsharp_port                                  | 11493  | 5.00004  | 1       | base      | yes      |      | 2298.58345    |
+| 26    | c              | 2        | danielspaangberg_1of2                                 | 11452  | 5.00040  | 1       | base      | yes      | 1    | 2290.21861    |
+| 27    | crystal        | 1        | marghidanu                                            | 11273  | 5.00021  | 1       | base      | yes      | 1    | 2254.50441    |
+| 28    | haskell        | 1        | fatho/bitset                                          | 11111  | 5.00034  | 1       | base      | no       | 1    | 2222.04712    |
+| 29    | rust           | 1        | mike-barber_bit-storage                               | 10484  | 5.00006  | 1       | base      | yes      | 1    | 2096.77540    |
+| 30    | csharp         | 1        | kinematics_dbool                                      | 10483  | 5.00004  | 1       | base      | yes      |      | 2096.58323    |
+| 31    | rust           | 2        | Azgrom                                                | 10449  | 5.00007  | 1       | base      | yes      |      | 2089.76970    |
+| 32    | rust           | 1        | mike-barber_bit-storage-rotate                        | 9876   | 5.00010  | 1       | base      | yes      | 1    | 1975.16195    |
+| 33    | zig            | 3        | ManDeJan&ityonemo-zig-single-sieve-bool               | 9715   | 5.00000  | 1       | base      | yes      | 8    | 1943.00000    |
+| 34    | cpp            | 1        | davepl                                                | 9544   | 5.00037  | 1       | base      | yes      | 1    | 1908.65838    |
+| 35    | java           | 1        | MansenC                                               | 18891  | 10.00000 | 1       | base      | yes      |      | 1889.10000    |
+| 36    | c              | 2        | danielspaangberg_8of30_owrb                           | 9429   | 5.00045  | 1       | wheel     | yes      | 1    | 1885.62841    |
+| 37    | zig            | 3        | ManDeJan&ityonemo-zig-single-sieve-u8-5760of30030     | 9196   | 5.00047  | 1       | wheel     | yes      | 8    | 1839.02713    |
+| 38    | haskell        | 1        | fatho/bitset_unchecked                                | 9014   | 5.00012  | 1       | base      | no       | 1    | 1802.75493    |
+| 39    | zig            | 3        | ManDeJan&ityonemo-zig-single-sieve-u8-480of2310       | 8804   | 5.00047  | 1       | wheel     | yes      | 8    | 1760.63450    |
+| 40    | assembly       | 1        | rbergen_x64ff_bitshift                                | 8632   | 5.00000  | 1       | base      | yes      | 1    | 1726.40000    |
+| 41    | rust           | 4        | joshallen64                                           | 8436   | 5.00052  | 1       | base      | yes      |      | 1687.02576    |
+| 42    | assembly       | 1        | rbergen_x64uff_bitshift                               | 8115   | 5.00000  | 1       | base      | no       | 1    | 1623.00000    |
+| 43    | julia          | 2        | epithet-jl                                            | 7908   | 5.00016  | 1       | base      | yes      | 1    | 1581.55068    |
+| 44    | csharp         | 3        | tannergooding                                         | 7708   | 5.00009  | 1       | base      | yes      | 1    | 1541.57170    |
+| 45    | assembly       | 1        | rbergen_x64uff_bitbtr                                 | 7564   | 5.00000  | 1       | base      | no       | 1    | 1512.80000    |
+| 46    | assembly       | 1        | rbergen_x64ff_bitbtr                                  | 7372   | 5.00000  | 1       | base      | yes      | 1    | 1474.40000    |
+| 47    | dart           | 1        | eagerestwolf&mmcdon20                                 | 7047   | 5.00029  | 1       | base      | yes      | 8    | 1409.31826    |
+| 48    | csharp         | 1        | kinematics_rawd                                       | 6976   | 5.00069  | 1       | base      | yes      | 1    | 1395.00749    |
+| 49    | csharp         | 1        | kinematics_raw                                        | 6953   | 5.00031  | 1       | base      | yes      | 1    | 1390.51379    |
+| 50    | csharp         | 1        | kinematics_raw32                                      | 6819   | 5.00025  | 1       | base      | yes      | 1    | 1363.73181    |
+| 51    | csharp         | 1        | kinematics_raw6                                       | 6765   | 5.00063  | 1       | wheel     | yes      | 1    | 1352.82954    |
+| 52    | csharp         | 1        | kinematics_pool30                                     | 6673   | 5.00034  | 1       | wheel     | yes      | 1    | 1334.50925    |
+| 53    | nodejs         | 1        | rogiervandam                                          | 6599   | 5.00015  | 1       | base      | yes      | 1    | 1319.75983    |
+| 54    | d              | 2        | BradleyChatha                                         | 6478   | 5.00042  | 1       | base      | yes      | 1    | 1295.49118    |
+| 55    | typescript     | 1        | marghidanu                                            | 5707   | 5.00000  | 1       | base      | yes      |      | 1141.40000    |
+| 56    | lisp           | 2        | mayerrobert-cl                                        | 5695   | 5.00333  | 1       | base      | no       | 1    | 1138.24170    |
+| 57    | csharp         | 1        | kinematics_pool30m                                    | 5555   | 5.00036  | 1       | wheel     | yes      | 1    | 1110.92001    |
+| 58    | csharp         | 1        | kinematics_pool2of6                                   | 5202   | 5.00014  | 1       | wheel     | yes      | 1    | 1040.37087    |
+| 59    | go             | 2        | ssovest-go                                            | 5198   | 5.00119  | 1       | base      | yes      | 1    | 1039.35177    |
+| 60    | rust           | 3        | Blui42                                                | 4018   | 5.00122  | 1       | base      | yes      |      | 803.40429     |
+| 61    | lua            | 2        | ben1jen_luajit1                                       | 3928   | 5.00000  | 1       | base      | no       | 1    | 785.60000     |
+| 62    | nim            | 2        | beef331                                               | 2903   | 5.00090  | 1       | base      | yes      | 1    | 580.49495     |
+| 63    | nim            | 1        | marghidanu                                            | 2829   | 5.00072  | 1       | base      | yes      | 8    | 565.71816     |
+| 64    | d              | 1        | eagerestwolf                                          | 2772   | 5.00000  | 1       | base      | yes      | 8    | 554.40000     |
+| 65    | csharp         | 1        | kinematics_pool                                       | 2772   | 5.00058  | 1       | base      | yes      | 1    | 554.33570     |
+| 66    | csharp         | 1        | kinematics_ibool                                      | 2763   | 5.00027  | 1       | base      | yes      |      | 552.57016     |
+| 67    | go             | 1        | bundgaard                                             | 2532   | 5.00008  | 1       | base      | yes      |      | 506.39159     |
+| 68    | cython         | 1        | rpkak                                                 | 2525   | 5.00175  | 1       | base      | yes      | 8    | 504.82376     |
+| 69    | csharp         | 1        | kinematics_bool                                       | 2432   | 5.00149  | 1       | base      | yes      |      | 486.25510     |
+| 70    | basic          | 1        | rbergen_8of30                                         | 2407   | 5.00100  | 1       | wheel     | yes      | 1    | 481.30374     |
+| 71    | assemblyscript | 1        | donmahallem                                           | 4584   | 10.00100 | 1       | base      | yes      |      | 458.35415     |
+| 72    | octave         | 1        | octave                                                | 2138   | 5.00196  | 1       | base      | no       |      | 427.43245     |
+| 73    | python         | 2        | ssovest                                               | 2042   | 5.00183  | 1       | base      | yes      | 8    | 408.25038     |
+| 74    | fsharp         | 1        | rbergen                                               | 1755   | 5.00131  | 1       | base      | yes      | 1    | 350.90822     |
+| 75    | csharp         | 1        | kinematics_standard                                   | 1667   | 5.00047  | 1       | base      | yes      | 1    | 333.36866     |
+| 76    | basic          | 2        | rbergen_vb                                            | 1591   | 5.00086  | 1       | base      | yes      | 1    | 318.14553     |
+| 77    | csharp         | 2        | davepl                                                | 2980   | 10.00120 | 1       | base      | yes      | 1    | 297.96424     |
+| 78    | scala          | 1        | rom1dep                                               | 1394   | 5.00100  | 1       | base      | yes      |      | 278.74425     |
+| 79    | csharp         | 1        | kinematics_original                                   | 1357   | 5.00328  | 1       | base      | yes      | 1    | 271.22208     |
+| 80    | cobol          | 1        | fvbakel_Cobol                                         | 1235   | 5.00000  | 1       | base      | no       | 8    | 247.00000     |
+| 81    | pascal         | 1        | rbergen                                               | 1177   | 5.00000  | 1       | base      | yes      |      | 235.40000     |
+| 82    | pony           | 1        | marghidanu                                            | 1138   | 5.00000  | 1       | base      | yes      | 1    | 227.60000     |
+| 83    | swift          | 1        | j-f1                                                  | 2233   | 10.00296 | 1       | base      | yes      |      | 223.23381     |
+| 84    | r              | 1        | fvbakel_R                                             | 831    | 5.00100  | 1       | base      | yes      | 32   | 166.16677     |
+| 85    | ada            | 1        | BoopBeepBoopBeep                                      | 752    | 5.00674  | 1       | base      | no       |      | 150.19746     |
+| 86    | basic          | 1        | rbergen_boolean                                       | 736    | 5.00600  | 1       | base      | yes      |      | 147.02357     |
+| 87    | haxe           | 1        | TayIorRobinson_Haxe_C++                               | 1397   | 10.00201 | 1       | base      | yes      |      | 139.67190     |
+| 88    | ocaml          | 2        | gkpotter-unfaithful                                   | 688    | 5.00218  | 1       | base      | no       |      | 137.54003     |
+| 89    | ocaml          | 1        | gkpotter-faithful                                     | 545    | 5.00152  | 1       | base      | yes      |      | 108.96683     |
+| 90    | julia          | 1        | dcbi                                                  | 537    | 5.00211  | 1       | base      | yes      | 1    | 107.35474     |
+| 91    | basic          | 1        | rbergen_bit32                                         | 475    | 5.00200  | 1       | base      | yes      | 1    | 94.96202      |
+| 92    | basic          | 1        | rbergen_bit64                                         | 461    | 5.00000  | 1       | base      | yes      | 1    | 92.20000      |
+| 93    | postscript     | 1        | epithet-ps                                            | 248    | 5.01500  | 1       | base      | no       | 8    | 49.45165      |
+| 94    | ruby           | 1        | rbergen                                               | 152    | 5.02500  | 1       | base      | yes      |      | 30.24876      |
+| 95    | wren           | 1        | marghidanu                                            | 119    | 5.01975  | 1       | base      | yes      |      | 23.70634      |
+| 96    | php            | 1        | DennisdeBest                                          | 213    | 10.04393 | 1       | base      | yes      |      | 21.20684      |
+| 97    | lisp           | 1        | mikehw                                                | 111    | 10.00666 | 1       | base      | no       | 1    | 11.09261      |
+| 98    | smalltalk      | 1        | fvbakel_smalltalk                                     | 53     | 5.05000  | 1       | base      | yes      | 1    | 10.49505      |
+| 99    | perl           | 1        | marghidanu                                            | 47     | 5.06580  | 1       | base      | yes      |      | 9.27790       |
+| 100   | mixal          | 1        | rbergen                                               | 30     | 3.66000  | 1       | base      | no       | 1    | 8.19672       |
+| 101   | haxe           | 1        | TayIorRobinson_Haxe_HaxeEval                          | 57     | 10.15326 | 1       | base      | yes      |      | 5.61396       |
+| 102   | python         | 1        | davepl                                                | 48     | 10.08296 | 1       | base      | yes      |      | 4.76051       |
+| 103   | sql            | 2        | fvbakel_MariaDB3                                      | 9      | 5.54700  | 1       | other     | no       | 32   | 1.62250       |
+| 104   | tcl            | 1        | fvbakeltcl                                            | 8      | 5.16700  | 1       | base      | yes      | 1    | 1.54829       |
+| 105   | powershell     | 2        | crowbar27_ps2                                         | 7      | 5.16513  | 1       | base      | yes      | 1    | 1.35524       |
+| 106   | sql            | 1        | fvbakel_sqlite                                        | 7      | 5.20352  | 1       | other     | no       | 8    | 1.34524       |
+| 107   | haxe           | 1        | TayIorRobinson_Haxe_Python                            | 13     | 10.49096 | 1       | base      | yes      |      | 1.23916       |
+| 108   | tcl            | 2        | fvbakel_ootcl                                         | 7      | 5.74000  | 1       | base      | yes      | 1    | 1.21951       |
+| 109   | sql            | 2        | fvbakel_MariaDB2                                      | 6      | 5.80400  | 1       | other     | no       | 32   | 1.03377       |
+| 110   | sql            | 2        | fvbakel_MariaDB1                                      | 1      | 5.93000  | 1       | base      | no       | 32   | 0.16863       |
+| 111   | latex          | 1        | tjol                                                  | 2      | 13.41066 | 1       | base      | no       | 32   | 0.14914       |
+| 112   | bash           | 1        | bash                                                  | 1      | 7.40178  | 1       | base      | no       |      | 0.13510       |
+| 113   | elixir         | 1        | cdesch                                                | 1      | 19.52600 | 1       | base      | no       |      | 0.05121       |
+| 114   | lua            | 1        | lua                                                   | 1      | 28.00000 | 1       | base      | no       | 64   | 0.03571       |
+| 115   | powershell     | 1        | crowbar27_ps1                                         | 1      | 53.05450 | 1       | base      | yes      | 1    | 0.01885       |
 
 ### Multi-threaded
 
 | Index | Implementation | Solution | Label                                                             | Passes | Duration | Threads | Algorithm | Faithful | Bits | Passes/Second |
 | ----- | -------------- | -------- | ----------------------------------------------------------------- | ------ | -------- | ------- | --------- | -------- | ---- | ------------- |
-| 1     | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u8-5760of30030  | 379918 | 5.00020  | 32      | wheel     | yes      | 1    | 2374.39252    |
-| 2     | cpp            | 3        | flo80_constexpr                                                   | 367328 | 5.00010  | 32      | base      | no       | 1    | 2295.75454    |
-| 3     | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u8-480of2310    | 349231 | 5.00036  | 32      | wheel     | yes      | 1    | 2182.53661    |
-| 4     | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u64-480of2310   | 341622 | 5.00003  | 32      | wheel     | yes      | 1    | 2135.12469    |
-| 5     | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u64-5760of30030 | 325192 | 5.00026  | 32      | wheel     | yes      | 1    | 2032.34432    |
-| 6     | c              | 2        | danielspaangberg_5760of30030_par                                  | 29870  | 5.00011  | 4       | wheel     | yes      | 1    | 1493.46834    |
-| 7     | c              | 2        | danielspaangberg_480of2310_par                                    | 29067  | 5.00012  | 4       | wheel     | yes      | 1    | 1453.31541    |
-| 8     | c              | 2        | danielspaangberg_48of210_par                                      | 27570  | 5.00015  | 4       | wheel     | yes      | 1    | 1378.45782    |
-| 9     | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-sieve-u8                 | 203789 | 5.00033  | 32      | base      | yes      | 8    | 1273.59719    |
-| 10    | rust           | 1        | mike-barber_byte-storage                                          | 202672 | 5.00084  | 32      | base      | yes      | 8    | 1266.48827    |
-| 11    | c              | 2        | danielspaangberg_8of30_par                                        | 25008  | 5.00012  | 4       | wheel     | yes      | 1    | 1250.36874    |
-| 12    | c              | 2        | danielspaangberg_5760of30030_epar                                 | 200042 | 5.00547  | 32      | wheel     | yes      | 1    | 1248.89596    |
-| 13    | c              | 2        | danielspaangberg_480of2310_epar                                   | 177743 | 5.00904  | 32      | wheel     | yes      | 1    | 1108.88976    |
-| 14    | rust           | 1        | mike-barber_bit-storage-rotate                                    | 167167 | 5.00104  | 32      | base      | yes      | 1    | 1044.57628    |
-| 15    | rust           | 1        | mike-barber_bit-storage                                           | 163797 | 5.00095  | 32      | base      | yes      | 1    | 1023.53729    |
-| 16    | c              | 2        | danielspaangberg_48of210_epar                                     | 163730 | 5.00656  | 32      | wheel     | yes      | 1    | 1021.97106    |
-| 17    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u8              | 162733 | 5.00060  | 32      | base      | yes      | 1    | 1016.95921    |
-| 18    | c              | 2        | danielspaangberg_1of2_par                                         | 20291  | 5.00015  | 4       | base      | yes      | 1    | 1014.51977    |
-| 19    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u64             | 156600 | 5.00053  | 32      | base      | yes      | 1    | 978.64626     |
-| 20    | c              | 2        | danielspaangberg_1of2_epar                                        | 144596 | 5.01536  | 32      | base      | yes      | 1    | 900.95744     |
-| 21    | c              | 2        | danielspaangberg_8of30_epar                                       | 133367 | 5.01430  | 32      | wheel     | yes      | 1    | 831.16661     |
-| 22    | cpp            | 2        | davepl_par                                                        | 107296 | 5.00125  | 32      | base      | yes      | 1    | 670.43239     |
-| 23    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-amdahl-sieve-u8                    | 10132  | 5.00010  | 32      | base      | yes      | 8    | 63.32373      |
-| 24    | csharp         | 1        | kinematics_rawp                                                   | 3365   | 5.00128  | 32      | base      | yes      | 1    | 21.02587      |
-| 25    | csharp         | 1        | kinematics_pool6p                                                 | 3308   | 5.00150  | 32      | wheel     | yes      | 1    | 20.66880      |
+| 1     | cpp            | 3        | flo80_constexpr                                                   | 421984 | 5.00027  | 32      | base      | no       | 1    | 2637.25864    |
+| 2     | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u8-5760of30030  | 383430 | 5.00003  | 32      | wheel     | yes      | 1    | 2396.42312    |
+| 3     | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u8-480of2310    | 356075 | 5.00045  | 32      | wheel     | yes      | 1    | 2225.26848    |
+| 4     | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u64-480of2310   | 345499 | 5.00030  | 32      | wheel     | yes      | 1    | 2159.23920    |
+| 5     | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u64-5760of30030 | 327690 | 5.00033  | 32      | wheel     | yes      | 1    | 2047.92734    |
+| 6     | c              | 2        | danielspaangberg_5760of30030_par                                  | 28963  | 5.00016  | 4       | wheel     | yes      | 1    | 1448.10250    |
+| 7     | c              | 2        | danielspaangberg_480of2310_par                                    | 27965  | 5.00001  | 4       | wheel     | yes      | 1    | 1398.24692    |
+| 8     | c              | 2        | danielspaangberg_8of30_par                                        | 27419  | 5.00000  | 4       | wheel     | yes      | 1    | 1370.94890    |
+| 9     | c              | 2        | danielspaangberg_48of210_par                                      | 26684  | 5.00012  | 4       | wheel     | yes      | 1    | 1334.16851    |
+| 10    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-sieve-u8                 | 207830 | 5.00078  | 32      | base      | yes      | 8    | 1298.73490    |
+| 11    | rust           | 1        | mike-barber_byte-storage                                          | 206468 | 5.00073  | 32      | base      | yes      | 8    | 1290.23723    |
+| 12    | c              | 2        | danielspaangberg_5760of30030_epar                                 | 174460 | 5.01108  | 32      | wheel     | yes      | 1    | 1087.96342    |
+| 13    | rust           | 1        | mike-barber_bit-storage-rotate                                    | 166758 | 5.00106  | 32      | base      | yes      | 1    | 1042.01719    |
+| 14    | c              | 2        | danielspaangberg_1of2_par                                         | 20751  | 5.00003  | 4       | base      | yes      | 1    | 1037.54315    |
+| 15    | rust           | 1        | mike-barber_bit-storage                                           | 162583 | 5.00089  | 32      | base      | yes      | 1    | 1015.96237    |
+| 16    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u8              | 160350 | 5.00018  | 32      | base      | yes      | 1    | 1002.15142    |
+| 17    | c              | 2        | danielspaangberg_480of2310_epar                                   | 159935 | 5.01328  | 32      | wheel     | yes      | 1    | 996.94686     |
+| 18    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u64             | 155101 | 5.00027  | 32      | base      | yes      | 1    | 969.32891     |
+| 19    | c              | 2        | danielspaangberg_48of210_epar                                     | 145712 | 5.01702  | 32      | wheel     | yes      | 1    | 907.61067     |
+| 20    | c              | 2        | danielspaangberg_1of2_epar                                        | 131028 | 5.01615  | 32      | base      | yes      | 1    | 816.28823     |
+| 21    | c              | 2        | danielspaangberg_8of30_epar                                       | 119800 | 5.01452  | 32      | wheel     | yes      | 1    | 746.58133     |
+| 22    | cpp            | 2        | davepl_par                                                        | 91936  | 5.00045  | 32      | base      | yes      | 1    | 574.54829     |
+| 23    | d              | 2        | BradleyChatha-Multi                                               | 79169  | 5.00186  | 32      | base      | yes      | 1    | 494.62225     |
+| 24    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-amdahl-sieve-u8                    | 10560  | 5.00004  | 32      | base      | yes      | 8    | 65.99947      |
+| 25    | csharp         | 1        | kinematics_rawp                                                   | 3480   | 5.00043  | 32      | base      | yes      | 1    | 21.74813      |
+| 26    | csharp         | 1        | kinematics_pool6p                                                 | 3412   | 5.00033  | 32      | wheel     | yes      | 1    | 21.32359      |
