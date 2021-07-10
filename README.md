@@ -1,6 +1,6 @@
 # PrimesResult
 
-The results of the [Dave Plummer's Primes Drag Race](https://github.com/PlummersSoftwareLLC/Primes).
+The results of the [David Plummer's Primes Drag Race](https://github.com/PlummersSoftwareLLC/Primes).
 
 ## Results
 
@@ -46,7 +46,6 @@ Generated at 2021-07-10 on a Ryzen 9 5950X with 32GB RAM.
 | tcl            | 3443.5     | 35       | 104   | 1        | fvbakeltcl                                           | 8      | 5.10300  | 1       | base      | 1    | 1.56771       |
 | powershell     | 4021.5     | 36       | 106   | 2        | crowbar27_ps2                                        | 7      | 5.21470  | 1       | base      | 1    | 1.34236       |
 | prolog         | 3.3416e+04 | 37       | 111   | 1        | jimbxb_prolog                                        | 1      | 6.19000  | 1       | base      | 1    | 0.16155       |
-| powershell     | 2.8442e+05 | 38       | 116   | 1        | crowbar27_ps1                                        | 1      | 52.67450 | 1       | base      | 1    | 0.01898       |
 
 ### Single-threaded
 
