@@ -4,7 +4,7 @@ The results of the [David Plummer's Primes Drag Race](https://github.com/Plummer
 
 ## Results
 
-Generated at 2021-07-29 on a Ryzen 9 5950X with 32GB RAM.
+Generated at 2021-07-30 on a Ryzen 9 5950X with 32GB RAM.
 
 ### Best faithful performers for each language
 
