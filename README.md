@@ -4,436 +4,437 @@ The results of the [David Plummer's Primes Drag Race](https://github.com/Plummer
 
 ## Results
 
-Generated at 2021-09-12 on a Ryzen 9 5950X with 32GB RAM.
+Generated at 2021-09-15 on a Ryzen 9 5950X with 32GB RAM.
 
 ### Best faithful performers for each language
 
-| Implementation | Slowness   | Position | Index | Solution | Label                                                 | Passes | Duration | Threads | Algorithm | Faithful | Bits | Passes/Second |
-| -------------- | ---------- | -------- | ----- | -------- | ----------------------------------------------------- | ------ | -------- | ------- | --------- | -------- | ---- | ------------- |
-| rust           | 1          | 1        | 6     | 1        | mike-barber_bit-unrolled-hybrid                       | 65997  | 5.00004  | 1       | base      | yes      | 1    | 13199.29552   |
-| nim            | 1.0672     | 2        | 7     | 3        | GordonBGood_extreme_hybrid                            | 61844  | 5.00003  | 1       | base      | yes      | 1    | 12368.72956   |
-| crystal        | 1.2782     | 3        | 8     | 2        | GordonBGood_extreme-hybrid                            | 51633  | 5.00007  | 1       | base      | yes      | 1    | 10326.46576   |
-| chapel         | 1.4356     | 4        | 9     | 1        | GordonBGood_unrolled_hybrid                           | 45971  | 5.00003  | 1       | base      | yes      | 1    | 9194.14484    |
-| v              | 1.4646     | 5        | 10    | 2        | GordonBGood_extreme-hybrid                            | 45062  | 5.00005  | 1       | base      | yes      | 1    | 9012.31168    |
-| c              | 1.4905     | 6        | 11    | 3        | fvbakel_Cwords                                        | 44279  | 5.00000  | 1       | other     | yes      | 1    | 8855.79292    |
-| cython         | 1.5865     | 7        | 12    | 1        | ssovest-cy                                            | 41598  | 5.00006  | 1       | other     | yes      | 1    | 8319.50849    |
-| cpp            | 2.1590     | 8        | 14    | 4        | BlackMark-5760of30030-os-hs-inv_vec<u8>-gcc           | 30569  | 5.00010  | 1       | wheel     | yes      | 8    | 6113.67773    |
-| zig            | 2.4313     | 9        | 20    | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u64-5760of30030 | 27145  | 5.00011  | 1       | wheel     | yes      | 1    | 5428.88056    |
-| go             | 2.6729     | 10       | 30    | 2        | ssovest-go-other-u64                                  | 24697  | 5.00124  | 1       | other     | yes      | 1    | 4938.17250    |
-| julia          | 2.8110     | 11       | 33    | 4        | GordonBGood_unpeeled                                  | 23479  | 5.00018  | 1       | base      | yes      | 1    | 4695.62647    |
-| csharp         | 2.8550     | 12       | 36    | 4        | italytoast-stride8-blocks32k                          | 23117  | 5.00012  | 1       | base      | yes      | 1    | 4623.28904    |
-| amd64          | 3.2689     | 13       | 47    | 1        | dacvs8                                                | 20189  | 5.00000  | 1       | base      | yes      | 8    | 4037.79919    |
-| lisp           | 3.3109     | 14       | 51    | 2        | mayerrobert-cl-words                                  | 19933  | 5.00001  | 1       | other     | yes      | 1    | 3986.59043    |
-| fortran        | 3.4027     | 15       | 54    | 2        | tjol-8bit                                             | 19396  | 5.00012  | 1       | base      | yes      | 8    | 3879.10789    |
-| haskell        | 3.4281     | 16       | 56    | 2        | GordonBGood_unpeeled_block                            | 19252  | 5.00007  | 1       | base      | yes      | 1    | 3850.34538    |
-| fsharp         | 3.7003     | 17       | 58    | 4        | GordonBGood_unpeeled                                  | 17836  | 5.00014  | 1       | base      | yes      | 1    | 3567.10155    |
-| java           | 3.7997     | 18       | 63    | 4        | chrvanorleStrided32Blocks16k                          | 17369  | 5.00000  | 1       | base      | yes      | 1    | 3473.80000    |
-| swift          | 3.8746     | 19       | 65    | 1        | yellowcub_striped_UInt8                               | 17034  | 5.00026  | 1       | base      | yes      | 1    | 3406.62148    |
-| assemblyscript | 3.9396     | 20       | 66    | 2        | maxgraey_unrolled                                     | 16752  | 5.00000  | 1       | base      | yes      | 1    | 3350.40000    |
-| assembly       | 4.6641     | 21       | 81    | 1        | rbergen_x64ff_byte                                    | 14150  | 5.00000  | 1       | base      | yes      | 8    | 2830.00000    |
-| odin           | 4.7432     | 22       | 82    | 1        | odin_byte_moe                                         | 13914  | 5.00000  | 1       | base      | yes      | 8    | 2782.80000    |
-| nodejs         | 6.1245     | 23       | 108   | 1        | rogiervandam_memcopy                                  | 10776  | 5.00007  | 1       | other     | yes      | 1    | 2155.17003    |
-| clojure        | 6.1381     | 24       | 109   | 2        | axvr_clj-sln-2_8-bit                                  | 10753  | 5.00052  | 1       | base      | yes      | 8    | 2150.37711    |
-| scala          | 6.2196     | 25       | 111   | 2        | scilari                                               | 10611  | 5.00000  | 1       | base      | yes      |      | 2122.20000    |
-| kotlin         | 6.5558     | 26       | 117   | 1        | jvm_kotlin_idiomatic_fast_single                      | 10081  | 5.00700  | 1       | base      | yes      |      | 2013.38127    |
-| rexx           | 7.1042     | 27       | 126   | 2        | joss_NetRexx                                          | 9290   | 5.00012  | 1       | base      | yes      | 8    | 1857.95467    |
-| dart           | 9.1110     | 28       | 141   | 1        | eagerestwolf&mmcdon20_8bit                            | 7244   | 5.00025  | 1       | base      | yes      | 8    | 1448.72640    |
-| typescript     | 9.8078     | 29       | 148   | 2        | mikevdbokke_8bit-array                                | 6729   | 5.00000  | 1       | base      | yes      | 1    | 1345.80000    |
-| basic          | 10.525     | 30       | 150   | 3        | Nukepayload2_ArrayPool8of30M                          | 6271   | 5.00028  | 1       | wheel     | yes      | 1    | 1254.12879    |
-| umple          | 15.199     | 31       | 168   | 1        | mmcdon20_umple                                        | 4343   | 5.00100  | 1       | base      | yes      | 1    | 868.42631     |
-| d              | 20.471     | 32       | 172   | 2        | BradleyChatha-Single-SieveRTB1_32                     | 3224   | 5.00008  | 1       | base      | yes      | 1    | 644.78968     |
-| pascal         | 21.455     | 33       | 176   | 3        | olivierbrun-1-threads                                 | 3076   | 5.00000  | 1       | base      | yes      | 1    | 615.20000     |
-| python         | 26.546     | 34       | 188   | 2        | ssovest                                               | 2487   | 5.00183  | 1       | base      | yes      | 8    | 497.21805     |
-| standardml     | 37.035     | 35       | 197   | 1        | NotMatthewGriffin_SML                                 | 1782   | 5.00000  | 1       | base      | yes      | 1    | 356.40000     |
-| lean4          | 48.556     | 36       | 202   | 1        | badly-drawn-wizards                                   | 1360   | 5.00300  | 1       | base      | yes      | 8    | 271.83690     |
-| pony           | 60.381     | 37       | 208   | 1        | marghidanu                                            | 1093   | 5.00000  | 1       | base      | yes      | 1    | 218.60000     |
-| r              | 66.301     | 38       | 209   | 1        | fvbakel_R                                             | 996    | 5.00300  | 1       | base      | yes      | 32   | 199.08055     |
-| haxe           | 93.080     | 39       | 211   | 1        | TayIorRobinson_Haxe_C++                               | 710    | 5.00686  | 1       | base      | yes      |      | 141.80550     |
-| scheme         | 103.00     | 40       | 214   | 1        | William103                                            | 641    | 5.00194  | 1       | base      | yes      | 1    | 128.15031     |
-| octave         | 108.52     | 41       | 215   | 2        | Brandon-Johns_8bit                                    | 609    | 5.00680  | 1       | base      | yes      | 8    | 121.63465     |
-| ocaml          | 115.08     | 42       | 216   | 1        | gkpotter-faithful                                     | 574    | 5.00436  | 1       | base      | yes      |      | 114.70005     |
-| php            | 158.45     | 43       | 220   | 1        | DennisdeBest                                          | 418    | 5.01788  | 1       | base      | yes      |      | 83.30206      |
-| perl           | 171.31     | 44       | 221   | 2        | kjetillll                                             | 386    | 5.00992  | 1       | base      | yes      |      | 77.04715      |
-| groovy         | 189.80     | 45       | 222   | 1        | mmcdon20_groovy                                       | 348    | 5.00400  | 1       | base      | yes      | 1    | 69.54436      |
-| ballerina      | 366.65     | 46       | 228   | 1        | da-strange-boi                                        | 180    | 5.00000  | 1       | base      | yes      | 1    | 36.00000      |
-| gdscript       | 387.70     | 47       | 229   | 1        | OrigamiDev-Pete                                       | 177    | 5.19900  | 1       | base      | yes      | 8    | 34.04501      |
-| ruby           | 425.68     | 48       | 230   | 1        | rbergen                                               | 156    | 5.03100  | 1       | base      | yes      |      | 31.00775      |
-| wren           | 549.01     | 49       | 231   | 1        | marghidanu                                            | 121    | 5.03282  | 1       | base      | yes      |      | 24.04220      |
-| hack           | 646.77     | 50       | 233   | 1        | da-strange-boi                                        | 103    | 5.04700  | 1       | base      | yes      |      | 20.40816      |
-| kos            | 734.94     | 51       | 234   | 1        | cdragan                                               | 90     | 5.01123  | 1       | base      | yes      | 8    | 17.95966      |
-| lua            | 970.54     | 52       | 236   | 1        | lua                                                   | 68     | 5.00000  | 1       | base      | yes      | 64   | 13.60000      |
-| elixir         | 1108.3     | 53       | 238   | 2        | thomas9911                                            | 62     | 5.20600  | 1       | base      | yes      | 1    | 11.90934      |
-| smalltalk      | 1257.9     | 54       | 241   | 1        | fvbakel_smalltalk                                     | 53     | 5.05100  | 1       | base      | yes      | 1    | 10.49297      |
-| tcl            | 1461.1     | 55       | 242   | 2        | fvbakel_ootcl2                                        | 46     | 5.09200  | 1       | base      | yes      | 32   | 9.03378       |
-| powershell     | 1625.3     | 56       | 244   | 3        | RobCannon_ps3                                         | 41     | 5.04849  | 1       | base      | yes      | 1    | 8.12124       |
-| emojicode      | 2639.9     | 57       | 248   | 1        | marghidanu                                            | 25     | 5.00000  | 1       | base      | yes      |      | 5.00000       |
-| raku           | 8276.3     | 58       | 251   | 1        | draco1006                                             | 8      | 5.01616  | 1       | base      | yes      |      | 1.59484       |
-| red            | 1.0518e+04 | 59       | 255   | 1        | mmcdon20_red                                          | 7      | 5.57829  | 1       | base      | yes      | 1    | 1.25487       |
-| idl            | 2.0184e+04 | 60       | 261   | 1        | kriztioan_1bit                                        | 4      | 6.11656  | 1       | base      | yes      | 1    | 0.65396       |
-| yoix           | 6.3409e+04 | 61       | 264   | 1        | mmcdon20_yoix                                         | 2      | 9.60800  | 1       | base      | yes      | 1    | 0.20816       |
-| prolog         | 8.3382e+04 | 62       | 266   | 1        | jimbxb-prolog-basic                                   | 1      | 6.31700  | 1       | base      | yes      | 1    | 0.15830       |
+| Implementation | Slowness   | Position | Index | Solution | Label                                         | Passes | Duration | Threads | Algorithm | Faithful | Bits | Passes/Second |
+| -------------- | ---------- | -------- | ----- | -------- | --------------------------------------------- | ------ | -------- | ------- | --------- | -------- | ---- | ------------- |
+| rust           | 1          | 1        | 6     | 1        | mike-barber_bit-unrolled-hybrid               | 65063  | 5.00003  | 1       | base      | yes      | 1    | 13012.51313   |
+| nim            | 1.0559     | 2        | 7     | 3        | GordonBGood_extreme_hybrid                    | 61620  | 5.00003  | 1       | base      | yes      | 1    | 12323.91479   |
+| crystal        | 1.2678     | 3        | 8     | 2        | GordonBGood_extreme-hybrid                    | 51319  | 5.00009  | 1       | base      | yes      | 1    | 10263.62347   |
+| chapel         | 1.4183     | 4        | 9     | 1        | GordonBGood_unrolled_hybrid                   | 45875  | 5.00005  | 1       | base      | yes      | 1    | 9174.90825    |
+| v              | 1.4378     | 5        | 10    | 2        | GordonBGood_extreme-hybrid                    | 45253  | 5.00008  | 1       | base      | yes      | 1    | 9050.45157    |
+| c              | 1.4850     | 6        | 11    | 3        | fvbakel_Cwords                                | 43813  | 5.00003  | 1       | other     | yes      | 1    | 8762.54217    |
+| cython         | 1.5193     | 7        | 12    | 1        | ssovest-cy                                    | 42825  | 5.00009  | 1       | other     | yes      | 1    | 8564.84755    |
+| zig            | 1.5309     | 8        | 13    | 3        | ManDeJan&ityonemo&SpexGuy-zig-single-vecSieve | 42501  | 5.00007  | 1       | other     | yes      | 1    | 8500.08100    |
+| cpp            | 2.1575     | 9        | 15    | 4        | BlackMark-5760of30030-os-hs-inv_vec<u8>-gcc   | 30156  | 5.00002  | 1       | wheel     | yes      | 8    | 6031.17588    |
+| go             | 2.6918     | 10       | 30    | 2        | ssovest-go-other-u64                          | 24176  | 5.00106  | 1       | other     | yes      | 1    | 4834.17211    |
+| julia          | 2.7158     | 11       | 31    | 4        | GordonBGood_unpeeled                          | 23958  | 5.00015  | 1       | base      | yes      | 1    | 4791.45423    |
+| csharp         | 2.9353     | 12       | 36    | 4        | italytoast-stride8-blocks32k                  | 22166  | 5.00003  | 1       | base      | yes      | 1    | 4433.17340    |
+| lisp           | 3.2744     | 13       | 45    | 2        | mayerrobert-cl-words                          | 19870  | 5.00001  | 1       | other     | yes      | 1    | 3973.99046    |
+| haskell        | 3.2850     | 14       | 47    | 2        | GordonBGood_unpeeled_block                    | 19807  | 5.00020  | 1       | base      | yes      | 1    | 3961.23798    |
+| amd64          | 3.3979     | 15       | 51    | 1        | dacvs8                                        | 19149  | 5.00025  | 1       | base      | yes      | 8    | 3829.61158    |
+| fortran        | 3.4505     | 16       | 57    | 2        | tjol-8bit                                     | 18856  | 5.00006  | 1       | base      | yes      | 8    | 3771.15180    |
+| fsharp         | 3.6987     | 17       | 63    | 4        | GordonBGood_unpeeled                          | 17591  | 5.00010  | 1       | base      | yes      | 1    | 3518.12893    |
+| java           | 3.7362     | 18       | 64    | 4        | chrvanorleStrided32Blocks16k                  | 17414  | 5.00000  | 1       | base      | yes      | 1    | 3482.80000    |
+| swift          | 3.7692     | 19       | 65    | 1        | yellowcub_striped_UInt8                       | 17262  | 5.00016  | 1       | base      | yes      | 1    | 3452.29094    |
+| assemblyscript | 3.9501     | 20       | 71    | 2        | maxgraey_unrolled                             | 16471  | 5.00000  | 1       | base      | yes      | 1    | 3294.20000    |
+| odin           | 4.6098     | 21       | 81    | 1        | odin_byte_moe                                 | 14114  | 5.00000  | 1       | base      | yes      | 8    | 2822.80000    |
+| assembly       | 4.7225     | 22       | 84    | 1        | rbergen_x64ff_byte                            | 13777  | 5.00000  | 1       | base      | yes      | 8    | 2755.40000    |
+| scala          | 6.0071     | 23       | 107   | 2        | scilari                                       | 10831  | 5.00000  | 1       | base      | yes      |      | 2166.20000    |
+| nodejs         | 6.0928     | 24       | 108   | 1        | rogiervandam_memcopy                          | 10679  | 5.00020  | 1       | other     | yes      | 1    | 2135.71521    |
+| clojure        | 6.1640     | 25       | 110   | 2        | axvr_clj-sln-2_8-bit                          | 10556  | 5.00036  | 1       | base      | yes      | 8    | 2111.04864    |
+| kotlin         | 6.5232     | 26       | 120   | 1        | jvm_kotlin_idiomatic_fast_single              | 9988   | 5.00700  | 1       | base      | yes      |      | 1994.80727    |
+| rexx           | 7.1954     | 27       | 127   | 2        | joss_NetRexx                                  | 9043   | 5.00039  | 1       | base      | yes      | 8    | 1808.45822    |
+| dart           | 9.0944     | 28       | 141   | 1        | eagerestwolf&mmcdon20_8bit                    | 7155   | 5.00060  | 1       | base      | yes      | 8    | 1430.82916    |
+| typescript     | 9.7721     | 29       | 146   | 2        | mikevdbokke_8bit-array                        | 6658   | 5.00000  | 1       | base      | yes      | 1    | 1331.60000    |
+| basic          | 10.417     | 30       | 148   | 3        | Nukepayload2_ArrayPool8of30M                  | 6246   | 5.00036  | 1       | wheel     | yes      | 1    | 1249.10981    |
+| umple          | 14.875     | 31       | 166   | 1        | mmcdon20_umple                                | 4374   | 5.00000  | 1       | base      | yes      | 1    | 874.80000     |
+| d              | 20.376     | 32       | 171   | 2        | BradleyChatha-Single-SieveRTB1_32             | 3194   | 5.00132  | 1       | base      | yes      | 1    | 638.63140     |
+| pascal         | 21.385     | 33       | 175   | 3        | olivierbrun-1-threads                         | 3043   | 5.00100  | 1       | base      | yes      | 1    | 608.47830     |
+| python         | 25.870     | 34       | 187   | 2        | ssovest                                       | 2515   | 5.00005  | 1       | base      | yes      | 8    | 502.99507     |
+| standardml     | 37.009     | 35       | 197   | 1        | NotMatthewGriffin_SML                         | 1758   | 5.00000  | 1       | base      | yes      | 1    | 351.60000     |
+| lean4          | 49.347     | 36       | 201   | 1        | badly-drawn-wizards                           | 1319   | 5.00200  | 1       | base      | yes      | 8    | 263.69452     |
+| pony           | 50.950     | 37       | 202   | 1        | marghidanu                                    | 1277   | 5.00000  | 1       | base      | yes      | 1    | 255.40000     |
+| r              | 67.646     | 38       | 208   | 1        | fvbakel_R                                     | 962    | 5.00100  | 1       | base      | yes      | 32   | 192.36153     |
+| haxe           | 91.711     | 39       | 210   | 1        | TayIorRobinson_Haxe_C++                       | 710    | 5.00403  | 1       | base      | yes      |      | 141.88561     |
+| scheme         | 106.48     | 40       | 213   | 1        | William103                                    | 612    | 5.00797  | 1       | base      | yes      | 1    | 122.20529     |
+| octave         | 107.96     | 41       | 214   | 2        | Brandon-Johns_8bit                            | 603    | 5.00292  | 1       | base      | yes      | 8    | 120.52961     |
+| ocaml          | 116.51     | 42       | 215   | 1        | gkpotter-faithful                             | 559    | 5.00495  | 1       | base      | yes      |      | 111.68952     |
+| php            | 156.74     | 43       | 219   | 1        | DennisdeBest                                  | 417    | 5.02290  | 1       | base      | yes      |      | 83.01985      |
+| perl           | 166.51     | 44       | 220   | 2        | kjetillll                                     | 391    | 5.00333  | 1       | base      | yes      |      | 78.14802      |
+| groovy         | 196.01     | 45       | 222   | 1        | mmcdon20_groovy                               | 332    | 5.00100  | 1       | base      | yes      | 1    | 66.38672      |
+| gdscript       | 386.88     | 46       | 227   | 1        | OrigamiDev-Pete                               | 175    | 5.20300  | 1       | base      | yes      | 8    | 33.63444      |
+| ballerina      | 406.64     | 47       | 228   | 1        | da-strange-boi                                | 160    | 5.00000  | 1       | base      | yes      | 1    | 32.00000      |
+| ruby           | 420.43     | 48       | 229   | 1        | rbergen                                       | 155    | 5.00800  | 1       | base      | yes      |      | 30.95048      |
+| wren           | 543.48     | 49       | 230   | 1        | marghidanu                                    | 120    | 5.01192  | 1       | base      | yes      |      | 23.94292      |
+| hack           | 647.66     | 50       | 232   | 1        | da-strange-boi                                | 101    | 5.02700  | 1       | base      | yes      |      | 20.09151      |
+| kos            | 739.58     | 51       | 233   | 1        | cdragan                                       | 88     | 5.00155  | 1       | base      | yes      | 8    | 17.59456      |
+| lua            | 1161.8     | 52       | 238   | 1        | lua                                           | 56     | 5.00000  | 1       | base      | yes      | 64   | 11.20000      |
+| smalltalk      | 1250.9     | 53       | 239   | 1        | fvbakel_smalltalk                             | 53     | 5.09500  | 1       | base      | yes      | 1    | 10.40236      |
+| elixir         | 1456.9     | 54       | 240   | 2        | thomas9911                                    | 49     | 5.48600  | 1       | base      | yes      | 1    | 8.93183       |
+| tcl            | 1491.7     | 55       | 241   | 2        | fvbakel_ootcl2                                | 44     | 5.04400  | 1       | base      | yes      | 32   | 8.72324       |
+| powershell     | 1601.2     | 56       | 243   | 3        | RobCannon_ps3                                 | 41     | 5.04519  | 1       | base      | yes      | 1    | 8.12655       |
+| emojicode      | 2710.9     | 57       | 247   | 1        | marghidanu                                    | 24     | 5.00000  | 1       | base      | yes      |      | 4.80000       |
+| raku           | 8264.0     | 58       | 251   | 1        | draco1006                                     | 8      | 5.08064  | 1       | base      | yes      |      | 1.57460       |
+| red            | 1.0066e+04 | 59       | 253   | 1        | mmcdon20_red                                  | 7      | 5.41471  | 1       | base      | yes      | 1    | 1.29278       |
+| idl            | 2.0075e+04 | 60       | 260   | 1        | kriztioan_1bit                                | 4      | 6.17104  | 1       | base      | yes      | 1    | 0.64819       |
+| yoix           | 6.3214e+04 | 61       | 263   | 1        | mmcdon20_yoix                                 | 2      | 9.71600  | 1       | base      | yes      | 1    | 0.20585       |
+| prolog         | 8.2940e+04 | 62       | 266   | 1        | jimbxb-prolog-basic                           | 1      | 6.37400  | 1       | base      | yes      | 1    | 0.15689       |
 
 ### Single-threaded
 
-| Index | Implementation | Solution | Label                                                 | Passes    | Duration  | Threads | Algorithm | Faithful | Bits | Passes/Second  |
-| ----- | -------------- | -------- | ----------------------------------------------------- | --------- | --------- | ------- | --------- | -------- | ---- | -------------- |
-| 1     | lisp           | 2        | mayerrobert-cl-hashdot                                | 453691544 | 5.00001   | 1       | base      | no       | 1    | 90738091.02858 |
-| 2     | cpp            | 3        | flo80_pol_constexpr                                   | 233001419 | 5.00001   | 1       | base      | no       | 1    | 46600227.87973 |
-| 3     | cpp            | 4        | BlackMark-pregenerated-inv_bits<u32>-clang            | 2464201   | 5.00000   | 1       | base      | no       | 1    | 492840.20000   |
-| 4     | cpp            | 4        | BlackMark-pregenerated-inv_bits<u32>-gcc              | 1302899   | 5.00000   | 1       | base      | no       | 1    | 260579.80000   |
-| 5     | rust           | 6        | SycrationSinglethreaded                               | 287912    | 5.00000   | 1       | base      | no       |      | 57582.34731    |
-| 6     | rust           | 1        | mike-barber_bit-unrolled-hybrid                       | 65997     | 5.00004   | 1       | base      | yes      | 1    | 13199.29552    |
-| 7     | nim            | 3        | GordonBGood_extreme_hybrid                            | 61844     | 5.00003   | 1       | base      | yes      | 1    | 12368.72956    |
-| 8     | crystal        | 2        | GordonBGood_extreme-hybrid                            | 51633     | 5.00007   | 1       | base      | yes      | 1    | 10326.46576    |
-| 9     | chapel         | 1        | GordonBGood_unrolled_hybrid                           | 45971     | 5.00003   | 1       | base      | yes      | 1    | 9194.14484     |
-| 10    | v              | 2        | GordonBGood_extreme-hybrid                            | 45062     | 5.00005   | 1       | base      | yes      | 1    | 9012.31168     |
-| 11    | c              | 3        | fvbakel_Cwords                                        | 44279     | 5.00000   | 1       | other     | yes      | 1    | 8855.79292     |
-| 12    | cython         | 1        | ssovest-cy                                            | 41598     | 5.00006   | 1       | other     | yes      | 1    | 8319.50849     |
-| 13    | rust           | 1        | mike-barber_bit-striped-hybrid-blocks16k              | 31363     | 5.00012   | 1       | base      | yes      | 1    | 6272.44985     |
-| 14    | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_vec<u8>-gcc           | 30569     | 5.00010   | 1       | wheel     | yes      | 8    | 6113.67773     |
-| 15    | mixed          | 1        | ssovest-cgo                                           | 29620     | 5.00034   | 1       | other     | no       | 1    | 5923.59897     |
-| 16    | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_bits<u32>-gcc         | 29377     | 5.00014   | 1       | wheel     | yes      | 1    | 5875.23549     |
-| 17    | rust           | 1        | mike-barber_bit-striped-hybrid-blocks4k               | 29232     | 5.00005   | 1       | base      | yes      | 1    | 5846.33978     |
-| 18    | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_bits<u32>-clang       | 28441     | 5.00010   | 1       | wheel     | yes      | 1    | 5688.08624     |
-| 19    | cpp            | 4        | BlackMark-5760of30030-os-hs-maskedbits<u32>-clang     | 28202     | 5.00000   | 1       | wheel     | yes      | 1    | 5640.40000     |
-| 20    | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u64-5760of30030 | 27145     | 5.00011   | 1       | wheel     | yes      | 1    | 5428.88056     |
-| 21    | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u8-5760of30030  | 26543     | 5.00006   | 1       | wheel     | yes      | 1    | 5308.53630     |
-| 22    | crystal        | 2        | GordonBGood_extreme                                   | 26335     | 5.00014   | 1       | base      | yes      | 1    | 5266.85253     |
-| 23    | c              | 2        | danielspaangberg_48of210                              | 26003     | 5.00009   | 1       | wheel     | yes      | 1    | 5200.50743     |
-| 24    | rust           | 1        | mike-barber_bit-striped-blocks16k                     | 25844     | 5.00002   | 1       | base      | yes      | 1    | 5168.78176     |
-| 25    | cpp            | 4        | BlackMark-5760of30030-os-hs-maskedbits<u32>-gcc       | 25831     | 5.00000   | 1       | wheel     | yes      | 1    | 5166.20000     |
-| 26    | v              | 2        | GordonBGood_extreme                                   | 25812     | 5.00012   | 1       | base      | yes      | 1    | 5162.27404     |
-| 27    | rust           | 1        | mike-barber_bit-striped-blocks4k                      | 25033     | 5.00002   | 1       | base      | yes      | 1    | 5006.57804     |
-| 28    | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u8-480of2310    | 24917     | 5.00004   | 1       | wheel     | yes      | 1    | 4983.36013     |
-| 29    | c              | 4        | merriam                                               | 24889     | 5.00000   | 1       | wheel     | yes      | 1    | 4977.80000     |
-| 30    | go             | 2        | ssovest-go-other-u64                                  | 24697     | 5.00124   | 1       | other     | yes      | 1    | 4938.17250     |
-| 31    | chapel         | 1        | GordonBGood_unrolled                                  | 24444     | 5.00019   | 1       | base      | yes      | 1    | 4888.61423     |
-| 32    | crystal        | 2        | GordonBGood_stride8-rblock16K                         | 24188     | 5.00009   | 1       | base      | yes      | 1    | 4837.51776     |
-| 33    | julia          | 4        | GordonBGood_unpeeled                                  | 23479     | 5.00018   | 1       | base      | yes      | 1    | 4695.62647     |
-| 34    | go             | 2        | ssovest-go-other-u32-seg-16k                          | 23475     | 5.00132   | 1       | other     | yes      | 1    | 4693.76319     |
-| 35    | rust           | 1        | mike-barber_byte                                      | 23402     | 5.00019   | 1       | base      | yes      | 8    | 4680.22414     |
-| 36    | csharp         | 4        | italytoast-stride8-blocks32k                          | 23117     | 5.00012   | 1       | base      | yes      | 1    | 4623.28904     |
-| 37    | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u64-480of2310   | 22833     | 5.00021   | 1       | wheel     | yes      | 1    | 4566.40821     |
-| 38    | v              | 2        | GordonBGood_stride8-block16K                          | 22828     | 5.00009   | 1       | base      | yes      | 1    | 4565.51326     |
-| 39    | csharp         | 4        | italytoast-stride8-blocks16k                          | 22546     | 5.00015   | 1       | base      | yes      | 1    | 4509.06473     |
-| 40    | c              | 3        | fvbakel_Cstriped-block                                | 22314     | 5.00013   | 1       | base      | yes      | 1    | 4462.68219     |
-| 41    | go             | 2        | ssovest-go-other-u32-rblock-16k                       | 21807     | 5.00118   | 1       | other     | yes      | 1    | 4360.37241     |
-| 42    | c              | 2        | danielspaangberg_8of30                                | 21798     | 5.00008   | 1       | wheel     | yes      | 1    | 4359.53374     |
-| 43    | rust           | 7        | sergiocks                                             | 21643     | 5.00028   | 1       | wheel     | yes      | 8    | 4328.35764     |
-| 44    | rust           | 1        | mike-barber_bit-striped                               | 21566     | 5.00006   | 1       | base      | yes      | 1    | 4313.15023     |
-| 45    | csharp         | 4        | italytoast-stride8-blocks64k                          | 20698     | 5.00012   | 1       | base      | yes      | 1    | 4139.50065     |
-| 46    | zig            | 2        | ManDeJan&ityonemo-zig-byte-sieve-type-bool            | 20402     | 5.00007   | 1       | base      | no       | 8    | 4080.34288     |
-| 47    | amd64          | 1        | dacvs8                                                | 20189     | 5.00000   | 1       | base      | yes      | 8    | 4037.79919     |
-| 48    | c              | 2        | danielspaangberg_5760of30030_owrb                     | 20074     | 5.00002   | 1       | wheel     | yes      | 1    | 4014.78474     |
-| 49    | cpp            | 4        | BlackMark-1of2-bs-hs-vec<u8>-gcc                      | 20037     | 5.00012   | 1       | base      | yes      | 8    | 4007.30382     |
-| 50    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_arr<bool>-gcc                | 19997     | 5.00001   | 1       | base      | yes      | 8    | 3999.39200     |
-| 51    | lisp           | 2        | mayerrobert-cl-words                                  | 19933     | 5.00001   | 1       | other     | yes      | 1    | 3986.59043     |
-| 52    | go             | 2        | ssovest-go-other-u32-block-16k                        | 19807     | 5.00187   | 1       | other     | yes      | 1    | 3959.92282     |
-| 53    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_arr<bool>-clang              | 19403     | 5.00010   | 1       | base      | yes      | 8    | 3880.52239     |
-| 54    | fortran        | 2        | tjol-8bit                                             | 19396     | 5.00012   | 1       | base      | yes      | 8    | 3879.10789     |
-| 55    | cython         | 1        | rpkak+byte-array                                      | 19352     | 5.00024   | 1       | base      | yes      | 8    | 3870.21801     |
-| 56    | haskell        | 2        | GordonBGood_unpeeled_block                            | 19252     | 5.00007   | 1       | base      | yes      | 1    | 3850.34538     |
-| 57    | assembly       | 1        | rbergen_x64uff_byte                                   | 19133     | 5.00000   | 1       | base      | no       | 8    | 3826.60000     |
-| 58    | fsharp         | 4        | GordonBGood_unpeeled                                  | 17836     | 5.00014   | 1       | base      | yes      | 1    | 3567.10155     |
-| 59    | lisp           | 2        | mayerrobert-cl-wheel-opt                              | 17830     | 5.00001   | 1       | wheel     | yes      | 1    | 3565.99144     |
-| 60    | chapel         | 1        | GordonBGood_unpeeled_block                            | 17744     | 5.00016   | 1       | base      | yes      | 1    | 3548.68644     |
-| 61    | lisp           | 2        | mayerrobert-cl-wheel                                  | 17408     | 5.00001   | 1       | wheel     | yes      | 1    | 3481.59234     |
-| 62    | csharp         | 4        | italytoast-stride8                                    | 17407     | 5.00023   | 1       | base      | yes      | 1    | 3481.23986     |
-| 63    | java           | 4        | chrvanorleStrided32Blocks16k                          | 17369     | 5.00000   | 1       | base      | yes      | 1    | 3473.80000     |
-| 64    | haskell        | 2        | GordonBGood_unpeeled                                  | 17294     | 5.00021   | 1       | base      | yes      | 1    | 3458.65470     |
-| 65    | swift          | 1        | yellowcub_striped_UInt8                               | 17034     | 5.00026   | 1       | base      | yes      | 1    | 3406.62148     |
-| 66    | assemblyscript | 2        | maxgraey_unrolled                                     | 16752     | 5.00000   | 1       | base      | yes      | 1    | 3350.40000     |
-| 67    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_stridedbits<u8>-gcc          | 16697     | 5.00009   | 1       | base      | yes      | 1    | 3339.33989     |
-| 68    | lisp           | 2        | mayerrobert-cl-wheel-bitvector                        | 16605     | 5.00001   | 1       | wheel     | yes      | 1    | 3320.99203     |
-| 69    | crystal        | 2        | GordonBGood_stride8                                   | 16574     | 5.00026   | 1       | base      | yes      | 1    | 3314.62963     |
-| 70    | c              | 2        | danielspaangberg_480of2310_owrb                       | 16572     | 5.00019   | 1       | wheel     | yes      | 1    | 3314.27339     |
-| 71    | chapel         | 1        | GordonBGood_unpeeled                                  | 16523     | 5.00017   | 1       | base      | yes      | 1    | 3304.48765     |
-| 72    | v              | 2        | GordonBGood_stride8                                   | 16477     | 5.00019   | 1       | base      | yes      | 1    | 3295.27807     |
-| 73    | haskell        | 1        | fatho/vector_unchecked                                | 16077     | 5.00017   | 1       | base      | no       | 8    | 3215.29068     |
-| 74    | zig            | 1        | devblok                                               | 16040     | 5.00001   | 1       | base      | yes      | 8    | 3207.99358     |
-| 75    | v              | 1        | marghidanu                                            | 15770     | 5.00000   | 1       | base      | yes      |      | 3154.00000     |
-| 76    | cpp            | 1        | davepl_pol                                            | 15200     | 5.00026   | 1       | base      | yes      | 1    | 3039.84497     |
-| 77    | ada            | 1        | BoopBeepBoopBeep                                      | 14988     | 5.00004   | 1       | base      | no       |      | 2997.57529     |
-| 78    | go             | 2        | ssovest-go-stride-u32-rblock-16k                      | 14898     | 5.00125   | 1       | base      | yes      | 1    | 2978.85549     |
-| 79    | d              | 2        | BradleyChatha-Single-SieveCT                          | 14669     | 5.00014   | 1       | base      | no       | 1    | 2933.71786     |
-| 80    | assemblyscript | 1        | donmahallem                                           | 14318     | 5.00000   | 1       | base      | yes      |      | 2863.60000     |
-| 81    | assembly       | 1        | rbergen_x64ff_byte                                    | 14150     | 5.00000   | 1       | base      | yes      | 8    | 2830.00000     |
-| 82    | odin           | 1        | odin_byte_moe                                         | 13914     | 5.00000   | 1       | base      | yes      | 8    | 2782.80000     |
-| 83    | rust           | 1        | mike-barber_bit-rotate                                | 13912     | 5.00024   | 1       | base      | yes      | 1    | 2782.26919     |
-| 84    | c              | 2        | danielspaangberg_48of210_owrb                         | 13827     | 5.00001   | 1       | wheel     | yes      | 1    | 2765.39668     |
-| 85    | csharp         | 4        | italytoast-dense-and-sparse                           | 13817     | 5.00004   | 1       | base      | yes      | 1    | 2763.37789     |
-| 86    | haskell        | 1        | fatho/vector                                          | 13532     | 5.00035   | 1       | base      | no       | 8    | 2706.21111     |
-| 87    | go             | 2        | ssovest-go-stride-u32-block-16k                       | 13408     | 5.00151   | 1       | base      | yes      | 1    | 2680.79141     |
-| 88    | fortran        | 1        | johandweber_fortran                                   | 13306     | 5.00000   | 1       | base      | no       | 1    | 2661.20000     |
-| 89    | fortran        | 2        | tjol-logical                                          | 13182     | 5.00011   | 1       | base      | yes      |      | 2636.34394     |
-| 90    | c              | 1        | mckoss-c830                                           | 12998     | 5.00000   | 1       | wheel     | yes      | 1    | 2599.60000     |
-| 91    | assembly       | 1        | rbergen_x64uff_bitshift                               | 12569     | 5.00000   | 1       | base      | no       | 1    | 2513.80000     |
-| 92    | zig            | 3        | ManDeJan&ityonemo-zig-single-bitSieve-u8              | 12320     | 5.00011   | 1       | base      | yes      | 1    | 2463.94579     |
-| 93    | fortran        | 2        | tjol-bits                                             | 12168     | 5.00040   | 1       | base      | yes      | 1    | 2433.40692     |
-| 94    | zig            | 2        | ManDeJan&ityonemo-zig-bit-sieve                       | 12109     | 5.00028   | 1       | base      | no       | 1    | 2421.66439     |
-| 95    | assembly       | 1        | rbergen_x64ff_bitshift                                | 12066     | 5.00000   | 1       | base      | yes      | 1    | 2413.20000     |
-| 96    | zig            | 3        | ManDeJan&ityonemo-zig-single-sieve-u8                 | 12037     | 5.00008   | 1       | base      | yes      | 8    | 2407.36148     |
-| 97    | chapel         | 1        | GordonBGood_bittwiddle                                | 11674     | 5.00032   | 1       | base      | yes      | 1    | 2334.65058     |
-| 98    | c              | 2        | danielspaangberg_1of2                                 | 11669     | 5.00027   | 1       | base      | yes      | 1    | 2333.67538     |
-| 99    | java           | 4        | chrvanorleI32CUnroll                                  | 11594     | 5.00000   | 1       | base      | yes      | 1    | 2318.80000     |
-| 100   | crystal        | 1        | marghidanu                                            | 11472     | 5.00012   | 1       | base      | yes      | 1    | 2294.34264     |
-| 101   | haskell        | 1        | fatho/bitset                                          | 11440     | 5.00038   | 1       | base      | no       | 1    | 2287.82567     |
-| 102   | fsharp         | 2        | dmannock_fsharp_port                                  | 11241     | 5.00037   | 1       | base      | yes      |      | 2248.03410     |
-| 103   | rust           | 1        | mike-barber_bit                                       | 11161     | 5.00037   | 1       | base      | yes      | 1    | 2232.03482     |
-| 104   | swift          | 1        | yellowcub_1bit_UInt8                                  | 10940     | 5.00041   | 1       | base      | yes      | 1    | 2187.81884     |
-| 105   | crystal        | 2        | GordonBGood_bittwiddle                                | 10912     | 5.00018   | 1       | base      | yes      | 1    | 2182.32100     |
-| 106   | fsharp         | 3        | dmannock_fsharp_recursion                             | 10815     | 5.00001   | 1       | base      | yes      |      | 2162.99567     |
-| 107   | go             | 2        | ssovest-go-stride-u32                                 | 10797     | 5.00133   | 1       | base      | yes      | 1    | 2158.82730     |
-| 108   | nodejs         | 1        | rogiervandam_memcopy                                  | 10776     | 5.00007   | 1       | other     | yes      | 1    | 2155.17003     |
-| 109   | clojure        | 2        | axvr_clj-sln-2_8-bit                                  | 10753     | 5.00052   | 1       | base      | yes      | 8    | 2150.37711     |
-| 110   | rust           | 2        | Azgrom                                                | 10739     | 5.00005   | 1       | base      | yes      |      | 2147.77852     |
-| 111   | scala          | 2        | scilari                                               | 10611     | 5.00000   | 1       | base      | yes      |      | 2122.20000     |
-| 112   | c              | 2        | danielspaangberg_8of30_owrb                           | 10499     | 5.00029   | 1       | wheel     | yes      | 1    | 2099.67780     |
-| 113   | amd64          | 1        | dacvs1                                                | 10418     | 5.00037   | 1       | base      | yes      | 1    | 2083.44791     |
-| 114   | cython         | 1        | rpkak+bit-array                                       | 10389     | 5.00002   | 1       | base      | yes      | 1    | 2077.79238     |
-| 115   | csharp         | 1        | kinematics_dbool                                      | 10304     | 5.00028   | 1       | base      | yes      | 8    | 2060.68460     |
-| 116   | julia          | 3        | louie-github_port_1of2                                | 10113     | 5.00041   | 1       | base      | yes      | 1    | 2022.43500     |
-| 117   | kotlin         | 1        | jvm_kotlin_idiomatic_fast_single                      | 10081     | 5.00700   | 1       | base      | yes      |      | 2013.38127     |
-| 118   | csharp         | 1        | kinematics_ibool                                      | 10052     | 5.00043   | 1       | base      | yes      | 8    | 2010.22712     |
-| 119   | odin           | 1        | odin_bit_moe                                          | 9950      | 5.00000   | 1       | base      | yes      | 1    | 1990.00000     |
-| 120   | java           | 1        | MansenC                                               | 9646      | 5.00000   | 1       | base      | yes      |      | 1929.20000     |
-| 121   | kotlin         | 1        | jvm_kotlin_traditional_single                         | 9662      | 5.01900   | 1       | base      | yes      |      | 1925.08468     |
-| 122   | zig            | 3        | ManDeJan&ityonemo-zig-single-sieve-bool               | 9597      | 5.00026   | 1       | base      | yes      | 8    | 1919.30020     |
-| 123   | kotlin         | 1        | jvm_kotlin_idiomatic_single                           | 9577      | 5.00200   | 1       | base      | yes      |      | 1914.63415     |
-| 124   | haskell        | 1        | fatho/bitset_unchecked                                | 9439      | 5.00012   | 1       | base      | no       | 1    | 1887.75620     |
-| 125   | zig            | 3        | ManDeJan&ityonemo-zig-single-sieve-u8-5760of30030     | 9298      | 5.00035   | 1       | wheel     | yes      | 8    | 1859.46984     |
-| 126   | rexx           | 2        | joss_NetRexx                                          | 9290      | 5.00012   | 1       | base      | yes      | 8    | 1857.95467     |
-| 127   | python         | 3        | emillynge_numpy                                       | 9240      | 5.00016   | 1       | base      | no       | 8    | 1847.94028     |
-| 128   | assemblyscript | 2        | maxgraey                                              | 9002      | 5.00000   | 1       | base      | yes      | 1    | 1800.40000     |
-| 129   | zig            | 3        | ManDeJan&ityonemo-zig-single-sieve-u8-480of2310       | 8901      | 5.00053   | 1       | wheel     | yes      | 8    | 1780.01132     |
-| 130   | rust           | 4        | joshallen64                                           | 8629      | 5.00029   | 1       | base      | yes      |      | 1725.69912     |
-| 131   | julia          | 1        | dcbi                                                  | 8535      | 5.00011   | 1       | base      | yes      | 1    | 1706.96142     |
-| 132   | v              | 2        | GordonBGood_bittwiddle                                | 8507      | 5.00030   | 1       | base      | yes      | 1    | 1701.29792     |
-| 133   | lua            | 2        | ben1jen_luajit1                                       | 8328      | 5.00000   | 1       | base      | no       | 1    | 1665.60000     |
-| 134   | julia          | 2        | epithet-jl                                            | 8057      | 5.00055   | 1       | base      | yes      | 1    | 1611.22276     |
-| 135   | csharp         | 3        | tannergooding                                         | 7924      | 5.00020   | 1       | base      | yes      | 1    | 1584.73645     |
-| 136   | java           | 4        | chrvanorleI64PatternCalc                              | 7893      | 5.00000   | 1       | other     | yes      | 1    | 1578.60000     |
-| 137   | assembly       | 1        | rbergen_x64uff_bitbtr                                 | 7860      | 5.00000   | 1       | base      | no       | 1    | 1572.00000     |
-| 138   | mixed          | 2        | RobCannon_ps2                                         | 7793      | 5.00064   | 1       | base      | no       | 1    | 1558.40052     |
-| 139   | csharp         | 1        | kinematics_raw32                                      | 7616      | 5.00013   | 1       | base      | yes      | 1    | 1523.16040     |
-| 140   | assembly       | 1        | rbergen_x64ff_bitbtr                                  | 7554      | 5.00000   | 1       | base      | yes      | 1    | 1510.80000     |
-| 141   | dart           | 1        | eagerestwolf&mmcdon20_8bit                            | 7244      | 5.00025   | 1       | base      | yes      | 8    | 1448.72640     |
-| 142   | csharp         | 1        | kinematics_rawd                                       | 7176      | 5.00039   | 1       | base      | yes      | 1    | 1435.08806     |
-| 143   | csharp         | 1        | kinematics_raw                                        | 7169      | 5.00048   | 1       | base      | yes      | 1    | 1433.66237     |
-| 144   | scala          | 1        | rom1dep                                               | 7107      | 5.00000   | 1       | base      | yes      |      | 1421.40000     |
-| 145   | lisp           | 2        | mayerrobert-cl                                        | 7052      | 5.00001   | 1       | base      | yes      | 1    | 1410.39690     |
-| 146   | csharp         | 1        | kinematics_bool                                       | 6925      | 5.00024   | 1       | base      | yes      | 8    | 1384.93352     |
-| 147   | csharp         | 1        | kinematics_raw6                                       | 6888      | 5.00043   | 1       | wheel     | yes      | 1    | 1377.48154     |
-| 148   | typescript     | 2        | mikevdbokke_8bit-array                                | 6729      | 5.00000   | 1       | base      | yes      | 1    | 1345.80000     |
-| 149   | nodejs         | 1        | rogiervandam                                          | 6608      | 5.00011   | 1       | base      | yes      | 1    | 1321.57133     |
-| 150   | basic          | 3        | Nukepayload2_ArrayPool8of30M                          | 6271      | 5.00028   | 1       | wheel     | yes      | 1    | 1254.12879     |
-| 151   | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_vec<u8>-clang         | 6182      | 5.00026   | 1       | wheel     | yes      | 8    | 1236.33571     |
-| 152   | csharp         | 1        | kinematics_pool30                                     | 6164      | 5.00026   | 1       | wheel     | yes      | 1    | 1232.73590     |
-| 153   | basic          | 3        | Nukepayload2_ReDim8of30M                              | 6128      | 5.00027   | 1       | wheel     | yes      | 1    | 1225.53500     |
-| 154   | dart           | 1        | eagerestwolf&mmcdon20_1bit                            | 5972      | 5.00075   | 1       | base      | yes      | 1    | 1194.22087     |
-| 155   | csharp         | 1        | kinematics_pool30m                                    | 5798      | 5.00012   | 1       | wheel     | yes      | 1    | 1159.57217     |
-| 156   | typescript     | 1        | marghidanu                                            | 5677      | 5.00000   | 1       | base      | yes      |      | 1135.40000     |
-| 157   | go             | 2        | ssovest-go-simple-u32                                 | 5648      | 5.00152   | 1       | base      | yes      | 1    | 1129.25691     |
-| 158   | lisp           | 2        | mayerrobert-clb                                       | 5644      | 5.00001   | 1       | base      | yes      | 1    | 1128.79729     |
-| 159   | typescript     | 2        | mikevdbokke_byte-array                                | 5622      | 5.00000   | 1       | base      | yes      | 8    | 1124.40000     |
-| 160   | typescript     | 2        | mikevdbokke_32bit-array                               | 5167      | 5.00000   | 1       | base      | yes      | 1    | 1033.40000     |
-| 161   | csharp         | 1        | kinematics_pool2of6                                   | 5167      | 5.00060   | 1       | wheel     | yes      | 1    | 1033.27601     |
-| 162   | java           | 2        | PratimGhosh86-JavaBitSet                              | 4951      | 5.00000   | 1       | base      | yes      | 1    | 990.20000      |
-| 163   | java           | 4        | chrvanorleI64                                         | 4942      | 5.00000   | 1       | base      | yes      | 1    | 988.40000      |
-| 164   | java           | 4        | chrvanorleI64C                                        | 4936      | 5.00000   | 1       | base      | yes      | 1    | 987.20000      |
-| 165   | java           | 4        | chrvanorleI8                                          | 4933      | 5.00000   | 1       | base      | yes      | 1    | 986.60000      |
-| 166   | java           | 4        | chrvanorleI32C                                        | 4843      | 5.00000   | 1       | base      | yes      | 1    | 968.60000      |
-| 167   | java           | 4        | chrvanorleI32                                         | 4833      | 5.00000   | 1       | base      | yes      | 1    | 966.60000      |
-| 168   | umple          | 1        | mmcdon20_umple                                        | 4343      | 5.00100   | 1       | base      | yes      | 1    | 868.42631      |
-| 169   | rust           | 3        | Blui42                                                | 4150      | 5.00098   | 1       | base      | yes      |      | 829.83661      |
-| 170   | java           | 3        | MansenC-native                                        | 4023      | 5.00000   | 1       | base      | yes      |      | 804.60000      |
-| 171   | kotlin         | 1        | native_kotlin_idiomatic_fast_single                   | 3766      | 5.00100   | 1       | base      | yes      |      | 753.04939      |
-| 172   | d              | 2        | BradleyChatha-Single-SieveRTB1_32                     | 3224      | 5.00008   | 1       | base      | yes      | 1    | 644.78968      |
-| 173   | d              | 2        | BradleyChatha-Single-SieveRTB1_64                     | 3221      | 5.00047   | 1       | base      | yes      | 1    | 644.13945      |
-| 174   | swift          | 1        | j-f1_yellowcub_bool                                   | 3090      | 5.00026   | 1       | base      | yes      | 8    | 617.96775      |
-| 175   | cpp            | 4        | BlackMark-1of2-bs-hs-vec<u8>-clang                    | 3087      | 5.00031   | 1       | base      | yes      | 8    | 617.36172      |
-| 176   | pascal         | 3        | olivierbrun-1-threads                                 | 3076      | 5.00000   | 1       | base      | yes      | 1    | 615.20000      |
-| 177   | d              | 2        | BradleyChatha-Single-SieveRTB1_16                     | 3066      | 5.00161   | 1       | base      | yes      | 1    | 613.00261      |
-| 178   | d              | 2        | BradleyChatha-Single-SieveRT                          | 3033      | 5.00026   | 1       | base      | yes      | 1    | 606.56846      |
-| 179   | nim            | 2        | beef331                                               | 3026      | 5.00142   | 1       | base      | yes      | 1    | 605.02759      |
-| 180   | d              | 2        | BradleyChatha-Single-SieveRTBX                        | 2954      | 5.00048   | 1       | base      | yes      | 8    | 590.74329      |
-| 181   | d              | 1        | eagerestwolf                                          | 2908      | 5.00000   | 1       | base      | yes      | 8    | 581.60000      |
-| 182   | nim            | 1        | marghidanu                                            | 2886      | 5.00134   | 1       | base      | yes      | 8    | 577.04533      |
-| 183   | mixed          | 3        | 1mikegrn/CPython                                      | 2818      | 5.00001   | 1       | base      | no       | 32   | 563.59836      |
-| 184   | csharp         | 1        | kinematics_pool                                       | 2804      | 5.00036   | 1       | base      | yes      | 1    | 560.75963      |
-| 185   | clojure        | 2        | axvr_clj-sln-2_1-bit                                  | 2655      | 5.00186   | 1       | base      | yes      | 1    | 530.80260      |
-| 186   | csharp         | 1        | kinematics_standard                                   | 2638      | 5.00049   | 1       | base      | yes      | 1    | 527.54830      |
-| 187   | csharp         | 2        | davepl                                                | 2527      | 5.00063   | 1       | base      | yes      | 1    | 505.33633      |
-| 188   | python         | 2        | ssovest                                               | 2487      | 5.00183   | 1       | base      | yes      | 8    | 497.21805      |
-| 189   | csharp         | 1        | kinematics_original                                   | 2477      | 5.00170   | 1       | base      | yes      | 1    | 495.23162      |
-| 190   | basic          | 1        | rbergen_8of30                                         | 2462      | 5.00000   | 1       | wheel     | yes      | 1    | 492.40000      |
-| 191   | kotlin         | 1        | native_kotlin_idiomatic_single                        | 2403      | 5.00100   | 1       | base      | yes      |      | 480.50390      |
-| 192   | octave         | 1        | octave                                                | 2212      | 5.00073   | 1       | base      | no       |      | 442.33542      |
-| 193   | kotlin         | 1        | js_kotlin_idiomatic_fast_single                       | 2003      | 5.00400   | 1       | base      | yes      |      | 400.27978      |
-| 194   | kotlin         | 1        | js_kotlin_idiomatic_single                            | 1986      | 5.00400   | 1       | base      | yes      |      | 396.88249      |
-| 195   | kotlin         | 1        | js_kotlin_traditional_single                          | 1953      | 5.00400   | 1       | base      | yes      |      | 390.28777      |
-| 196   | d              | 2        | BradleyChatha-Single-SieveRTBX                        | 1842      | 5.00088   | 1       | base      | yes      | 64   | 368.33517      |
-| 197   | standardml     | 1        | NotMatthewGriffin_SML                                 | 1782      | 5.00000   | 1       | base      | yes      | 1    | 356.40000      |
-| 198   | fsharp         | 1        | rbergen                                               | 1781      | 5.00161   | 1       | base      | yes      | 1    | 356.08538      |
-| 199   | cpp            | 4        | BlackMark-1of2-cs-hs-inv_stridedbits<u8>-clang        | 1695      | 5.00061   | 1       | base      | yes      | 1    | 338.95865      |
-| 200   | kotlin         | 1        | native_kotlin_traditional_single                      | 1604      | 5.00200   | 1       | base      | yes      |      | 320.67173      |
-| 201   | basic          | 2        | rbergen_vb                                            | 1600      | 5.00096   | 1       | base      | yes      | 1    | 319.93826      |
-| 202   | lean4          | 1        | badly-drawn-wizards                                   | 1360      | 5.00300   | 1       | base      | yes      | 8    | 271.83690      |
-| 203   | go             | 1        | bundgaard                                             | 1264      | 5.00080   | 1       | base      | yes      |      | 252.75956      |
-| 204   | cobol          | 1        | fvbakel_Cobol                                         | 1246      | 5.00000   | 1       | base      | no       | 8    | 249.20000      |
-| 205   | pascal         | 1        | rbergen                                               | 1245      | 5.00000   | 1       | base      | yes      |      | 249.00000      |
-| 206   | pascal         | 2        | circular17                                            | 1170      | 5.00000   | 1       | base      | yes      | 1    | 234.00000      |
-| 207   | r              | 2        | nobrien97                                             | 1106      | 5.00200   | 1       | base      | no       | 32   | 221.11156      |
-| 208   | pony           | 1        | marghidanu                                            | 1093      | 5.00000   | 1       | base      | yes      | 1    | 218.60000      |
-| 209   | r              | 1        | fvbakel_R                                             | 996       | 5.00300   | 1       | base      | yes      | 32   | 199.08055      |
-| 210   | basic          | 1        | rbergen_boolean                                       | 734       | 5.00500   | 1       | base      | yes      |      | 146.65335      |
-| 211   | haxe           | 1        | TayIorRobinson_Haxe_C++                               | 710       | 5.00686   | 1       | base      | yes      |      | 141.80550      |
-| 212   | ocaml          | 2        | gkpotter-unfaithful                                   | 701       | 5.00981   | 1       | base      | no       |      | 139.92533      |
-| 213   | scala          | 3        | mmcdon20_scala                                        | 664       | 5.00000   | 1       | base      | yes      | 1    | 132.80000      |
-| 214   | scheme         | 1        | William103                                            | 641       | 5.00194   | 1       | base      | yes      | 1    | 128.15031      |
-| 215   | octave         | 2        | Brandon-Johns_8bit                                    | 609       | 5.00680   | 1       | base      | yes      | 8    | 121.63465      |
-| 216   | ocaml          | 1        | gkpotter-faithful                                     | 574       | 5.00436   | 1       | base      | yes      |      | 114.70005      |
-| 217   | forth          | 1        | tjol-8bit                                             | 499       | 5.00198   | 1       | base      | no       | 8    | 99.76044       |
-| 218   | basic          | 1        | rbergen_bit32                                         | 483       | 5.00200   | 1       | base      | yes      | 1    | 96.56138       |
-| 219   | basic          | 1        | rbergen_bit64                                         | 457       | 5.00900   | 1       | base      | yes      | 1    | 91.23578       |
-| 220   | php            | 1        | DennisdeBest                                          | 418       | 5.01788   | 1       | base      | yes      |      | 83.30206       |
-| 221   | perl           | 2        | kjetillll                                             | 386       | 5.00992   | 1       | base      | yes      |      | 77.04715       |
-| 222   | groovy         | 1        | mmcdon20_groovy                                       | 348       | 5.00400   | 1       | base      | yes      | 1    | 69.54436       |
-| 223   | forth          | 1        | tjol-1bit                                             | 337       | 5.00454   | 1       | base      | no       | 1    | 67.33886       |
-| 224   | typescript     | 2        | mikevdbokke_number-array                              | 300       | 5.01300   | 1       | base      | yes      |      | 59.84440       |
-| 225   | postscript     | 1        | epithet-ps                                            | 246       | 5.00700   | 1       | base      | no       | 8    | 49.13122       |
-| 226   | tex            | 2        | jfbu-tex-48of210                                      | 192       | 5.02481   | 1       | wheel     | no       | 32   | 38.21040       |
-| 227   | tex            | 2        | jfbu-tex-8of30                                        | 182       | 5.02449   | 1       | wheel     | no       | 32   | 36.22258       |
-| 228   | ballerina      | 1        | da-strange-boi                                        | 180       | 5.00000   | 1       | base      | yes      | 1    | 36.00000       |
-| 229   | gdscript       | 1        | OrigamiDev-Pete                                       | 177       | 5.19900   | 1       | base      | yes      | 8    | 34.04501       |
-| 230   | ruby           | 1        | rbergen                                               | 156       | 5.03100   | 1       | base      | yes      |      | 31.00775       |
-| 231   | wren           | 1        | marghidanu                                            | 121       | 5.03282   | 1       | base      | yes      |      | 24.04220       |
-| 232   | tex            | 2        | jfbu-tex-480of2310                                    | 110       | 5.02590   | 1       | wheel     | no       | 32   | 21.88663       |
-| 233   | hack           | 1        | da-strange-boi                                        | 103       | 5.04700   | 1       | base      | yes      |      | 20.40816       |
-| 234   | kos            | 1        | cdragan                                               | 90        | 5.01123   | 1       | base      | yes      | 8    | 17.95966       |
-| 235   | tex            | 2        | jfbu-tex                                              | 70        | 5.02098   | 1       | base      | no       | 32   | 13.94150       |
-| 236   | lua            | 1        | lua                                                   | 68        | 5.00000   | 1       | base      | yes      | 64   | 13.60000       |
-| 237   | perl           | 1        | marghidanu                                            | 60        | 5.01152   | 1       | base      | yes      |      | 11.97242       |
-| 238   | elixir         | 2        | thomas9911                                            | 62        | 5.20600   | 1       | base      | yes      | 1    | 11.90934       |
-| 239   | lisp           | 1        | mikehw                                                | 114       | 10.00336  | 1       | base      | no       | 1    | 11.39617       |
-| 240   | prolog         | 1        | jimbxb-prolog-c                                       | 57        | 5.00800   | 1       | base      | no       | 1    | 11.38179       |
-| 241   | smalltalk      | 1        | fvbakel_smalltalk                                     | 53        | 5.05100   | 1       | base      | yes      | 1    | 10.49297       |
-| 242   | tcl            | 2        | fvbakel_ootcl2                                        | 46        | 5.09200   | 1       | base      | yes      | 32   | 9.03378        |
-| 243   | mixal          | 1        | rbergen                                               | 30        | 3.63000   | 1       | base      | no       | 1    | 8.26446        |
-| 244   | powershell     | 3        | RobCannon_ps3                                         | 41        | 5.04849   | 1       | base      | yes      | 1    | 8.12124        |
-| 245   | rexx           | 1        | joss_REXX                                             | 31        | 5.03635   | 1       | base      | no       | 8    | 6.15525        |
-| 246   | haxe           | 1        | TayIorRobinson_Haxe_HaxeEval                          | 30        | 5.10925   | 1       | base      | yes      |      | 5.87170        |
-| 247   | powershell     | 2        | crowbar27_ps2                                         | 28        | 5.14513   | 1       | base      | yes      | 1    | 5.44204        |
-| 248   | emojicode      | 1        | marghidanu                                            | 25        | 5.00000   | 1       | base      | yes      |      | 5.00000        |
-| 249   | python         | 1        | davepl                                                | 24        | 5.01127   | 1       | base      | yes      |      | 4.78921        |
-| 250   | sql            | 2        | fvbakel_MariaDB3                                      | 9         | 5.40700   | 1       | other     | no       | 32   | 1.66451        |
-| 251   | raku           | 1        | draco1006                                             | 8         | 5.01616   | 1       | base      | yes      |      | 1.59484        |
-| 252   | tcl            | 1        | fvbakeltcl                                            | 8         | 5.06500   | 1       | base      | yes      | 1    | 1.57947        |
-| 253   | sql            | 1        | fvbakel_sqlite                                        | 7         | 5.10247   | 1       | other     | no       | 8    | 1.37188        |
-| 254   | befunge        | 1        | tjol-bf98                                             | 7         | 5.20545   | 1       | base      | no       | 1    | 1.34474        |
-| 255   | red            | 1        | mmcdon20_red                                          | 7         | 5.57829   | 1       | base      | yes      | 1    | 1.25487        |
-| 256   | haxe           | 1        | TayIorRobinson_Haxe_Python                            | 7         | 5.71463   | 1       | base      | yes      |      | 1.22493        |
-| 257   | tcl            | 2        | fvbakel_ootcl                                         | 7         | 5.78900   | 1       | base      | yes      | 1    | 1.20919        |
-| 258   | sql            | 2        | fvbakel_MariaDB2                                      | 6         | 5.65700   | 1       | other     | no       | 32   | 1.06063        |
-| 259   | clojure        | 1        | mmcdon20_clojure                                      | 5         | 5.12800   | 1       | base      | yes      | 1    | 0.97504        |
-| 260   | prolog         | 1        | jimbxb-prolog-dynamic                                 | 5         | 5.46400   | 1       | base      | no       |      | 0.91508        |
-| 261   | idl            | 1        | kriztioan_1bit                                        | 4         | 6.11656   | 1       | base      | yes      | 1    | 0.65396        |
-| 262   | bash           | 1        | bash_inline                                           | 3         | 6.63242   | 1       | base      | no       |      | 0.45232        |
-| 263   | bash           | 1        | bash                                                  | 2         | 7.58028   | 1       | base      | no       |      | 0.26384        |
-| 264   | yoix           | 1        | mmcdon20_yoix                                         | 2         | 9.60800   | 1       | base      | yes      | 1    | 0.20816        |
-| 265   | sql            | 2        | fvbakel_MariaDB1                                      | 1         | 5.96400   | 1       | base      | no       | 32   | 0.16767        |
-| 266   | prolog         | 1        | jimbxb-prolog-basic                                   | 1         | 6.31700   | 1       | base      | yes      | 1    | 0.15830        |
-| 267   | tex            | 1        | tjol                                                  | 2         | 13.05067  | 1       | base      | no       | 32   | 0.15325        |
-| 268   | bash           | 1        | bash_packed                                           | 1         | 7.47044   | 1       | base      | no       |      | 0.13386        |
-| 269   | elixir         | 1        | cdesch                                                | 1         | 22.08000  | 1       | base      | no       |      | 0.04529        |
-| 270   | powershell     | 1        | crowbar27_ps1                                         | 1         | 50.82070  | 1       | base      | yes      | 1    | 0.01968        |
-| 271   | brainfuck      | 1        | aquarel                                               | 1         | 101.21107 | 1       | base      | no       | 32   | 0.00988        |
-| 272   | octave         | 2        | Brandon-Johns_1bit                                    | 1         | 126.81154 | 1       | base      | yes      | 1    | 0.00789        |
+| Index | Implementation | Solution | Label                                                                                                | Passes    | Duration  | Threads | Algorithm | Faithful | Bits | Passes/Second  |
+| ----- | -------------- | -------- | ---------------------------------------------------------------------------------------------------- | --------- | --------- | ------- | --------- | -------- | ---- | -------------- |
+| 1     | lisp           | 2        | mayerrobert-cl-hashdot                                                                               | 461227772 | 5.00001   | 1       | base      | no       | 1    | 92245314.56218 |
+| 2     | cpp            | 3        | flo80_pol_constexpr                                                                                  | 226561179 | 5.00001   | 1       | base      | no       | 1    | 45312108.92610 |
+| 3     | cpp            | 4        | BlackMark-pregenerated-inv_bits<u32>-clang                                                           | 2562469   | 5.00000   | 1       | base      | no       | 1    | 512493.80000   |
+| 4     | cpp            | 4        | BlackMark-pregenerated-inv_bits<u32>-gcc                                                             | 1244058   | 5.00000   | 1       | base      | no       | 1    | 248811.60000   |
+| 5     | rust           | 6        | SycrationSinglethreaded                                                                              | 267989    | 5.00001   | 1       | base      | no       |      | 53597.67797    |
+| 6     | rust           | 1        | mike-barber_bit-unrolled-hybrid                                                                      | 65063     | 5.00003   | 1       | base      | yes      | 1    | 13012.51313    |
+| 7     | nim            | 3        | GordonBGood_extreme_hybrid                                                                           | 61620     | 5.00003   | 1       | base      | yes      | 1    | 12323.91479    |
+| 8     | crystal        | 2        | GordonBGood_extreme-hybrid                                                                           | 51319     | 5.00009   | 1       | base      | yes      | 1    | 10263.62347    |
+| 9     | chapel         | 1        | GordonBGood_unrolled_hybrid                                                                          | 45875     | 5.00005   | 1       | base      | yes      | 1    | 9174.90825     |
+| 10    | v              | 2        | GordonBGood_extreme-hybrid                                                                           | 45253     | 5.00008   | 1       | base      | yes      | 1    | 9050.45157     |
+| 11    | c              | 3        | fvbakel_Cwords                                                                                       | 43813     | 5.00003   | 1       | other     | yes      | 1    | 8762.54217     |
+| 12    | cython         | 1        | ssovest-cy                                                                                           | 42825     | 5.00009   | 1       | other     | yes      | 1    | 8564.84755     |
+| 13    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-single-vecSieve                                                        | 42501     | 5.00007   | 1       | other     | yes      | 1    | 8500.08100     |
+| 14    | rust           | 1        | mike-barber_bit-striped-hybrid-blocks16k                                                             | 30698     | 5.00012   | 1       | base      | yes      | 1    | 6139.45421     |
+| 15    | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_vec<u8>-gcc                                                          | 30156     | 5.00002   | 1       | wheel     | yes      | 8    | 6031.17588     |
+| 16    | mixed          | 1        | ssovest-cgo                                                                                          | 29497     | 5.00106   | 1       | other     | no       | 1    | 5898.14826     |
+| 17    | rust           | 1        | mike-barber_bit-striped-hybrid-blocks4k                                                              | 28661     | 5.00009   | 1       | base      | yes      | 1    | 5732.09559     |
+| 18    | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_bits<u32>-gcc                                                        | 28534     | 5.00013   | 1       | wheel     | yes      | 1    | 5706.65163     |
+| 19    | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_bits<u32>-clang                                                      | 28254     | 5.00017   | 1       | wheel     | yes      | 1    | 5650.60788     |
+| 20    | cpp            | 4        | BlackMark-5760of30030-os-hs-maskedbits<u32>-clang                                                    | 28093     | 5.00009   | 1       | wheel     | yes      | 1    | 5618.49887     |
+| 21    | crystal        | 2        | GordonBGood_extreme                                                                                  | 25950     | 5.00011   | 1       | base      | yes      | 1    | 5189.88271     |
+| 22    | v              | 2        | GordonBGood_extreme                                                                                  | 25427     | 5.00002   | 1       | base      | yes      | 1    | 5085.38373     |
+| 23    | c              | 2        | danielspaangberg_48of210                                                                             | 25339     | 5.00002   | 1       | wheel     | yes      | 1    | 5067.77567     |
+| 24    | rust           | 1        | mike-barber_bit-striped-blocks16k                                                                    | 25239     | 5.00002   | 1       | base      | yes      | 1    | 5047.77834     |
+| 25    | cpp            | 4        | BlackMark-5760of30030-os-hs-maskedbits<u32>-gcc                                                      | 25190     | 5.00004   | 1       | wheel     | yes      | 1    | 5037.95970     |
+| 26    | c              | 4        | merriam                                                                                              | 25159     | 5.00000   | 1       | wheel     | yes      | 1    | 5031.80000     |
+| 27    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-single-sieve-u8-92160of255255                                          | 25113     | 5.00016   | 1       | wheel     | yes      | 8    | 5022.43928     |
+| 28    | rust           | 1        | mike-barber_bit-striped-blocks4k                                                                     | 24515     | 5.00007   | 1       | base      | yes      | 1    | 4902.93127     |
+| 29    | chapel         | 1        | GordonBGood_unrolled                                                                                 | 24426     | 5.00001   | 1       | base      | yes      | 1    | 4885.19023     |
+| 30    | go             | 2        | ssovest-go-other-u64                                                                                 | 24176     | 5.00106   | 1       | other     | yes      | 1    | 4834.17211     |
+| 31    | julia          | 4        | GordonBGood_unpeeled                                                                                 | 23958     | 5.00015   | 1       | base      | yes      | 1    | 4791.45423     |
+| 32    | crystal        | 2        | GordonBGood_stride8-rblock16K                                                                        | 23789     | 5.00013   | 1       | base      | yes      | 1    | 4757.68011     |
+| 33    | go             | 2        | ssovest-go-other-u32-seg-16k                                                                         | 22638     | 5.00100   | 1       | other     | yes      | 1    | 4526.69609     |
+| 34    | v              | 2        | GordonBGood_stride8-block16K                                                                         | 22509     | 5.00006   | 1       | base      | yes      | 1    | 4501.74868     |
+| 35    | rust           | 1        | mike-barber_byte                                                                                     | 22348     | 5.00009   | 1       | base      | yes      | 8    | 4469.52285     |
+| 36    | csharp         | 4        | italytoast-stride8-blocks32k                                                                         | 22166     | 5.00003   | 1       | base      | yes      | 1    | 4433.17340     |
+| 37    | c              | 3        | fvbakel_Cstriped-block                                                                               | 21766     | 5.00015   | 1       | base      | yes      | 1    | 4353.06854     |
+| 38    | csharp         | 4        | italytoast-stride8-blocks16k                                                                         | 21613     | 5.00007   | 1       | base      | yes      | 1    | 4322.53948     |
+| 39    | rust           | 7        | sergiocks                                                                                            | 21375     | 5.00027   | 1       | wheel     | yes      | 8    | 4274.76566     |
+| 40    | go             | 2        | ssovest-go-other-u32-rblock-16k                                                                      | 21144     | 5.00088   | 1       | other     | yes      | 1    | 4228.05572     |
+| 41    | go             | 2        | ssovest-go-other-u32-block-16k                                                                       | 21098     | 5.00199   | 1       | other     | yes      | 1    | 4217.92465     |
+| 42    | rust           | 1        | mike-barber_bit-striped                                                                              | 21086     | 5.00011   | 1       | base      | yes      | 1    | 4217.10710     |
+| 43    | c              | 2        | danielspaangberg_8of30                                                                               | 20765     | 5.00021   | 1       | wheel     | yes      | 1    | 4152.82558     |
+| 44    | csharp         | 4        | italytoast-stride8-blocks64k                                                                         | 19891     | 5.00023   | 1       | base      | yes      | 1    | 3978.01701     |
+| 45    | lisp           | 2        | mayerrobert-cl-words                                                                                 | 19870     | 5.00001   | 1       | other     | yes      | 1    | 3973.99046     |
+| 46    | cython         | 1        | rpkak+byte-array                                                                                     | 19825     | 5.00018   | 1       | base      | yes      | 8    | 3964.85778     |
+| 47    | haskell        | 2        | GordonBGood_unpeeled_block                                                                           | 19807     | 5.00020   | 1       | base      | yes      | 1    | 3961.23798     |
+| 48    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_arr<bool>-clang                                                             | 19724     | 5.00025   | 1       | base      | yes      | 8    | 3944.60277     |
+| 49    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_arr<bool>-gcc                                                               | 19682     | 5.00010   | 1       | base      | yes      | 8    | 3936.32127     |
+| 50    | c              | 2        | danielspaangberg_5760of30030_owrb                                                                    | 19679     | 5.00015   | 1       | wheel     | yes      | 1    | 3935.68114     |
+| 51    | amd64          | 1        | dacvs8                                                                                               | 19149     | 5.00025   | 1       | base      | yes      | 8    | 3829.61158     |
+| 52    | cpp            | 4        | BlackMark-1of2-bs-hs-vec<u8>-gcc                                                                     | 19095     | 5.00024   | 1       | base      | yes      | 8    | 3818.81670     |
+| 53    | zig            | 2        | ManDeJan&ityonemo-zig-byte-sieve-type-bool                                                           | 19072     | 5.00008   | 1       | base      | no       | 8    | 3814.33897     |
+| 54    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-single-bitSieve-unrolled-run-u64-find-u32-5760of15015                  | 19057     | 5.00026   | 1       | wheel     | yes      | 1    | 3811.20182     |
+| 55    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-single-inverted-bitSieve-unrolled-run-u64-find-u8-advanced-5760of15015 | 19007     | 5.00001   | 1       | wheel     | yes      | 1    | 3801.39240     |
+| 56    | assembly       | 1        | rbergen_x64uff_byte                                                                                  | 19000     | 5.00000   | 1       | base      | no       | 8    | 3800.00000     |
+| 57    | fortran        | 2        | tjol-8bit                                                                                            | 18856     | 5.00006   | 1       | base      | yes      | 8    | 3771.15180     |
+| 58    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-single-bitSieve-unrolled-run-u64-find-u32                              | 18646     | 5.00009   | 1       | base      | yes      | 1    | 3729.13288     |
+| 59    | lisp           | 2        | mayerrobert-cl-wheel                                                                                 | 17920     | 5.00001   | 1       | wheel     | yes      | 1    | 3583.99140     |
+| 60    | haskell        | 2        | GordonBGood_unpeeled                                                                                 | 17765     | 5.00002   | 1       | base      | yes      | 1    | 3552.98825     |
+| 61    | chapel         | 1        | GordonBGood_unpeeled_block                                                                           | 17726     | 5.00011   | 1       | base      | yes      | 1    | 3545.12201     |
+| 62    | lisp           | 2        | mayerrobert-cl-wheel-opt                                                                             | 17711     | 5.00001   | 1       | wheel     | yes      | 1    | 3542.19150     |
+| 63    | fsharp         | 4        | GordonBGood_unpeeled                                                                                 | 17591     | 5.00010   | 1       | base      | yes      | 1    | 3518.12893     |
+| 64    | java           | 4        | chrvanorleStrided32Blocks16k                                                                         | 17414     | 5.00000   | 1       | base      | yes      | 1    | 3482.80000     |
+| 65    | swift          | 1        | yellowcub_striped_UInt8                                                                              | 17262     | 5.00016   | 1       | base      | yes      | 1    | 3452.29094     |
+| 66    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-single-sieve-u8                                                        | 16879     | 5.00012   | 1       | base      | yes      | 8    | 3375.71898     |
+| 67    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_stridedbits<u8>-gcc                                                         | 16854     | 5.00022   | 1       | base      | yes      | 1    | 3370.65169     |
+| 68    | csharp         | 4        | italytoast-stride8                                                                                   | 16633     | 5.00014   | 1       | base      | yes      | 1    | 3326.50686     |
+| 69    | crystal        | 2        | GordonBGood_stride8                                                                                  | 16509     | 5.00015   | 1       | base      | yes      | 1    | 3301.70161     |
+| 70    | v              | 1        | marghidanu                                                                                           | 16473     | 5.00000   | 1       | base      | yes      |      | 3294.60000     |
+| 71    | assemblyscript | 2        | maxgraey_unrolled                                                                                    | 16471     | 5.00000   | 1       | base      | yes      | 1    | 3294.20000     |
+| 72    | chapel         | 1        | GordonBGood_unpeeled                                                                                 | 16462     | 5.00008   | 1       | base      | yes      | 1    | 3292.34732     |
+| 73    | c              | 2        | danielspaangberg_480of2310_owrb                                                                      | 16384     | 5.00026   | 1       | wheel     | yes      | 1    | 3276.62962     |
+| 74    | v              | 2        | GordonBGood_stride8                                                                                  | 16364     | 5.00020   | 1       | base      | yes      | 1    | 3272.67171     |
+| 75    | haskell        | 1        | fatho/vector_unchecked                                                                               | 16232     | 5.00026   | 1       | base      | no       | 8    | 3246.23120     |
+| 76    | lisp           | 2        | mayerrobert-cl-wheel-bitvector                                                                       | 16105     | 5.00001   | 1       | wheel     | yes      | 1    | 3220.99227     |
+| 77    | zig            | 1        | devblok                                                                                              | 15947     | 5.00001   | 1       | base      | yes      | 8    | 3189.39362     |
+| 78    | ada            | 1        | BoopBeepBoopBeep                                                                                     | 15449     | 5.00023   | 1       | base      | no       |      | 3089.65870     |
+| 79    | cpp            | 1        | davepl_pol                                                                                           | 14682     | 5.00026   | 1       | base      | yes      | 1    | 2936.24966     |
+| 80    | d              | 2        | BradleyChatha-Single-SieveCT                                                                         | 14611     | 5.00016   | 1       | base      | no       | 1    | 2922.10649     |
+| 81    | odin           | 1        | odin_byte_moe                                                                                        | 14114     | 5.00000   | 1       | base      | yes      | 8    | 2822.80000     |
+| 82    | assemblyscript | 1        | donmahallem                                                                                          | 14087     | 5.00000   | 1       | base      | yes      |      | 2817.40000     |
+| 83    | go             | 2        | ssovest-go-stride-u32-rblock-16k                                                                     | 13817     | 5.00153   | 1       | base      | yes      | 1    | 2762.55521     |
+| 84    | assembly       | 1        | rbergen_x64ff_byte                                                                                   | 13777     | 5.00000   | 1       | base      | yes      | 8    | 2755.40000     |
+| 85    | c              | 2        | danielspaangberg_48of210_owrb                                                                        | 13770     | 5.00004   | 1       | wheel     | yes      | 1    | 2753.97577     |
+| 86    | haskell        | 1        | fatho/vector                                                                                         | 13605     | 5.00006   | 1       | base      | no       | 8    | 2720.96572     |
+| 87    | go             | 2        | ssovest-go-stride-u32-block-16k                                                                      | 13457     | 5.00142   | 1       | base      | yes      | 1    | 2690.63572     |
+| 88    | csharp         | 4        | italytoast-dense-and-sparse                                                                          | 13227     | 5.00002   | 1       | base      | yes      | 1    | 2645.38942     |
+| 89    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-single-bitSieve-unrolled-run-u64v8h-find-u32                           | 13222     | 5.00024   | 1       | base      | yes      | 1    | 2644.27307     |
+| 90    | rust           | 1        | mike-barber_bit-rotate                                                                               | 13209     | 5.00037   | 1       | base      | yes      | 1    | 2641.60451     |
+| 91    | fortran        | 2        | tjol-logical                                                                                         | 13061     | 5.00001   | 1       | base      | yes      |      | 2612.19328     |
+| 92    | c              | 1        | mckoss-c830                                                                                          | 12990     | 5.00000   | 1       | wheel     | yes      | 1    | 2598.00000     |
+| 93    | fortran        | 1        | johandweber_fortran                                                                                  | 12777     | 5.00000   | 1       | base      | no       | 1    | 2555.40000     |
+| 94    | assembly       | 1        | rbergen_x64uff_bitshift                                                                              | 12601     | 5.00000   | 1       | base      | no       | 1    | 2520.20000     |
+| 95    | fortran        | 2        | tjol-bits                                                                                            | 12358     | 5.00024   | 1       | base      | yes      | 1    | 2471.48356     |
+| 96    | java           | 4        | chrvanorleI32CUnroll                                                                                 | 11924     | 5.00000   | 1       | base      | yes      | 1    | 2384.80000     |
+| 97    | c              | 2        | danielspaangberg_1of2                                                                                | 11779     | 5.00019   | 1       | base      | yes      | 1    | 2355.71048     |
+| 98    | chapel         | 1        | GordonBGood_bittwiddle                                                                               | 11745     | 5.00033   | 1       | base      | yes      | 1    | 2348.84498     |
+| 99    | assembly       | 1        | rbergen_x64ff_bitshift                                                                               | 11715     | 5.00000   | 1       | base      | yes      | 1    | 2343.00000     |
+| 100   | zig            | 2        | ManDeJan&ityonemo-zig-bit-sieve                                                                      | 11541     | 5.00040   | 1       | base      | no       | 1    | 2308.01536     |
+| 101   | crystal        | 1        | marghidanu                                                                                           | 11492     | 5.00005   | 1       | base      | yes      | 1    | 2298.37564     |
+| 102   | haskell        | 1        | fatho/bitset                                                                                         | 11384     | 5.00027   | 1       | base      | no       | 1    | 2276.67888     |
+| 103   | fsharp         | 3        | dmannock_fsharp_recursion                                                                            | 11211     | 5.00029   | 1       | base      | yes      |      | 2242.06906     |
+| 104   | fsharp         | 2        | dmannock_fsharp_port                                                                                 | 11038     | 5.00035   | 1       | base      | yes      |      | 2207.44504     |
+| 105   | swift          | 1        | yellowcub_1bit_UInt8                                                                                 | 11012     | 5.00001   | 1       | base      | yes      | 1    | 2202.39428     |
+| 106   | crystal        | 2        | GordonBGood_bittwiddle                                                                               | 10942     | 5.00044   | 1       | base      | yes      | 1    | 2188.20831     |
+| 107   | scala          | 2        | scilari                                                                                              | 10831     | 5.00000   | 1       | base      | yes      |      | 2166.20000     |
+| 108   | nodejs         | 1        | rogiervandam_memcopy                                                                                 | 10679     | 5.00020   | 1       | other     | yes      | 1    | 2135.71521     |
+| 109   | rust           | 1        | mike-barber_bit                                                                                      | 10614     | 5.00040   | 1       | base      | yes      | 1    | 2122.62834     |
+| 110   | clojure        | 2        | axvr_clj-sln-2_8-bit                                                                                 | 10556     | 5.00036   | 1       | base      | yes      | 8    | 2111.04864     |
+| 111   | rust           | 2        | Azgrom                                                                                               | 10506     | 5.00023   | 1       | base      | yes      |      | 2101.10179     |
+| 112   | c              | 2        | danielspaangberg_8of30_owrb                                                                          | 10441     | 5.00027   | 1       | wheel     | yes      | 1    | 2088.08683     |
+| 113   | go             | 2        | ssovest-go-stride-u32                                                                                | 10404     | 5.00081   | 1       | base      | yes      | 1    | 2080.46238     |
+| 114   | cython         | 1        | rpkak+bit-array                                                                                      | 10360     | 5.00039   | 1       | base      | yes      | 1    | 2071.83671     |
+| 115   | odin           | 1        | odin_bit_moe                                                                                         | 10244     | 5.00000   | 1       | base      | yes      | 1    | 2048.80000     |
+| 116   | amd64          | 1        | dacvs1                                                                                               | 10216     | 5.00028   | 1       | base      | yes      | 1    | 2043.08600     |
+| 117   | csharp         | 1        | kinematics_dbool                                                                                     | 10145     | 5.00050   | 1       | base      | yes      | 8    | 2028.79712     |
+| 118   | csharp         | 1        | kinematics_ibool                                                                                     | 10141     | 5.00004   | 1       | base      | yes      | 8    | 2028.18377     |
+| 119   | julia          | 3        | louie-github_port_1of2                                                                               | 10083     | 5.00036   | 1       | base      | yes      | 1    | 2016.45683     |
+| 120   | kotlin         | 1        | jvm_kotlin_idiomatic_fast_single                                                                     | 9988      | 5.00700   | 1       | base      | yes      |      | 1994.80727     |
+| 121   | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-single-bitSieve-run-u64-find-u32                                       | 9716      | 5.00017   | 1       | base      | yes      | 1    | 1943.13393     |
+| 122   | kotlin         | 1        | jvm_kotlin_traditional_single                                                                        | 9571      | 5.01800   | 1       | base      | yes      |      | 1907.33360     |
+| 123   | haskell        | 1        | fatho/bitset_unchecked                                                                               | 9411      | 5.00003   | 1       | base      | no       | 1    | 1882.18682     |
+| 124   | java           | 1        | MansenC                                                                                              | 9373      | 5.00000   | 1       | base      | yes      |      | 1874.60000     |
+| 125   | assemblyscript | 2        | maxgraey                                                                                             | 9223      | 5.00000   | 1       | base      | yes      | 1    | 1844.60000     |
+| 126   | python         | 3        | emillynge_numpy                                                                                      | 9129      | 5.00052   | 1       | base      | no       | 8    | 1825.60838     |
+| 127   | rexx           | 2        | joss_NetRexx                                                                                         | 9043      | 5.00039   | 1       | base      | yes      | 8    | 1808.45822     |
+| 128   | julia          | 1        | dcbi                                                                                                 | 8631      | 5.00028   | 1       | base      | yes      | 1    | 1726.10189     |
+| 129   | v              | 2        | GordonBGood_bittwiddle                                                                               | 8613      | 5.00012   | 1       | base      | yes      | 1    | 1722.55831     |
+| 130   | rust           | 4        | joshallen64                                                                                          | 8471      | 5.00012   | 1       | base      | yes      |      | 1694.16090     |
+| 131   | lua            | 2        | ben1jen_luajit1                                                                                      | 8144      | 5.00000   | 1       | base      | no       | 1    | 1628.80000     |
+| 132   | julia          | 2        | epithet-jl                                                                                           | 8015      | 5.00028   | 1       | base      | yes      | 1    | 1602.91027     |
+| 133   | csharp         | 3        | tannergooding                                                                                        | 7810      | 5.00020   | 1       | base      | yes      | 1    | 1561.93599     |
+| 134   | assembly       | 1        | rbergen_x64ff_bitbtr                                                                                 | 7664      | 5.00000   | 1       | base      | yes      | 1    | 1532.80000     |
+| 135   | assembly       | 1        | rbergen_x64uff_bitbtr                                                                                | 7613      | 5.00000   | 1       | base      | no       | 1    | 1522.60000     |
+| 136   | mixed          | 2        | RobCannon_ps2                                                                                        | 7604      | 5.00055   | 1       | base      | no       | 1    | 1520.63273     |
+| 137   | java           | 4        | chrvanorleI64PatternCalc                                                                             | 7572      | 5.00000   | 1       | other     | yes      | 1    | 1514.40000     |
+| 138   | csharp         | 1        | kinematics_raw32                                                                                     | 7526      | 5.00049   | 1       | base      | yes      | 1    | 1505.05250     |
+| 139   | scala          | 1        | rom1dep                                                                                              | 7343      | 5.00000   | 1       | base      | yes      |      | 1468.60000     |
+| 140   | lisp           | 2        | mayerrobert-cl                                                                                       | 7190      | 5.00001   | 1       | base      | yes      | 1    | 1437.99626     |
+| 141   | dart           | 1        | eagerestwolf&mmcdon20_8bit                                                                           | 7155      | 5.00060   | 1       | base      | yes      | 8    | 1430.82916     |
+| 142   | csharp         | 1        | kinematics_rawd                                                                                      | 7133      | 5.00055   | 1       | base      | yes      | 1    | 1426.44309     |
+| 143   | csharp         | 1        | kinematics_raw                                                                                       | 7024      | 5.00010   | 1       | base      | yes      | 1    | 1404.77190     |
+| 144   | csharp         | 1        | kinematics_bool                                                                                      | 6896      | 5.00002   | 1       | base      | yes      | 8    | 1379.19448     |
+| 145   | csharp         | 1        | kinematics_raw6                                                                                      | 6810      | 5.00017   | 1       | wheel     | yes      | 1    | 1361.95369     |
+| 146   | typescript     | 2        | mikevdbokke_8bit-array                                                                               | 6658      | 5.00000   | 1       | base      | yes      | 1    | 1331.60000     |
+| 147   | nodejs         | 1        | rogiervandam                                                                                         | 6608      | 5.00066   | 1       | base      | yes      | 1    | 1321.42427     |
+| 148   | basic          | 3        | Nukepayload2_ArrayPool8of30M                                                                         | 6246      | 5.00036   | 1       | wheel     | yes      | 1    | 1249.10981     |
+| 149   | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_vec<u8>-clang                                                        | 6155      | 5.00056   | 1       | wheel     | yes      | 8    | 1230.86214     |
+| 150   | csharp         | 1        | kinematics_pool30                                                                                    | 6152      | 5.00013   | 1       | wheel     | yes      | 1    | 1230.36801     |
+| 151   | basic          | 3        | Nukepayload2_ReDim8of30M                                                                             | 6111      | 5.00009   | 1       | wheel     | yes      | 1    | 1222.17793     |
+| 152   | dart           | 1        | eagerestwolf&mmcdon20_1bit                                                                           | 5968      | 5.00024   | 1       | base      | yes      | 1    | 1193.54199     |
+| 153   | csharp         | 1        | kinematics_pool30m                                                                                   | 5751      | 5.00080   | 1       | wheel     | yes      | 1    | 1150.01600     |
+| 154   | lisp           | 2        | mayerrobert-clb                                                                                      | 5615      | 5.00001   | 1       | base      | yes      | 1    | 1122.99730     |
+| 155   | typescript     | 1        | marghidanu                                                                                           | 5571      | 5.00000   | 1       | base      | yes      |      | 1114.20000     |
+| 156   | typescript     | 2        | mikevdbokke_byte-array                                                                               | 5495      | 5.00000   | 1       | base      | yes      | 8    | 1099.00000     |
+| 157   | go             | 2        | ssovest-go-simple-u32                                                                                | 5267      | 5.00170   | 1       | base      | yes      | 1    | 1053.04108     |
+| 158   | java           | 2        | PratimGhosh86-JavaBitSet                                                                             | 5158      | 5.00000   | 1       | base      | yes      | 1    | 1031.60000     |
+| 159   | typescript     | 2        | mikevdbokke_32bit-array                                                                              | 5152      | 5.00000   | 1       | base      | yes      | 1    | 1030.40000     |
+| 160   | csharp         | 1        | kinematics_pool2of6                                                                                  | 5050      | 5.00090   | 1       | wheel     | yes      | 1    | 1009.81823     |
+| 161   | java           | 4        | chrvanorleI64                                                                                        | 4858      | 5.00000   | 1       | base      | yes      | 1    | 971.60000      |
+| 162   | java           | 4        | chrvanorleI32C                                                                                       | 4809      | 5.00100   | 1       | base      | yes      | 1    | 961.60768      |
+| 163   | java           | 4        | chrvanorleI32                                                                                        | 4702      | 5.00000   | 1       | base      | yes      | 1    | 940.40000      |
+| 164   | java           | 4        | chrvanorleI8                                                                                         | 4699      | 5.00000   | 1       | base      | yes      | 1    | 939.80000      |
+| 165   | java           | 4        | chrvanorleI64C                                                                                       | 4691      | 5.00000   | 1       | base      | yes      | 1    | 938.20000      |
+| 166   | umple          | 1        | mmcdon20_umple                                                                                       | 4374      | 5.00000   | 1       | base      | yes      | 1    | 874.80000      |
+| 167   | kotlin         | 1        | jvm_kotlin_idiomatic_single                                                                          | 4091      | 5.00200   | 1       | base      | yes      |      | 817.87285      |
+| 168   | java           | 3        | MansenC-native                                                                                       | 3974      | 5.00000   | 1       | base      | yes      |      | 794.80000      |
+| 169   | rust           | 3        | Blui42                                                                                               | 3959      | 5.00019   | 1       | base      | yes      |      | 791.76963      |
+| 170   | kotlin         | 1        | native_kotlin_idiomatic_fast_single                                                                  | 3750      | 5.00100   | 1       | base      | yes      |      | 749.85003      |
+| 171   | d              | 2        | BradleyChatha-Single-SieveRTB1_32                                                                    | 3194      | 5.00132   | 1       | base      | yes      | 1    | 638.63140      |
+| 172   | d              | 2        | BradleyChatha-Single-SieveRTB1_64                                                                    | 3162      | 5.00055   | 1       | base      | yes      | 1    | 632.33044      |
+| 173   | swift          | 1        | j-f1_yellowcub_bool                                                                                  | 3103      | 5.00123   | 1       | base      | yes      | 8    | 620.44688      |
+| 174   | cpp            | 4        | BlackMark-1of2-bs-hs-vec<u8>-clang                                                                   | 3085      | 5.00074   | 1       | base      | yes      | 8    | 616.90870      |
+| 175   | pascal         | 3        | olivierbrun-1-threads                                                                                | 3043      | 5.00100   | 1       | base      | yes      | 1    | 608.47830      |
+| 176   | d              | 2        | BradleyChatha-Single-SieveRTB1_16                                                                    | 3034      | 5.00074   | 1       | base      | yes      | 1    | 606.71021      |
+| 177   | d              | 2        | BradleyChatha-Single-SieveRT                                                                         | 3018      | 5.00032   | 1       | base      | yes      | 1    | 603.56137      |
+| 178   | nim            | 2        | beef331                                                                                              | 3000      | 5.00061   | 1       | base      | yes      | 1    | 599.92671      |
+| 179   | d              | 2        | BradleyChatha-Single-SieveRTBX                                                                       | 2952      | 5.00024   | 1       | base      | yes      | 8    | 590.37166      |
+| 180   | d              | 1        | eagerestwolf                                                                                         | 2904      | 5.00000   | 1       | base      | yes      | 8    | 580.80000      |
+| 181   | csharp         | 1        | kinematics_pool                                                                                      | 2811      | 5.00135   | 1       | base      | yes      | 1    | 562.04825      |
+| 182   | nim            | 1        | marghidanu                                                                                           | 2799      | 5.00067   | 1       | base      | yes      | 8    | 559.72516      |
+| 183   | mixed          | 3        | 1mikegrn/CPython                                                                                     | 2789      | 5.00129   | 1       | base      | no       | 32   | 557.65590      |
+| 184   | clojure        | 2        | axvr_clj-sln-2_1-bit                                                                                 | 2652      | 5.00115   | 1       | base      | yes      | 1    | 530.27778      |
+| 185   | csharp         | 1        | kinematics_standard                                                                                  | 2627      | 5.00123   | 1       | base      | yes      | 1    | 525.27078      |
+| 186   | csharp         | 2        | davepl                                                                                               | 2527      | 5.00115   | 1       | base      | yes      | 1    | 505.28378      |
+| 187   | python         | 2        | ssovest                                                                                              | 2515      | 5.00005   | 1       | base      | yes      | 8    | 502.99507      |
+| 188   | csharp         | 1        | kinematics_original                                                                                  | 2465      | 5.00154   | 1       | base      | yes      | 1    | 492.84820      |
+| 189   | basic          | 1        | rbergen_8of30                                                                                        | 2400      | 5.00100   | 1       | wheel     | yes      | 1    | 479.90402      |
+| 190   | kotlin         | 1        | native_kotlin_idiomatic_single                                                                       | 2374      | 5.00100   | 1       | base      | yes      |      | 474.70506      |
+| 191   | octave         | 1        | octave                                                                                               | 2190      | 5.00055   | 1       | base      | no       |      | 437.95183      |
+| 192   | kotlin         | 1        | js_kotlin_idiomatic_fast_single                                                                      | 1971      | 5.00300   | 1       | base      | yes      |      | 393.96362      |
+| 193   | kotlin         | 1        | js_kotlin_idiomatic_single                                                                           | 1963      | 5.00500   | 1       | base      | yes      |      | 392.20779      |
+| 194   | kotlin         | 1        | js_kotlin_traditional_single                                                                         | 1897      | 5.01100   | 1       | base      | yes      |      | 378.56715      |
+| 195   | d              | 2        | BradleyChatha-Single-SieveRTBX                                                                       | 1791      | 5.00194   | 1       | base      | yes      | 64   | 358.06107      |
+| 196   | fsharp         | 1        | rbergen                                                                                              | 1763      | 5.00126   | 1       | base      | yes      | 1    | 352.51132      |
+| 197   | standardml     | 1        | NotMatthewGriffin_SML                                                                                | 1758      | 5.00000   | 1       | base      | yes      | 1    | 351.60000      |
+| 198   | cpp            | 4        | BlackMark-1of2-cs-hs-inv_stridedbits<u8>-clang                                                       | 1718      | 5.00218   | 1       | base      | yes      | 1    | 343.45026      |
+| 199   | basic          | 2        | rbergen_vb                                                                                           | 1680      | 5.00183   | 1       | base      | yes      | 1    | 335.87692      |
+| 200   | kotlin         | 1        | native_kotlin_traditional_single                                                                     | 1590      | 5.00200   | 1       | base      | yes      |      | 317.87285      |
+| 201   | lean4          | 1        | badly-drawn-wizards                                                                                  | 1319      | 5.00200   | 1       | base      | yes      | 8    | 263.69452      |
+| 202   | pony           | 1        | marghidanu                                                                                           | 1277      | 5.00000   | 1       | base      | yes      | 1    | 255.40000      |
+| 203   | cobol          | 1        | fvbakel_Cobol                                                                                        | 1235      | 5.00000   | 1       | base      | no       | 8    | 247.00000      |
+| 204   | go             | 1        | bundgaard                                                                                            | 1223      | 5.00058   | 1       | base      | yes      |      | 244.57168      |
+| 205   | pascal         | 1        | rbergen                                                                                              | 1195      | 5.00000   | 1       | base      | yes      |      | 239.00000      |
+| 206   | pascal         | 2        | circular17                                                                                           | 1190      | 5.00000   | 1       | base      | yes      | 1    | 238.00000      |
+| 207   | r              | 2        | nobrien97                                                                                            | 1067      | 5.00100   | 1       | base      | no       | 32   | 213.35733      |
+| 208   | r              | 1        | fvbakel_R                                                                                            | 962       | 5.00100   | 1       | base      | yes      | 32   | 192.36153      |
+| 209   | basic          | 1        | rbergen_boolean                                                                                      | 767       | 5.00100   | 1       | base      | yes      |      | 153.36933      |
+| 210   | haxe           | 1        | TayIorRobinson_Haxe_C++                                                                              | 710       | 5.00403   | 1       | base      | yes      |      | 141.88561      |
+| 211   | ocaml          | 2        | gkpotter-unfaithful                                                                                  | 690       | 5.00118   | 1       | base      | no       |      | 137.96752      |
+| 212   | scala          | 3        | mmcdon20_scala                                                                                       | 661       | 5.00600   | 1       | base      | yes      | 1    | 132.04155      |
+| 213   | scheme         | 1        | William103                                                                                           | 612       | 5.00797   | 1       | base      | yes      | 1    | 122.20529      |
+| 214   | octave         | 2        | Brandon-Johns_8bit                                                                                   | 603       | 5.00292   | 1       | base      | yes      | 8    | 120.52961      |
+| 215   | ocaml          | 1        | gkpotter-faithful                                                                                    | 559       | 5.00495   | 1       | base      | yes      |      | 111.68952      |
+| 216   | forth          | 1        | tjol-8bit                                                                                            | 495       | 5.00774   | 1       | base      | no       | 8    | 98.84700       |
+| 217   | basic          | 1        | rbergen_bit32                                                                                        | 491       | 5.00800   | 1       | base      | yes      | 1    | 98.04313       |
+| 218   | basic          | 1        | rbergen_bit64                                                                                        | 477       | 5.00500   | 1       | base      | yes      | 1    | 95.30470       |
+| 219   | php            | 1        | DennisdeBest                                                                                         | 417       | 5.02290   | 1       | base      | yes      |      | 83.01985       |
+| 220   | perl           | 2        | kjetillll                                                                                            | 391       | 5.00333   | 1       | base      | yes      |      | 78.14802       |
+| 221   | forth          | 1        | tjol-1bit                                                                                            | 342       | 5.01071   | 1       | base      | no       | 1    | 68.25377       |
+| 222   | groovy         | 1        | mmcdon20_groovy                                                                                      | 332       | 5.00100   | 1       | base      | yes      | 1    | 66.38672       |
+| 223   | typescript     | 2        | mikevdbokke_number-array                                                                             | 289       | 5.00200   | 1       | base      | yes      |      | 57.77689       |
+| 224   | postscript     | 1        | epithet-ps                                                                                           | 243       | 5.00300   | 1       | base      | no       | 8    | 48.57086       |
+| 225   | tex            | 2        | jfbu-tex-48of210                                                                                     | 190       | 5.02562   | 1       | wheel     | no       | 32   | 37.80628       |
+| 226   | tex            | 2        | jfbu-tex-8of30                                                                                       | 173       | 5.00552   | 1       | wheel     | no       | 32   | 34.56184       |
+| 227   | gdscript       | 1        | OrigamiDev-Pete                                                                                      | 175       | 5.20300   | 1       | base      | yes      | 8    | 33.63444       |
+| 228   | ballerina      | 1        | da-strange-boi                                                                                       | 160       | 5.00000   | 1       | base      | yes      | 1    | 32.00000       |
+| 229   | ruby           | 1        | rbergen                                                                                              | 155       | 5.00800   | 1       | base      | yes      |      | 30.95048       |
+| 230   | wren           | 1        | marghidanu                                                                                           | 120       | 5.01192   | 1       | base      | yes      |      | 23.94292       |
+| 231   | tex            | 2        | jfbu-tex-480of2310                                                                                   | 109       | 5.02974   | 1       | wheel     | no       | 32   | 21.67110       |
+| 232   | hack           | 1        | da-strange-boi                                                                                       | 101       | 5.02700   | 1       | base      | yes      |      | 20.09151       |
+| 233   | kos            | 1        | cdragan                                                                                              | 88        | 5.00155   | 1       | base      | yes      | 8    | 17.59456       |
+| 234   | tex            | 2        | jfbu-tex                                                                                             | 72        | 5.05379   | 1       | base      | no       | 32   | 14.24673       |
+| 235   | perl           | 1        | marghidanu                                                                                           | 60        | 5.06113   | 1       | base      | yes      |      | 11.85505       |
+| 236   | lisp           | 1        | mikehw                                                                                               | 114       | 10.07002  | 1       | base      | no       | 1    | 11.32073       |
+| 237   | prolog         | 1        | jimbxb-prolog-c                                                                                      | 57        | 5.08500   | 1       | base      | no       | 1    | 11.20944       |
+| 238   | lua            | 1        | lua                                                                                                  | 56        | 5.00000   | 1       | base      | yes      | 64   | 11.20000       |
+| 239   | smalltalk      | 1        | fvbakel_smalltalk                                                                                    | 53        | 5.09500   | 1       | base      | yes      | 1    | 10.40236       |
+| 240   | elixir         | 2        | thomas9911                                                                                           | 49        | 5.48600   | 1       | base      | yes      | 1    | 8.93183        |
+| 241   | tcl            | 2        | fvbakel_ootcl2                                                                                       | 44        | 5.04400   | 1       | base      | yes      | 32   | 8.72324        |
+| 242   | mixal          | 1        | rbergen                                                                                              | 30        | 3.59000   | 1       | base      | no       | 1    | 8.35655        |
+| 243   | powershell     | 3        | RobCannon_ps3                                                                                        | 41        | 5.04519   | 1       | base      | yes      | 1    | 8.12655        |
+| 244   | rexx           | 1        | joss_REXX                                                                                            | 30        | 5.03969   | 1       | base      | no       | 8    | 5.95275        |
+| 245   | haxe           | 1        | TayIorRobinson_Haxe_HaxeEval                                                                         | 30        | 5.05500   | 1       | base      | yes      |      | 5.93472        |
+| 246   | powershell     | 2        | crowbar27_ps2                                                                                        | 28        | 5.03410   | 1       | base      | yes      | 1    | 5.56207        |
+| 247   | emojicode      | 1        | marghidanu                                                                                           | 24        | 5.00000   | 1       | base      | yes      |      | 4.80000        |
+| 248   | python         | 1        | davepl                                                                                               | 23        | 5.01419   | 1       | base      | yes      |      | 4.58698        |
+| 249   | sql            | 2        | fvbakel_MariaDB3                                                                                     | 9         | 5.43400   | 1       | other     | no       | 32   | 1.65624        |
+| 250   | tcl            | 1        | fvbakeltcl                                                                                           | 8         | 5.07300   | 1       | base      | yes      | 1    | 1.57698        |
+| 251   | raku           | 1        | draco1006                                                                                            | 8         | 5.08064   | 1       | base      | yes      |      | 1.57460        |
+| 252   | sql            | 1        | fvbakel_sqlite                                                                                       | 7         | 5.32018   | 1       | other     | no       | 8    | 1.31574        |
+| 253   | red            | 1        | mmcdon20_red                                                                                         | 7         | 5.41471   | 1       | base      | yes      | 1    | 1.29278        |
+| 254   | befunge        | 1        | tjol-bf98                                                                                            | 7         | 5.42955   | 1       | base      | no       | 1    | 1.28924        |
+| 255   | haxe           | 1        | TayIorRobinson_Haxe_Python                                                                           | 7         | 5.69841   | 1       | base      | yes      |      | 1.22841        |
+| 256   | tcl            | 2        | fvbakel_ootcl                                                                                        | 6         | 5.04000   | 1       | base      | yes      | 1    | 1.19048        |
+| 257   | sql            | 2        | fvbakel_MariaDB2                                                                                     | 6         | 5.59300   | 1       | other     | no       | 32   | 1.07277        |
+| 258   | clojure        | 1        | mmcdon20_clojure                                                                                     | 5         | 5.26400   | 1       | base      | yes      | 1    | 0.94985        |
+| 259   | prolog         | 1        | jimbxb-prolog-dynamic                                                                                | 5         | 5.34300   | 1       | base      | no       |      | 0.93580        |
+| 260   | idl            | 1        | kriztioan_1bit                                                                                       | 4         | 6.17104   | 1       | base      | yes      | 1    | 0.64819        |
+| 261   | bash           | 1        | bash_inline                                                                                          | 3         | 6.61122   | 1       | base      | no       |      | 0.45377        |
+| 262   | bash           | 1        | bash                                                                                                 | 2         | 7.54334   | 1       | base      | no       |      | 0.26513        |
+| 263   | yoix           | 1        | mmcdon20_yoix                                                                                        | 2         | 9.71600   | 1       | base      | yes      | 1    | 0.20585        |
+| 264   | comal          | 2        | kottm                                                                                                | 1         | 5.00000   | 1       | base      | no       | 1    | 0.20000        |
+| 265   | sql            | 2        | fvbakel_MariaDB1                                                                                     | 1         | 5.75700   | 1       | base      | no       | 32   | 0.17370        |
+| 266   | prolog         | 1        | jimbxb-prolog-basic                                                                                  | 1         | 6.37400   | 1       | base      | yes      | 1    | 0.15689        |
+| 267   | tex            | 1        | tjol                                                                                                 | 2         | 12.92877  | 1       | base      | no       | 32   | 0.15469        |
+| 268   | bash           | 1        | bash_packed                                                                                          | 1         | 7.31206   | 1       | base      | no       |      | 0.13676        |
+| 269   | elixir         | 1        | cdesch                                                                                               | 1         | 22.27900  | 1       | base      | no       |      | 0.04489        |
+| 270   | powershell     | 1        | crowbar27_ps1                                                                                        | 1         | 52.53090  | 1       | base      | yes      | 1    | 0.01904        |
+| 271   | brainfuck      | 1        | aquarel                                                                                              | 1         | 98.37238  | 1       | base      | no       | 32   | 0.01017        |
+| 272   | octave         | 2        | Brandon-Johns_1bit                                                                                   | 1         | 131.50375 | 1       | base      | yes      | 1    | 0.00760        |
 
 ### Multi-threaded
 
-| Index | Implementation | Solution | Label                                                             | Passes     | Duration | Threads | Algorithm | Faithful | Bits | Passes/Second  |
-| ----- | -------------- | -------- | ----------------------------------------------------------------- | ---------- | -------- | ------- | --------- | -------- | ---- | -------------- |
-| 1     | d              | 2        | BradleyChatha-MultistaticThreads-SieveRTCT_Cheatiness             | 3096613368 | 5.00001  | 32      | other     | no       | 1    | 19353794.84241 |
-| 2     | cpp            | 3        | flo80_pol_constexpr                                               | 1095313694 | 5.00052  | 32      | base      | no       | 1    | 6845001.44535  |
-| 3     | cpp            | 4        | BlackMark-pregenerated-inv_bits<u32>-clang                        | 32968570   | 5.00129  | 32      | base      | no       | 1    | 206000.41439   |
-| 4     | cpp            | 4        | BlackMark-pregenerated-inv_bits<u32>-gcc                          | 13699797   | 5.00129  | 32      | base      | no       | 1    | 85601.64603    |
-| 5     | rust           | 6        | SycrationMultithreaded                                            | 1991833    | 5.00002  | 8       | base      | no       |      | 49795.67117    |
-| 6     | rust           | 1        | mike-barber_bit-unrolled-hybrid                                   | 882062     | 5.00043  | 32      | base      | yes      | 1    | 5512.41121     |
-| 7     | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_bits<u32>-gcc                     | 459571     | 5.00152  | 32      | wheel     | yes      | 1    | 2871.44583     |
-| 8     | cpp            | 4        | BlackMark-5760of30030-os-hs-maskedbits<u32>-gcc                   | 434244     | 5.02001  | 32      | wheel     | yes      | 1    | 2703.20677     |
-| 9     | rust           | 1        | mike-barber_bit-striped-hybrid-blocks4k                           | 410477     | 5.00048  | 32      | base      | yes      | 1    | 2565.23270     |
-| 10    | rust           | 1        | mike-barber_bit-striped-hybrid-blocks16k                          | 400728     | 5.00055  | 32      | base      | yes      | 1    | 2504.27225     |
-| 11    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u8-5760of30030  | 379252     | 5.00008  | 32      | wheel     | yes      | 1    | 2370.28708     |
-| 12    | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_bits<u32>-clang                   | 353957     | 5.00131  | 32      | wheel     | yes      | 1    | 2211.65180     |
-| 13    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u8-480of2310    | 350820     | 5.00022  | 32      | wheel     | yes      | 1    | 2192.52853     |
-| 14    | c              | 2        | danielspaangberg_5760of30030_epar                                 | 343336     | 5.00110  | 32      | wheel     | yes      | 1    | 2145.37973     |
-| 15    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u64-480of2310   | 342006     | 5.00013  | 32      | wheel     | yes      | 1    | 2137.48193     |
-| 16    | rust           | 1        | mike-barber_bit-striped-blocks4k                                  | 333693     | 5.00049  | 32      | base      | yes      | 1    | 2085.37680     |
-| 17    | cpp            | 4        | BlackMark-5760of30030-os-hs-maskedbits<u32>-clang                 | 333435     | 5.00253  | 32      | wheel     | yes      | 1    | 2082.91480     |
-| 18    | rust           | 1        | mike-barber_bit-striped-blocks16k                                 | 330536     | 5.00057  | 32      | base      | yes      | 1    | 2065.61656     |
-| 19    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u64-5760of30030 | 324478     | 5.00006  | 32      | wheel     | yes      | 1    | 2027.96316     |
-| 20    | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_vec<u8>-gcc                       | 305390     | 5.00324  | 32      | wheel     | yes      | 8    | 1907.45147     |
-| 21    | rust           | 1        | mike-barber_byte                                                  | 297851     | 5.00062  | 32      | base      | yes      | 8    | 1861.33870     |
-| 22    | c              | 2        | danielspaangberg_480of2310_epar                                   | 291472     | 5.00126  | 32      | wheel     | yes      | 1    | 1821.24214     |
-| 23    | rust           | 1        | mike-barber_bit-striped                                           | 282235     | 5.00057  | 32      | base      | yes      | 1    | 1763.76606     |
-| 24    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_arr<bool>-gcc                            | 264943     | 5.00386  | 32      | base      | yes      | 8    | 1654.61639     |
-| 25    | cpp            | 4        | BlackMark-1of2-bs-hs-vec<u8>-gcc                                  | 261815     | 5.00285  | 32      | base      | yes      | 8    | 1635.41157     |
-| 26    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_stridedbits<u8>-gcc                      | 253040     | 5.00129  | 32      | base      | yes      | 1    | 1581.09208     |
-| 27    | c              | 2        | danielspaangberg_5760of30030_par                                  | 30348      | 5.00004  | 4       | wheel     | yes      | 1    | 1517.38847     |
-| 28    | c              | 2        | danielspaangberg_48of210_epar                                     | 240580     | 5.00138  | 32      | wheel     | yes      | 1    | 1503.21162     |
-| 29    | java           | 4        | chrvanorleStrided32Blocks16k                                      | 232509     | 5.00500  | 32      | base      | yes      | 1    | 1451.72952     |
-| 30    | c              | 2        | danielspaangberg_480of2310_par                                    | 28782      | 5.00014  | 4       | wheel     | yes      | 1    | 1439.06086     |
-| 31    | d              | 2        | BradleyChatha-MultistaticThreads-SieveCT                          | 222940     | 5.00056  | 32      | base      | no       | 1    | 1393.21896     |
-| 32    | cpp            | 2        | davepl_par                                                        | 221302     | 5.00082  | 32      | base      | yes      | 1    | 1382.91070     |
-| 33    | c              | 2        | danielspaangberg_48of210_par                                      | 27656      | 5.00006  | 4       | wheel     | yes      | 1    | 1382.78258     |
-| 34    | rust           | 1        | mike-barber_bit-rotate                                            | 219586     | 5.00068  | 32      | base      | yes      | 1    | 1372.22523     |
-| 35    | c              | 2        | danielspaangberg_8of30_par                                        | 26478      | 5.00011  | 4       | wheel     | yes      | 1    | 1323.87087     |
-| 36    | rust           | 7        | sergiocks                                                         | 208810     | 5.00069  | 32      | wheel     | yes      | 8    | 1304.88232     |
-| 37    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-sieve-u8                 | 199158     | 5.00049  | 32      | base      | yes      | 8    | 1244.61553     |
-| 38    | go             | 4        | kpym-go-multi                                                     | 24237      | 5.00021  | 4       | base      | yes      |      | 1211.79910     |
-| 39    | c              | 2        | danielspaangberg_1of2_epar                                        | 193609     | 5.00169  | 32      | base      | yes      | 1    | 1209.64739     |
-| 40    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_arr<bool>-clang                          | 191519     | 5.00292  | 32      | base      | yes      | 8    | 1196.29511     |
-| 41    | c              | 2        | danielspaangberg_8of30_epar                                       | 179352     | 5.00157  | 32      | wheel     | yes      | 1    | 1120.59768     |
-| 42    | java           | 4        | chrvanorleI64PatternCalc                                          | 178428     | 5.00700  | 32      | other     | yes      | 1    | 1113.61594     |
-| 43    | java           | 4        | chrvanorleI32CUnroll                                              | 174979     | 5.00700  | 32      | base      | yes      | 1    | 1092.08982     |
-| 44    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u8              | 163946     | 5.00047  | 32      | base      | yes      | 1    | 1024.56619     |
-| 45    | rust           | 1        | mike-barber_bit                                                   | 163847     | 5.00079  | 32      | base      | yes      | 1    | 1023.88244     |
-| 46    | c              | 2        | danielspaangberg_1of2_par                                         | 20466      | 5.00018  | 4       | base      | yes      | 1    | 1023.26255     |
-| 47    | odin           | 1        | odin_bit_threaded_moe                                             | 160118     | 5.00400  | 32      | base      | yes      | 1    | 999.93755      |
-| 48    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-gustafson-bitSieve-u64             | 157946     | 5.00065  | 32      | base      | yes      | 1    | 987.03419      |
-| 49    | odin           | 1        | odin_byte_threaded_moe                                            | 143748     | 5.00200  | 32      | base      | yes      | 8    | 898.06577      |
-| 50    | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_vec<u8>-clang                     | 136862     | 5.00342  | 32      | wheel     | yes      | 8    | 854.80281      |
-| 51    | kotlin         | 1        | jvm_kotlin_idiomatic_fast_multi                                   | 127610     | 5.00000  | 32      | base      | yes      |      | 797.56250      |
-| 52    | kotlin         | 1        | jvm_kotlin_traditional_multi                                      | 124419     | 5.00000  | 32      | base      | yes      |      | 777.61875      |
-| 53    | java           | 4        | chrvanorleI32                                                     | 118551     | 5.00500  | 32      | base      | yes      | 1    | 740.20355      |
-| 54    | java           | 4        | chrvanorleI32C                                                    | 116472     | 5.00600  | 32      | base      | yes      | 1    | 727.07751      |
-| 55    | java           | 4        | chrvanorleI64                                                     | 114944     | 5.01300  | 32      | base      | yes      | 1    | 716.53700      |
-| 56    | java           | 4        | chrvanorleI64C                                                    | 112942     | 5.00600  | 32      | base      | yes      | 1    | 705.04145      |
-| 57    | rust           | 5        | kulasko-rust-tile-stripe-u8192                                    | 106277     | 5.00003  | 31      | base      | yes      | 1    | 685.65359      |
-| 58    | kotlin         | 1        | jvm_kotlin_idiomatic_multi                                        | 108606     | 5.00000  | 32      | base      | yes      |      | 678.78750      |
-| 59    | rust           | 5        | kulasko-rust-tile-rotate-u8                                       | 106244     | 5.00003  | 32      | base      | yes      | 1    | 664.02076      |
-| 60    | java           | 4        | chrvanorleI8                                                      | 104398     | 5.01800  | 32      | base      | yes      | 1    | 650.14697      |
-| 61    | rust           | 5        | kulasko-rust-tile-rotate-u32                                      | 101338     | 5.00005  | 32      | base      | yes      | 1    | 633.35680      |
-| 62    | nodejs         | 1        | rogiervandam                                                      | 100209     | 5.07981  | 32      | base      | yes      | 1    | 616.46622      |
-| 63    | rust           | 5        | kulasko-rust-tile-bit-u8                                          | 97756      | 5.00000  | 32      | base      | yes      | 1    | 610.97455      |
-| 64    | rust           | 5        | kulasko-rust-tile-bit-u32                                         | 95429      | 5.00005  | 32      | base      | yes      | 1    | 596.42552      |
-| 65    | dart           | 1        | eagerestwolf&mmcdon20_1bit_par                                    | 86275      | 5.00055  | 32      | base      | yes      | 1    | 539.15955      |
-| 66    | d              | 2        | BradleyChatha-MultistaticThreads-SieveRTB1_32                     | 77027      | 5.00182  | 32      | base      | yes      | 1    | 481.24358      |
-| 67    | java           | 2        | PratimGhosh86-JavaBitSetMT                                        | 75134      | 5.00000  | 32      | base      | yes      | 1    | 469.58750      |
-| 68    | cpp            | 4        | BlackMark-1of2-bs-hs-vec<u8>-clang                                | 73292      | 5.00299  | 32      | base      | yes      | 8    | 457.80123      |
-| 69    | pascal         | 3        | olivierbrun-32-threads                                            | 73153      | 5.00200  | 32      | base      | yes      | 1    | 457.02344      |
-| 70    | d              | 2        | BradleyChatha-MultistaticThreads-SieveRT                          | 71424      | 5.00207  | 32      | base      | yes      | 1    | 446.21527      |
-| 71    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_stridedbits<u8>-clang                    | 38283      | 5.00488  | 32      | base      | yes      | 1    | 239.03545      |
-| 72    | rust           | 5        | kulasko-rust-tile-bool-u8                                         | 32957      | 5.00011  | 32      | base      | yes      | 8    | 205.97672      |
-| 73    | dart           | 1        | eagerestwolf&mmcdon20_8bit_par                                    | 15914      | 5.00144  | 32      | base      | yes      | 8    | 99.43388       |
-| 74    | zig            | 3        | ManDeJan&ityonemo-zig-parallel-amdahl-sieve-u8                    | 9365       | 5.00057  | 32      | base      | yes      | 8    | 58.52458       |
-| 75    | csharp         | 1        | kinematics_rawp                                                   | 3420       | 5.00149  | 32      | base      | yes      | 1    | 21.36863       |
-| 76    | csharp         | 1        | kinematics_pool6p                                                 | 3282       | 5.00119  | 32      | wheel     | yes      | 1    | 20.50762       |
-| 77    | rust           | 5        | kulasko-rust-stream-rotate-u8                                     | 1840       | 5.00120  | 32      | base      | yes      | 1    | 11.49724       |
-| 78    | rust           | 5        | kulasko-rust-stream-bit-u8                                        | 1839       | 5.00024  | 32      | base      | yes      | 1    | 11.49319       |
-| 79    | rust           | 5        | kulasko-rust-stream-rotate-u32                                    | 1810       | 5.00042  | 32      | base      | yes      | 1    | 11.31155       |
-| 80    | rust           | 5        | kulasko-rust-stream-bit-u32                                       | 1806       | 5.00105  | 32      | base      | yes      | 1    | 11.28514       |
-| 81    | rust           | 5        | kulasko-rust-stream-bool-u8                                       | 1646       | 5.00161  | 32      | base      | yes      | 8    | 10.28418       |
-| 82    | rust           | 5        | kulasko-rust-stream-stripe-u8192                                  | 1551       | 5.00056  | 31      | base      | yes      | 1    | 10.00533       |
-| 83    | idl            | 1        | kriztioan_idlway                                                  | 541        | 5.00060  | 28      | base      | yes      | 8    | 3.86382        |
+| Index | Implementation | Solution | Label                                                                                                            | Passes     | Duration | Threads | Algorithm | Faithful | Bits | Passes/Second  |
+| ----- | -------------- | -------- | ---------------------------------------------------------------------------------------------------------------- | ---------- | -------- | ------- | --------- | -------- | ---- | -------------- |
+| 1     | d              | 2        | BradleyChatha-MultistaticThreads-SieveRTCT_Cheatiness                                                            | 3100404093 | 5.00001  | 32      | other     | no       | 1    | 19377486.82628 |
+| 2     | cpp            | 3        | flo80_pol_constexpr                                                                                              | 1381091610 | 5.00058  | 32      | base      | no       | 1    | 8630814.48337  |
+| 3     | cpp            | 4        | BlackMark-pregenerated-inv_bits<u32>-clang                                                                       | 32905898   | 5.00122  | 32      | base      | no       | 1    | 205611.69325   |
+| 4     | cpp            | 4        | BlackMark-pregenerated-inv_bits<u32>-gcc                                                                         | 13727368   | 5.00217  | 32      | base      | no       | 1    | 85758.83067    |
+| 5     | rust           | 6        | SycrationMultithreaded                                                                                           | 1967742    | 5.00002  | 8       | base      | no       |      | 49193.34992    |
+| 6     | rust           | 1        | mike-barber_bit-unrolled-hybrid                                                                                  | 890092     | 5.00049  | 32      | base      | yes      | 1    | 5562.52807     |
+| 7     | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_bits<u32>-gcc                                                                    | 463205     | 5.00134  | 32      | wheel     | yes      | 1    | 2894.25559     |
+| 8     | cpp            | 4        | BlackMark-5760of30030-os-hs-maskedbits<u32>-gcc                                                                  | 436439     | 5.00253  | 32      | wheel     | yes      | 1    | 2726.36421     |
+| 9     | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-parallel-gustafson-inverted-bitSieve-unrolled-run-u64-find-u8-advanced-5760of15015 | 426959     | 5.00018  | 32      | wheel     | yes      | 1    | 2668.39769     |
+| 10    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-parallel-gustafson-bitSieve-unrolled-run-u64-find-u32-480of1155                    | 422353     | 5.00027  | 32      | wheel     | yes      | 1    | 2639.56371     |
+| 11    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-parallel-gustafson-bitSieve-unrolled-run-u64-find-u32-5760of15015                  | 421471     | 5.00004  | 32      | wheel     | yes      | 1    | 2634.17268     |
+| 12    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-parallel-gustafson-bitSieve-unrolled-run-u64-find-u32-48of105                      | 418031     | 5.00023  | 32      | wheel     | yes      | 1    | 2612.57357     |
+| 13    | rust           | 1        | mike-barber_bit-striped-hybrid-blocks4k                                                                          | 416094     | 5.00048  | 32      | base      | yes      | 1    | 2600.34001     |
+| 14    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-parallel-gustafson-bitSieve-unrolled-run-u64-find-u32-8of15                        | 413365     | 5.00004  | 32      | wheel     | yes      | 1    | 2583.51058     |
+| 15    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-parallel-gustafson-bitSieve-unrolled-run-u64-find-u32                              | 410896     | 5.00021  | 32      | base      | yes      | 1    | 2567.99214     |
+| 16    | rust           | 1        | mike-barber_bit-striped-hybrid-blocks16k                                                                         | 402874     | 5.00056  | 32      | base      | yes      | 1    | 2517.68182     |
+| 17    | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_bits<u32>-clang                                                                  | 355954     | 5.00127  | 32      | wheel     | yes      | 1    | 2224.14757     |
+| 18    | c              | 2        | danielspaangberg_5760of30030_epar                                                                                | 345374     | 5.00112  | 32      | wheel     | yes      | 1    | 2158.10408     |
+| 19    | rust           | 1        | mike-barber_bit-striped-blocks4k                                                                                 | 335232     | 5.00047  | 32      | base      | yes      | 1    | 2095.00240     |
+| 20    | cpp            | 4        | BlackMark-5760of30030-os-hs-maskedbits<u32>-clang                                                                | 335219     | 5.00371  | 32      | wheel     | yes      | 1    | 2093.56532     |
+| 21    | rust           | 1        | mike-barber_bit-striped-blocks16k                                                                                | 330876     | 5.00057  | 32      | base      | yes      | 1    | 2067.73856     |
+| 22    | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_vec<u8>-gcc                                                                      | 306872     | 5.00249  | 32      | wheel     | yes      | 8    | 1916.99534     |
+| 23    | rust           | 1        | mike-barber_byte                                                                                                 | 301233     | 5.00062  | 32      | base      | yes      | 8    | 1882.47161     |
+| 24    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-parallel-gustafson-sieve-u8-92160of255255                                          | 300132     | 5.00050  | 32      | wheel     | yes      | 8    | 1875.63744     |
+| 25    | c              | 2        | danielspaangberg_480of2310_epar                                                                                  | 292752     | 5.00124  | 32      | wheel     | yes      | 1    | 1829.24452     |
+| 26    | rust           | 1        | mike-barber_bit-striped                                                                                          | 283687     | 5.00057  | 32      | base      | yes      | 1    | 1772.84239     |
+| 27    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_arr<bool>-gcc                                                                           | 263866     | 5.00414  | 32      | base      | yes      | 8    | 1647.79812     |
+| 28    | cpp            | 4        | BlackMark-1of2-bs-hs-vec<u8>-gcc                                                                                 | 262925     | 5.00680  | 32      | base      | yes      | 8    | 1641.04942     |
+| 29    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_stridedbits<u8>-gcc                                                                     | 251235     | 5.00152  | 32      | base      | yes      | 1    | 1569.74155     |
+| 30    | c              | 2        | danielspaangberg_5760of30030_par                                                                                 | 30984      | 5.00010  | 4       | wheel     | yes      | 1    | 1549.16778     |
+| 31    | c              | 2        | danielspaangberg_48of210_epar                                                                                    | 242083     | 5.00817  | 32      | wheel     | yes      | 1    | 1510.55111     |
+| 32    | java           | 4        | chrvanorleStrided32Blocks16k                                                                                     | 233561     | 5.00400  | 32      | base      | yes      | 1    | 1458.58938     |
+| 33    | c              | 2        | danielspaangberg_480of2310_par                                                                                   | 28371      | 5.00012  | 4       | wheel     | yes      | 1    | 1418.51482     |
+| 34    | d              | 2        | BradleyChatha-MultistaticThreads-SieveCT                                                                         | 223425     | 5.00071  | 32      | base      | no       | 1    | 1396.20799     |
+| 35    | cpp            | 2        | davepl_par                                                                                                       | 222912     | 5.00082  | 32      | base      | yes      | 1    | 1392.97155     |
+| 36    | c              | 2        | danielspaangberg_8of30_par                                                                                       | 27763      | 5.00014  | 4       | wheel     | yes      | 1    | 1388.11169     |
+| 37    | rust           | 1        | mike-barber_bit-rotate                                                                                           | 220044     | 5.00065  | 32      | base      | yes      | 1    | 1375.09521     |
+| 38    | c              | 2        | danielspaangberg_48of210_par                                                                                     | 27257      | 5.00008  | 4       | wheel     | yes      | 1    | 1362.82928     |
+| 39    | go             | 4        | kpym-go-multi                                                                                                    | 26076      | 5.00005  | 4       | base      | yes      |      | 1303.78748     |
+| 40    | rust           | 7        | sergiocks                                                                                                        | 206330     | 5.00076  | 32      | wheel     | yes      | 8    | 1289.36634     |
+| 41    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-parallel-gustafson-sieve-u8                                                        | 200246     | 5.00083  | 32      | base      | yes      | 8    | 1251.32978     |
+| 42    | c              | 2        | danielspaangberg_1of2_epar                                                                                       | 194446     | 5.00424  | 32      | base      | yes      | 1    | 1214.25878     |
+| 43    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_arr<bool>-clang                                                                         | 193838     | 5.00364  | 32      | base      | yes      | 8    | 1210.60618     |
+| 44    | c              | 2        | danielspaangberg_8of30_epar                                                                                      | 180114     | 5.00605  | 32      | wheel     | yes      | 1    | 1124.35248     |
+| 45    | java           | 4        | chrvanorleI64PatternCalc                                                                                         | 178919     | 5.00400  | 32      | other     | yes      | 1    | 1117.34987     |
+| 46    | java           | 4        | chrvanorleI32CUnroll                                                                                             | 174644     | 5.00700  | 32      | base      | yes      | 1    | 1089.99900     |
+| 47    | c              | 2        | danielspaangberg_1of2_par                                                                                        | 20580      | 5.00019  | 4       | base      | yes      | 1    | 1028.96172     |
+| 48    | rust           | 1        | mike-barber_bit                                                                                                  | 164597     | 5.00079  | 32      | base      | yes      | 1    | 1028.56891     |
+| 49    | odin           | 1        | odin_bit_threaded_moe                                                                                            | 160369     | 5.00200  | 32      | base      | yes      | 1    | 1001.90549     |
+| 50    | odin           | 1        | odin_byte_threaded_moe                                                                                           | 140363     | 5.00300  | 32      | base      | yes      | 8    | 876.74270      |
+| 51    | cpp            | 4        | BlackMark-5760of30030-os-hs-inv_vec<u8>-clang                                                                    | 136384     | 5.00284  | 32      | wheel     | yes      | 8    | 851.91611      |
+| 52    | kotlin         | 1        | jvm_kotlin_traditional_multi                                                                                     | 124572     | 5.00000  | 32      | base      | yes      |      | 778.57500      |
+| 53    | java           | 4        | chrvanorleI32                                                                                                    | 118649     | 5.01100  | 32      | base      | yes      | 1    | 739.92841      |
+| 54    | java           | 4        | chrvanorleI32C                                                                                                   | 116103     | 5.01800  | 32      | base      | yes      | 1    | 723.04080      |
+| 55    | java           | 4        | chrvanorleI64                                                                                                    | 114260     | 5.00700  | 32      | base      | yes      | 1    | 713.12662      |
+| 56    | java           | 4        | chrvanorleI64C                                                                                                   | 112208     | 5.00900  | 32      | base      | yes      | 1    | 700.03993      |
+| 57    | rust           | 5        | kulasko-rust-tile-stripe-u8192                                                                                   | 106917     | 5.00002  | 31      | base      | yes      | 1    | 689.78407      |
+| 58    | kotlin         | 1        | jvm_kotlin_idiomatic_fast_multi                                                                                  | 107902     | 5.00000  | 32      | base      | yes      |      | 674.38750      |
+| 59    | rust           | 5        | kulasko-rust-tile-rotate-u8                                                                                      | 106691     | 5.00004  | 32      | base      | yes      | 1    | 666.81350      |
+| 60    | rust           | 5        | kulasko-rust-tile-rotate-u32                                                                                     | 104447     | 5.00003  | 32      | base      | yes      | 1    | 652.78988      |
+| 61    | java           | 4        | chrvanorleI8                                                                                                     | 104300     | 5.01000  | 32      | base      | yes      | 1    | 650.57385      |
+| 62    | rust           | 5        | kulasko-rust-tile-bit-u8                                                                                         | 99290      | 5.00001  | 32      | base      | yes      | 1    | 620.56070      |
+| 63    | nodejs         | 1        | rogiervandam                                                                                                     | 100497     | 5.08980  | 32      | base      | yes      | 1    | 617.02397      |
+| 64    | rust           | 5        | kulasko-rust-tile-bit-u32                                                                                        | 97519      | 5.00002  | 32      | base      | yes      | 1    | 609.49133      |
+| 65    | dart           | 1        | eagerestwolf&mmcdon20_1bit_par                                                                                   | 86127      | 5.00312  | 32      | base      | yes      | 1    | 537.95774      |
+| 66    | d              | 2        | BradleyChatha-MultistaticThreads-SieveRTB1_32                                                                    | 77374      | 5.00188  | 32      | base      | yes      | 1    | 483.40574      |
+| 67    | kotlin         | 1        | jvm_kotlin_idiomatic_multi                                                                                       | 76000      | 5.00000  | 32      | base      | yes      |      | 475.00000      |
+| 68    | java           | 2        | PratimGhosh86-JavaBitSetMT                                                                                       | 74643      | 5.00000  | 32      | base      | yes      | 1    | 466.51875      |
+| 69    | cpp            | 4        | BlackMark-1of2-bs-hs-vec<u8>-clang                                                                               | 73318      | 5.00285  | 32      | base      | yes      | 8    | 457.97645      |
+| 70    | pascal         | 3        | olivierbrun-32-threads                                                                                           | 73212      | 5.00200  | 32      | base      | yes      | 1    | 457.39204      |
+| 71    | d              | 2        | BradleyChatha-MultistaticThreads-SieveRT                                                                         | 71832      | 5.00203  | 32      | base      | yes      | 1    | 448.76780      |
+| 72    | cpp            | 4        | BlackMark-1of2-cs-hs-inv_stridedbits<u8>-clang                                                                   | 38370      | 5.00496  | 32      | base      | yes      | 1    | 239.57484      |
+| 73    | rust           | 5        | kulasko-rust-tile-bool-u8                                                                                        | 33089      | 5.00009  | 32      | base      | yes      | 8    | 206.80258      |
+| 74    | dart           | 1        | eagerestwolf&mmcdon20_8bit_par                                                                                   | 16423      | 5.00432  | 32      | base      | yes      | 8    | 102.55504      |
+| 75    | zig            | 3        | ManDeJan&ityonemo&SpexGuy-zig-parallel-amdahl-sieve-u8                                                           | 10167      | 5.00019  | 32      | base      | yes      | 8    | 63.54134       |
+| 76    | csharp         | 1        | kinematics_rawp                                                                                                  | 3399       | 5.00054  | 32      | base      | yes      | 1    | 21.24146       |
+| 77    | csharp         | 1        | kinematics_pool6p                                                                                                | 3307       | 5.00006  | 32      | wheel     | yes      | 1    | 20.66850       |
+| 78    | rust           | 5        | kulasko-rust-stream-bit-u8                                                                                       | 1924       | 5.00191  | 32      | base      | yes      | 1    | 12.02041       |
+| 79    | rust           | 5        | kulasko-rust-stream-rotate-u8                                                                                    | 1906       | 5.00205  | 32      | base      | yes      | 1    | 11.90762       |
+| 80    | rust           | 5        | kulasko-rust-stream-rotate-u32                                                                                   | 1903       | 5.00182  | 32      | base      | yes      | 1    | 11.88943       |
+| 81    | rust           | 5        | kulasko-rust-stream-bit-u32                                                                                      | 1900       | 5.00026  | 32      | base      | yes      | 1    | 11.87439       |
+| 82    | rust           | 5        | kulasko-rust-stream-stripe-u8192                                                                                 | 1675       | 5.00149  | 31      | base      | yes      | 1    | 10.80323       |
+| 83    | rust           | 5        | kulasko-rust-stream-bool-u8                                                                                      | 1659       | 5.00189  | 32      | base      | yes      | 8    | 10.36484       |
+| 84    | idl            | 1        | kriztioan_idlway                                                                                                 | 528        | 5.00848  | 28      | base      | yes      | 8    | 3.76505        |
