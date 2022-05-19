@@ -6,77 +6,77 @@ The results of the [David Plummer's Primes Drag Race](https://github.com/Plummer
 
 Generated at 2022-05-19 on a Ryzen 9 5950X with 32GB RAM.
 
-### Best faithful performers for each language
+### Best single-threaded faithful performers for each language
 
-| Implementation | Slowness   | Position | Index | Solution | Label                                                                                                                   | Passes | Duration | Threads | Algorithm | Bits | Passes/Second |
-| -------------- | ---------- | -------- | ----- | -------- | ----------------------------------------------------------------------------------------------------------------------- | ------ | -------- | ------- | --------- | ---- | ------------- |
-| zig            | 1.000      | 1        | 6     | 3        | 77-ManDeJan&ityonemo&SpexGuy-zig-single-inverted-bitSieve-unrolled-run-u64v8h-deLUT-spLUT-find-u8-advanced-5760of30030v | 68147  | 5.00004  | 1       | wheel     | 1    | 13629.29097   |
-| rust           | 1.0032     | 2        | 7     | 1        | mike-barber_bit-extreme-hybrid                                                                                          | 67927  | 5.00005  | 1       | base      | 1    | 13585.27692   |
-| nim            | 1.0363     | 3        | 8     | 3        | GordonBGood_extreme-hybrid                                                                                              | 65762  | 5.00007  | 1       | base      | 1    | 13152.20996   |
-| haskell        | 1.1424     | 4        | 11    | 2        | GordonBGood_extreme-hybrid                                                                                              | 59652  | 5.00005  | 1       | base      | 1    | 11930.29254   |
-| chapel         | 1.2983     | 5        | 12    | 1        | GordonBGood_extreme_hybrid                                                                                              | 52487  | 5.00000  | 1       | base      | 1    | 10497.40000   |
-| crystal        | 1.3315     | 6        | 13    | 2        | GordonBGood_extreme-hybrid                                                                                              | 51182  | 5.00002  | 1       | base      | 1    | 10236.35087   |
-| c              | 1.5781     | 7        | 15    | 3        | fvbakel_Cwords                                                                                                          | 43184  | 5.00005  | 1       | other     | 1    | 8636.72227    |
-| cython         | 1.6338     | 8        | 16    | 1        | ssovest-cy                                                                                                              | 41710  | 5.00006  | 1       | other     | 1    | 8341.89489    |
-| julia          | 1.8111     | 9        | 17    | 4        | GordonBGood_extremehybrid                                                                                               | 37627  | 5.00008  | 1       | base      | 1    | 7525.27979    |
-| cpp            | 2.2941     | 10       | 19    | 4        | BlackMark-5760of30030-os-hs-inv_vec<u8>-gcc                                                                             | 29706  | 5.00012  | 1       | wheel     | 8    | 5941.05741    |
-| go             | 2.3441     | 11       | 21    | 2        | ssovest-go-other-u64                                                                                                    | 29081  | 5.00161  | 1       | other     | 1    | 5814.32334    |
-| lisp           | 2.6575     | 12       | 34    | 2        | mayerrobert-cl-dense                                                                                                    | 25643  | 5.00000  | 1       | base      | 1    | 5128.59487    |
-| csharp         | 3.1020     | 13       | 43    | 4        | italytoast-stride8-blocks32k                                                                                            | 21969  | 5.00006  | 1       | base      | 1    | 4393.74728    |
-| amd64          | 3.4201     | 14       | 49    | 1        | dacvs8                                                                                                                  | 19926  | 5.00022  | 1       | base      | 8    | 3985.02625    |
-| fortran        | 3.4887     | 15       | 52    | 2        | tjol-8bit                                                                                                               | 19534  | 5.00018  | 1       | base      | 8    | 3906.66289    |
-| fsharp         | 3.8442     | 16       | 63    | 4        | GordonBGood_unpeeled                                                                                                    | 17728  | 5.00020  | 1       | base      | 1    | 3545.45676    |
-| java           | 3.9615     | 17       | 66    | 4        | chrvanorleStrided32Blocks16k                                                                                            | 17202  | 5.00000  | 1       | base      | 1    | 3440.40000    |
-| swift          | 4.0533     | 18       | 72    | 1        | yellowcub_striped_UInt8                                                                                                 | 16813  | 5.00014  | 1       | base      | 1    | 3362.50652    |
-| assemblyscript | 4.1107     | 19       | 75    | 2        | maxgraey_unrolled                                                                                                       | 16578  | 5.00000  | 1       | base      | 1    | 3315.60000    |
-| odin           | 4.9246     | 20       | 88    | 1        | odin_byte_moe                                                                                                           | 13838  | 5.00000  | 1       | base      | 8    | 2767.60000    |
-| assembly       | 5.0389     | 21       | 91    | 1        | rbergen_x64ff_byte                                                                                                      | 13524  | 5.00000  | 1       | base      | 8    | 2704.80000    |
-| clojure        | 6.1003     | 22       | 114   | 3        | pez-clj-boolean-array                                                                                                   | 11172  | 5.00048  | 1       | base      | 8    | 2234.18529    |
-| nodejs         | 6.4114     | 23       | 119   | 1        | rogiervandam_memcopy                                                                                                    | 10630  | 5.00050  | 1       | other     | 1    | 2125.78535    |
-| mixed          | 6.5795     | 24       | 121   | 4        | mmcdon20_dart+c_1_bit                                                                                                   | 10358  | 5.00030  | 1       | base      | 1    | 2071.47488    |
-| scala          | 6.7279     | 25       | 125   | 2        | scilari                                                                                                                 | 10129  | 5.00000  | 1       | base      |      | 2025.80000    |
-| kotlin         | 6.8256     | 26       | 129   | 1        | jvm_kotlin_idiomatic_fast_single                                                                                        | 9996   | 5.00600  | 1       | base      |      | 1996.80384    |
-| rexx           | 6.8427     | 27       | 131   | 2        | joss_NetRexx                                                                                                            | 9960   | 5.00048  | 1       | base      | 8    | 1991.80918    |
-| dart           | 8.2878     | 28       | 142   | 1        | eagerestwolf&mmcdon20_8bit                                                                                              | 8223   | 5.00030  | 1       | base      | 8    | 1644.50067    |
-| apl            | 9.4027     | 29       | 151   | 1        | arcfideDfnFaithful                                                                                                      | 7249   | 5.00100  | 1       | wheel     | 1    | 1449.51010    |
-| typescript     | 10.185     | 30       | 155   | 2        | mikevdbokke_8bit-array                                                                                                  | 6691   | 5.00000  | 1       | base      | 1    | 1338.20000    |
-| basic          | 11.068     | 31       | 159   | 3        | Nukepayload2_ArrayPool8of30M                                                                                            | 6157   | 5.00006  | 1       | wheel     | 1    | 1231.38522    |
-| umple          | 11.685     | 32       | 164   | 1        | mmcdon20_umple                                                                                                          | 5832   | 5.00000  | 1       | base      | 1    | 1166.40000    |
-| d              | 22.180     | 33       | 183   | 2        | BradleyChatha-Single-SieveRTB1_64-1bit                                                                                  | 3073   | 5.00091  | 1       | base      | 1    | 614.48816     |
-| pascal         | 22.543     | 34       | 186   | 1        | rbergen                                                                                                                 | 3023   | 5.00000  | 1       | base      |      | 604.60000     |
-| python         | 27.315     | 35       | 201   | 2        | ssovest                                                                                                                 | 2495   | 5.00032  | 1       | base      | 8    | 498.96759     |
-| standardml     | 38.698     | 36       | 211   | 1        | NotMatthewGriffin_SML                                                                                                   | 1761   | 5.00000  | 1       | base      | 1    | 352.20000     |
-| pdl            | 47.183     | 37       | 216   | 2        | Luis*Mochán*(wlmb)\_Perl/PDL-PP                                                                                         | 1445   | 5.00237  | 1       | base      | 8    | 288.86308     |
-| lean4          | 50.762     | 38       | 217   | 1        | badly-drawn-wizards                                                                                                     | 1343   | 5.00200  | 1       | base      | 8    | 268.49260     |
-| pony           | 55.812     | 39       | 219   | 1        | marghidanu                                                                                                              | 1221   | 5.00000  | 1       | base      | 1    | 244.20000     |
-| r              | 70.852     | 40       | 224   | 1        | fvbakel_R                                                                                                               | 962    | 5.00100  | 1       | base      | 32   | 192.36153     |
-| haxe           | 97.118     | 41       | 227   | 1        | TayIorRobinson_Haxe_C++                                                                                                 | 702    | 5.00222  | 1       | base      |      | 140.33761     |
-| scheme         | 112.15     | 42       | 230   | 1        | William103                                                                                                              | 608    | 5.00298  | 1       | base      | 1    | 121.52750     |
-| octave         | 113.37     | 43       | 231   | 2        | Brandon-Johns_8bit                                                                                                      | 602    | 5.00770  | 1       | base      | 8    | 120.21497     |
-| ocaml          | 122.37     | 44       | 232   | 1        | gkpotter-faithful                                                                                                       | 557    | 5.00085  | 1       | base      |      | 111.38104     |
-| php            | 166.99     | 45       | 237   | 1        | DennisdeBest                                                                                                            | 410    | 5.02334  | 1       | base      |      | 81.61907      |
-| perl           | 175.20     | 46       | 238   | 2        | kjetillll                                                                                                               | 389    | 5.00041  | 1       | base      |      | 77.79357      |
-| ruby           | 190.13     | 47       | 239   | 1        | rbergen                                                                                                                 | 359    | 5.00800  | 1       | base      |      | 71.68530      |
-| groovy         | 198.76     | 48       | 240   | 1        | mmcdon20_groovy                                                                                                         | 343    | 5.00200  | 1       | base      | 1    | 68.57257      |
-| verilog        | 349.47     | 49       | 244   | 1        | alwayslinux2-verilog                                                                                                    | 195    | 5.00000  | 1       | base      | 1    | 39.00000      |
-| gdscript       | 410.53     | 50       | 247   | 1        | OrigamiDev-Pete                                                                                                         | 173    | 5.21100  | 1       | base      | 8    | 33.19900      |
-| ballerina      | 436.84     | 51       | 249   | 1        | da-strange-boi                                                                                                          | 156    | 5.00000  | 1       | base      | 1    | 31.20000      |
-| wren           | 575.46     | 52       | 251   | 1        | marghidanu                                                                                                              | 119    | 5.02448  | 1       | base      |      | 23.68403      |
-| hack           | 681.74     | 53       | 253   | 1        | da-strange-boi                                                                                                          | 100    | 5.00200  | 1       | base      |      | 19.99200      |
-| kos            | 766.87     | 54       | 254   | 1        | cdragan                                                                                                                 | 89     | 5.00768  | 1       | base      | 8    | 17.77269      |
-| lua            | 1064.8     | 55       | 256   | 1        | lua                                                                                                                     | 64     | 5.00000  | 1       | base      | 64   | 12.80000      |
-| elixir         | 1296.7     | 56       | 260   | 2        | thomas9911                                                                                                              | 63     | 5.99400  | 1       | base      | 1    | 10.51051      |
-| smalltalk      | 1301.5     | 57       | 261   | 1        | fvbakel_smalltalk                                                                                                       | 53     | 5.06100  | 1       | base      | 1    | 10.47224      |
-| tcl            | 1561.2     | 58       | 265   | 2        | fvbakel_ootcl2                                                                                                          | 44     | 5.04000  | 1       | base      | 32   | 8.73016       |
-| powershell     | 1802.8     | 59       | 268   | 3        | RobCannon_ps3                                                                                                           | 38     | 5.02650  | 1       | base      | 1    | 7.55993       |
-| emojicode      | 2839.4     | 60       | 273   | 1        | marghidanu                                                                                                              | 24     | 5.00000  | 1       | base      |      | 4.80000       |
-| m              | 4107.1     | 61       | 276   | 1        | rheit_m_array                                                                                                           | 17     | 5.12286  | 1       | base      |      | 3.31846       |
-| raku           | 8934.5     | 62       | 281   | 1        | draco1006                                                                                                               | 8      | 5.24432  | 1       | base      |      | 1.52546       |
-| red            | 1.0896e+04 | 63       | 285   | 1        | mmcdon20_red                                                                                                            | 7      | 5.59633  | 1       | base      | 1    | 1.25082       |
-| idl            | 2.2585e+04 | 64       | 291   | 1        | kriztioan_1bit                                                                                                          | 4      | 6.62833  | 1       | base      | 1    | 0.60347       |
-| clipper        | 6.0992e+04 | 65       | 294   | 1        | AndyRadford,Clip5.2e,Db                                                                                                 | 2      | 8.95000  | 1       | base      | 288  | 0.22346       |
-| yoix           | 6.6136e+04 | 66       | 295   | 1        | mmcdon20_yoix                                                                                                           | 2      | 9.70500  | 1       | base      | 1    | 0.20608       |
-| prolog         | 8.7295e+04 | 67       | 298   | 1        | jimbxb-prolog-basic                                                                                                     | 1      | 6.40500  | 1       | base      | 1    | 0.15613       |
+| Implementation | Slowness   | Position | Index | Solution | Algorithm | Bits | Passes/Second |
+| -------------- | ---------- | -------- | ----- | -------- | --------- | ---- | ------------- |
+| zig            | 1.000      | 1        | 6     | 3        | wheel     | 1    | 13629.29097   |
+| rust           | 1.0032     | 2        | 7     | 1        | base      | 1    | 13585.27692   |
+| nim            | 1.0363     | 3        | 8     | 3        | base      | 1    | 13152.20996   |
+| haskell        | 1.1424     | 4        | 11    | 2        | base      | 1    | 11930.29254   |
+| chapel         | 1.2983     | 5        | 12    | 1        | base      | 1    | 10497.40000   |
+| crystal        | 1.3315     | 6        | 13    | 2        | base      | 1    | 10236.35087   |
+| c              | 1.5781     | 7        | 15    | 3        | other     | 1    | 8636.72227    |
+| cython         | 1.6338     | 8        | 16    | 1        | other     | 1    | 8341.89489    |
+| julia          | 1.8111     | 9        | 17    | 4        | base      | 1    | 7525.27979    |
+| cpp            | 2.2941     | 10       | 19    | 4        | wheel     | 8    | 5941.05741    |
+| go             | 2.3441     | 11       | 21    | 2        | other     | 1    | 5814.32334    |
+| lisp           | 2.6575     | 12       | 34    | 2        | base      | 1    | 5128.59487    |
+| csharp         | 3.1020     | 13       | 43    | 4        | base      | 1    | 4393.74728    |
+| amd64          | 3.4201     | 14       | 49    | 1        | base      | 8    | 3985.02625    |
+| fortran        | 3.4887     | 15       | 52    | 2        | base      | 8    | 3906.66289    |
+| fsharp         | 3.8442     | 16       | 63    | 4        | base      | 1    | 3545.45676    |
+| java           | 3.9615     | 17       | 66    | 4        | base      | 1    | 3440.40000    |
+| swift          | 4.0533     | 18       | 72    | 1        | base      | 1    | 3362.50652    |
+| assemblyscript | 4.1107     | 19       | 75    | 2        | base      | 1    | 3315.60000    |
+| odin           | 4.9246     | 20       | 88    | 1        | base      | 8    | 2767.60000    |
+| assembly       | 5.0389     | 21       | 91    | 1        | base      | 8    | 2704.80000    |
+| clojure        | 6.1003     | 22       | 114   | 3        | base      | 8    | 2234.18529    |
+| nodejs         | 6.4114     | 23       | 119   | 1        | other     | 1    | 2125.78535    |
+| mixed          | 6.5795     | 24       | 121   | 4        | base      | 1    | 2071.47488    |
+| scala          | 6.7279     | 25       | 125   | 2        | base      |      | 2025.80000    |
+| kotlin         | 6.8256     | 26       | 129   | 1        | base      |      | 1996.80384    |
+| rexx           | 6.8427     | 27       | 131   | 2        | base      | 8    | 1991.80918    |
+| dart           | 8.2878     | 28       | 142   | 1        | base      | 8    | 1644.50067    |
+| apl            | 9.4027     | 29       | 151   | 1        | wheel     | 1    | 1449.51010    |
+| typescript     | 10.185     | 30       | 155   | 2        | base      | 1    | 1338.20000    |
+| basic          | 11.068     | 31       | 159   | 3        | wheel     | 1    | 1231.38522    |
+| umple          | 11.685     | 32       | 164   | 1        | base      | 1    | 1166.40000    |
+| d              | 22.180     | 33       | 183   | 2        | base      | 1    | 614.48816     |
+| pascal         | 22.543     | 34       | 186   | 1        | base      |      | 604.60000     |
+| python         | 27.315     | 35       | 201   | 2        | base      | 8    | 498.96759     |
+| standardml     | 38.698     | 36       | 211   | 1        | base      | 1    | 352.20000     |
+| pdl            | 47.183     | 37       | 216   | 2        | base      | 8    | 288.86308     |
+| lean4          | 50.762     | 38       | 217   | 1        | base      | 8    | 268.49260     |
+| pony           | 55.812     | 39       | 219   | 1        | base      | 1    | 244.20000     |
+| r              | 70.852     | 40       | 224   | 1        | base      | 32   | 192.36153     |
+| haxe           | 97.118     | 41       | 227   | 1        | base      |      | 140.33761     |
+| scheme         | 112.15     | 42       | 230   | 1        | base      | 1    | 121.52750     |
+| octave         | 113.37     | 43       | 231   | 2        | base      | 8    | 120.21497     |
+| ocaml          | 122.37     | 44       | 232   | 1        | base      |      | 111.38104     |
+| php            | 166.99     | 45       | 237   | 1        | base      |      | 81.61907      |
+| perl           | 175.20     | 46       | 238   | 2        | base      |      | 77.79357      |
+| ruby           | 190.13     | 47       | 239   | 1        | base      |      | 71.68530      |
+| groovy         | 198.76     | 48       | 240   | 1        | base      | 1    | 68.57257      |
+| verilog        | 349.47     | 49       | 244   | 1        | base      | 1    | 39.00000      |
+| gdscript       | 410.53     | 50       | 247   | 1        | base      | 8    | 33.19900      |
+| ballerina      | 436.84     | 51       | 249   | 1        | base      | 1    | 31.20000      |
+| wren           | 575.46     | 52       | 251   | 1        | base      |      | 23.68403      |
+| hack           | 681.74     | 53       | 253   | 1        | base      |      | 19.99200      |
+| kos            | 766.87     | 54       | 254   | 1        | base      | 8    | 17.77269      |
+| lua            | 1064.8     | 55       | 256   | 1        | base      | 64   | 12.80000      |
+| elixir         | 1296.7     | 56       | 260   | 2        | base      | 1    | 10.51051      |
+| smalltalk      | 1301.5     | 57       | 261   | 1        | base      | 1    | 10.47224      |
+| tcl            | 1561.2     | 58       | 265   | 2        | base      | 32   | 8.73016       |
+| powershell     | 1802.8     | 59       | 268   | 3        | base      | 1    | 7.55993       |
+| emojicode      | 2839.4     | 60       | 273   | 1        | base      |      | 4.80000       |
+| m              | 4107.1     | 61       | 276   | 1        | base      |      | 3.31846       |
+| raku           | 8934.5     | 62       | 281   | 1        | base      |      | 1.52546       |
+| red            | 1.0896e+04 | 63       | 285   | 1        | base      | 1    | 1.25082       |
+| idl            | 2.2585e+04 | 64       | 291   | 1        | base      | 1    | 0.60347       |
+| clipper        | 6.0992e+04 | 65       | 294   | 1        | base      | 288  | 0.22346       |
+| yoix           | 6.6136e+04 | 66       | 295   | 1        | base      | 1    | 0.20608       |
+| prolog         | 8.7295e+04 | 67       | 298   | 1        | base      | 1    | 0.15613       |
 
 ### Single-threaded
 
